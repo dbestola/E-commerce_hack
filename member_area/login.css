@@ -6,17 +6,19 @@
     font-size: 1.5rem;
 }
 .input-field{
-    width: 50%;
+    width: 100%; 
 }
+
 .forgot-password{
-    margin-left: 28rem;
+    position: absolute;
+    right: 0;
     text-decoration: none;
     font-size: 0.9rem;
     cursor: pointer;
     color: #007ACE;
 }
 .btn-1{
-    width: 6%;
+    width: 15%;
     border: 1px solid #000 ;
     background-color: #fff;
 }
@@ -32,3 +34,68 @@
     cursor: pointer;
     color: #007ACE;
 }
+
+.dev{
+    display: flex;
+}
+
+.one-half {
+    position: relative;
+    width: calc(50% - 20px);
+}
+
+.is-order-aligned-right {
+    order: 1;
+}
+
+.dev .column {
+    margin-left: calc(20px / 2);
+    margin-right: calc(20px / 2);
+}
+
+/* media screen */
+
+
+@media (max-width: 798px )  {
+
+    .medium-down--one-whole {
+        position: relative;
+        width: calc(100% - 20px);
+    }
+    
+    .is-order-aligned-right {
+       display: none;
+    }
+
+    .btn-1{
+        width: 15%;
+        border: 1px solid #000 ;
+        background-color: #fff;
+    }
+
+    .btn-1:hover{
+        background-color: #000;
+        color: #fff;
+    }
+
+    .forgot-password{
+        position: absolute;
+        right: 0;
+        text-decoration: none;
+        font-size: 0.9rem;
+        cursor: pointer;
+        color: #007ACE;
+    } 
+
+    /* .input-field{
+        width: 100%;
+    } */
+}
+
+
+/* @media (max-width: 600px ) {
+    .forgot-password{
+        margin-left: 3rem;
+        
+    }
+} */

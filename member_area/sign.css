@@ -6,13 +6,13 @@
     font-size: 1.5rem;
 }
 .input-field{
-    width: 50%;
+    width: 100%;
 }
 .required-field{
     display: flex;
 }
 .btn-1{
-    width: 6%;
+    width: 15%;
     border: 1px solid #000 ;
     background-color: #fff;
 }
@@ -21,7 +21,8 @@
     color: #fff;
 }
 .para-field{
-    margin-left: 25rem;
+    position: absolute;
+    right: 0;
 }
 .new-customer{
     display: flex;
@@ -30,4 +31,45 @@
     text-decoration: none;
     cursor: pointer;
     color: #007ACE;
+}
+
+.dev{
+    display: flex;
+}
+
+.one-half {
+    position: relative;
+    width: calc(50% - 20px);
+}
+
+.is-order-aligned-right {
+    order: 1;
+}
+
+.dev .column {
+    margin-left: calc(20px / 2);
+    margin-right: calc(20px / 2);
+}
+
+
+@media (max-width: 798px )  {
+
+    .medium-down--one-whole {
+        position: relative;
+        width: calc(100% - 20px);
+    }
+    
+    .is-order-aligned-right {
+       display: none;
+    }
+
+    .para-field {
+        position: absolute;
+        right: 0;
+    }
+
+    .input-field{
+        width: 100%;
+    }
+
 }
