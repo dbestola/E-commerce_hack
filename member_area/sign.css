@@ -1,0 +1,33 @@
+.horizontal{
+    width: 8%;
+    border: 1px solid #000;;
+}
+.customer-login{
+    font-size: 1.5rem;
+}
+.input-field{
+    width: 50%;
+}
+.required-field{
+    display: flex;
+}
+.btn-1{
+    width: 6%;
+    border: 1px solid #000 ;
+    background-color: #fff;
+}
+.btn-1:hover{
+    background-color: #000;
+    color: #fff;
+}
+.para-field{
+    margin-left: 25rem;
+}
+.new-customer{
+    display: flex;
+}
+.sign-up{
+    text-decoration: none;
+    cursor: pointer;
+    color: #007ACE;
+}
