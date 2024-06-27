@@ -1,0 +1,106 @@
+.horizontal{
+    width: 8%;
+    border: 1px solid #000;;
+}
+.vendor-login{
+    margin-top: 115px;
+    font-size: 1.5rem;
+}
+.input-field{
+    width: 100%; 
+}
+
+.forgot-password{
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #007ACE;
+}
+.btn-1{
+    width: 15%;
+    border: 1px solid #000 ;
+    background-color: #fff;
+}
+.btn-1:hover{
+    background-color: #000;
+    color: #fff;
+}
+.btn-1{
+    width: 15%;
+    border: 1px solid #000 ;
+    background-color: #fff;
+}
+.btn-1:hover{
+    background-color: #000;
+    color: #fff;
+}
+.new-customer{
+    display: flex;
+}
+.sign-up{
+    text-decoration: none;
+    cursor: pointer;
+    color: #007ACE;
+}
+
+.dev{
+    display: flex;
+}
+
+.one-half {
+    position: relative;
+    width: calc(50% - 20px);
+}
+
+.is-order-aligned-right {
+    order: 1;
+}
+
+.dev .column {
+    margin-left: calc(20px / 2);
+    margin-right: calc(20px / 2);
+}
+
+
+/* media screen */
+
+
+@media (max-width: 798px )  {
+
+    .customer-login{
+        margin-top: 130px;
+        font-size: 1.5rem;
+    }
+
+    .medium-down--one-whole {
+        position: relative;
+        width: calc(100% - 20px);
+    }
+    
+    .is-order-aligned-right {
+       display: none;
+    }
+
+    .btn-1{
+        width: 15%;
+        border: 1px solid #000 ;
+        background-color: #fff;
+    }
+
+    .btn-1:hover{
+        background-color: #000;
+        color: #fff;
+    }
+
+    .forgot-password{
+        position: absolute;
+        right: 0;
+        text-decoration: none;
+        font-size: 0.9rem;
+        cursor: pointer;
+        color: #007ACE;
+    } 
+
+}
