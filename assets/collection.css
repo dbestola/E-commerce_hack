@@ -71,9 +71,9 @@ background-color: rgba(240, 231, 231, 0.5);
 
 .horizontal-line4{
     position: absolute;
-    top: 420px;
+    top: 425px;
     right: 10px;
-    border-bottom: 1px solid  #ffffffaf;
+    border-bottom: 1px solid   rgba(0, 0, 0, 0.164);
     width: 540px;
     height: 1px;
 }
@@ -90,4 +90,10 @@ background-color: rgba(240, 231, 231, 0.5);
 .related-products {
     display: flex;
     justify-content: space-between;
+}
+
+.row {
+    position: absolute;
+    right: 380px;
+    top: 300px;
 }
