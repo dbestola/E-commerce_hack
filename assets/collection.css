@@ -21,6 +21,30 @@ background-color: rgba(240, 231, 231, 0.5);
     width: 50vh !important;
 }
 
+#share-product {
+    position: absolute;
+    bottom: 35vh;
+    left: 20px;
+}
+
+#twitter-icon {
+    position: absolute;
+    bottom: 30vh;
+    left: 20px;
+}
+
+#linkedin-icon {
+    position: absolute;
+    bottom: 30vh;
+    left: 65px;
+}
+
+#facebook-icon {
+    position: absolute;
+    bottom: 30vh;
+    left: 110px;
+}
+
 #add-to-cart {
     position: absolute;
     bottom: 35vh;
@@ -33,9 +57,31 @@ background-color: rgba(240, 231, 231, 0.5);
 
 #description {
     position: absolute;
-    right: 25vh;
+    right: 24vh;
     top: 40px;
     color: black;
+}
+
+#price {
+    position: absolute;
+    right: 54vh;
+    top: 150px;
+    color: black;
+}
+
+#before-price {
+    position: absolute;
+    right: 39vh;
+    top: 170px;
+    color: black;
+}
+
+#discount-percent {
+    position: absolute;
+    right: 32vh;
+    top: 170px;
+    color: black;
+    background-color: rgba(255, 192, 203, 0.582);
 }
 
 .horizontal-line{
