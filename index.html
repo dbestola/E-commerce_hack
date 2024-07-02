@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Commerce Store</title>
-    <link rel="stylesheet" href="assets/bootstrap-5.3.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css2/style2.css">
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="landing.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -13,6 +13,10 @@
 
       <!-- nav section -->
         <nav class="navbar">
+            <div class="nav-toggle">
+                <i class="fas fa-bars" id="toggle1"></i>
+                <i class="fa-solid fa-xmark" id="toggle2"></i>
+            </div>
             <div class="logo">
                 <a href="/index.html">logo<img src="" alt=""></a>
             </div>
@@ -52,10 +56,10 @@
             <div class="user-account">
                 <ul>
                     <li>
-                        <a href="#">User Account</a>
+                        <a href="#"><i class="fa-solid fa-user fa-lg" style="color: #ffffff;"></i></a>
                         <div class="user-dropdown-content">
-                            <a href="/member_area/login.html">Customer Login</a>
-                            <a href="/vendor_area/v_login.html">Vendor Login</a>
+                            <a href="/member_area/mLogin.html" id="mLogin">Customer Login</a>
+                            <a href="/vendor_area/vLogin.html">Vendor Login</a>
                         </div>
                     </li>
                 </ul>
@@ -98,6 +102,50 @@
               <span class="visually-hidden">Next</span>
           </button>
       </div>
+
+      <!-- navbar 2 -->
+      <div class="nav-links2">
+            <ul>
+                <li>
+                    <div class="dropdown2">
+                        <a href="#">Home</a>
+                        <span class="arrow-down"><i class="fas fa-angle-down" style="color: #ffffff;"></i></span>
+                    <div class="dropdown-content2">
+                        <a href="#">Item 1</a>
+                        <a href="#">Item 2</a>
+                        <a href="#">Item 3</a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="dropdown2">
+                        <a href="#">Products</a>
+                        <span class="arrow-down"><i class="fas fa-angle-down" style="color: #ffffff;"></i></span>
+                    </div>
+                    <div class="dropdown-content2">
+                        <a href="#">Category 1</a>
+                        <a href="#">Category 2</a>
+                        <a href="#">Category 3</a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="dropdown2">
+                        <a href="#">Services</a>
+                        <span class="arrow-down"><i class="fas fa-angle-down" style="color: #ffffff;"></i></span>
+                    </div>
+                    <div class="dropdown-content2">
+                        <a href="#">Service 1</a>
+                        <a href="#">Service 2</a>
+                        <a href="#">Service 3</a>
+                    </div>
+                </li>
+
+                <div class="contact">
+                    <a href="#">Contact</a>
+                </div>
+            </ul>
+      </div>
     </header>
 
     <!-- mini catalague -->
@@ -107,22 +155,22 @@
       <h3 class="h3-sample">Preview <span>sample produts</span></h3>
       <div class="hr-container"> <hr class="medium-line"> </div>
       <div class="sample-1">
-        <div id="img">
+        <div id="img" class="img1a">
             <a href="/pages/collections.html">  
                 <img src="/assets/images/Nigeria_Apple_Watch_Ultra2_Banner_400x.webp" alt="">
                 </a>
         </div>
-        <div id="img">
+        <div id="img" class="img1b">
             <a href="/pages/collections.html">
                 <img src="/assets/images/Nigeria_iPhone_15_Plus_Web_Banner_400x.webp" alt="">
                 </a>
         </div>
-        <div id="img">
+        <div id="img" class="img1c">
             <a href="/pages/collections.html">
                 <img src="/assets/images/Nigeria_iPhone_15_Pro_Max_Web_Banner_400x.webp" alt="">
                 </a>
         </div>
-        <div id="img">
+        <div id="img" class="img1d">
             <a href="/pages/collections.html">
                 <img src="/assets/images/Nigeria_iPhone_15_Pro_Max_Web_Banner_400x.webp" alt="">
             </a>
@@ -135,22 +183,22 @@
         <h3 class=" h3-sample">Preview <span>sample services</span></h3>
       <div class="hr-container"> <hr class="medium-line"> </div>
         <div class="sample-2">
-            <div id="img2">
+            <div id="img2" class="img2a">
                 <a href="/pages/services.html">
                     <img src="/assets/images/Nigeria_iPhone_15_Pro_Web_Banner_400x.webp" alt="">
                 </a>
             </div>
-            <div id="img2">
+            <div id="img2" class="img2b">
                 <a href="/pages/services.html">
                     <img src="/assets/images/Nigeria_iPhone_15_Web_Banner_400x.webp" alt="">
                 </a>
             </div>
-            <div id="img2">
+            <div id="img2" class="img2c">
                 <a href="/pages/services.html">
                     <img src="/assets/images/Nigeria_Series_9_Banner_400x.webp" alt="">
                 </a>
             </div>
-            <div id="img2">
+            <div id="img2" class="img2d">
                 <a href="/pages/services.html">
                     <img src="/assets/images/Nigeria_iPhone_15_Pro_Web_Banner_400x.webp" alt="">
                 </a>
@@ -161,7 +209,7 @@
 
     </div>
 
-
+<!-- footer -->
     <footer>
         <div class="socials-container">
             <div class="socials">
@@ -221,16 +269,25 @@
                     <p>Privacy Policy</p>
                 </a>
             </div>
-            <div>
+            <div class="subscribe">
                 <h4>Subscribe</h4>
                 <p>Sign up to get the latest on sales, new releases and more …</p>
                 <form action="" id="form1">
                     <input type="text" placeholder="Email*">
                     <br>
-                    <button id="sign-up">Sign Up</button>
+                    <button id="Lsign-up1">Sign Up</button>
                 </form>
             </div>
-
+        </div>
+        <hr id="footer-hr2">
+        <div class="subscribe2">
+            <h4>Subscribe</h4>
+            <p>Sign up to get the latest on sales, new releases and more …</p>
+            <form action="" id="form1">
+                <input type="text" placeholder="Email*">
+                <br>
+                <button id="Lsign-up2">Sign Up</button>
+            </form>
         </div>
 
         <div class="copyright">
@@ -238,7 +295,8 @@
         </div>
 
     </footer>
-    <script src="/assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="scripts.js"></script>
+    <script src="landing.js"></script>
+    <script src="/pages/collections/collection.js"></script>
+    <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
