@@ -11,53 +11,112 @@
 </head>
 <body>
 
-<header class="header">
-    <!-- nav section -->
-    <nav class="navbar">
-        <div class="logo">
-            <a href="/index.html">logo<img src="" alt=""></a>
+    <header class="header">
+
+        <!-- nav section -->
+          <nav class="navbar">
+              <div class="nav-toggle">
+                  <i class="fas fa-bars" id="toggle1"></i>
+                  <i class="fa-solid fa-xmark" id="toggle2"></i>
+              </div>
+              <div class="logo">
+                  <a href="/index.html">logo<img src="" alt=""></a>
+              </div>
+              <div class="nav-links">
+                  <ul>
+                      <li class="dropdown">
+                          <a href="#">Home</a>
+                          <div class="dropdown-content">
+                              <a href="#">Item 1</a>
+                              <a href="#">Item 2</a>
+                              <a href="#">Item 3</a>
+                          </div>
+                      </li>
+                      <li class="dropdown">
+                          <a href="#">Products</a>
+                          <div class="dropdown-content">
+                              <a href="#">Category 1</a>
+                              <a href="#">Category 2</a>
+                              <a href="#">Category 3</a>
+                          </div>
+                      </li>
+                      <li class="dropdown">
+                          <a href="#">Services</a>
+                          <div class="dropdown-content">
+                              <a href="#">Service 1</a>
+                              <a href="#">Service 2</a>
+                              <a href="#">Service 3</a>
+                          </div>
+                      </li>
+                      <li><a href="#">Contact</a></li>
+                  </ul>
+              </div>
+              <div class="search-bar">
+                  <input type="text" placeholder="Search...">
+                  <button>Search</button>
+              </div>
+              <div class="user-account">
+                  <ul>
+                      <li>
+                          <a href="#"><i class="fa-solid fa-user fa-lg" style="color: #ffffff;"></i></a>
+                          <div class="user-dropdown-content">
+                              <a href="/member_area/mLogin.html" id="mLogin">Customer Login</a>
+                              <a href="/vendor_area/vLogin.html">Vendor Login</a>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+              <div class="cart">    
+                  <a href="#">
+                      <img src="/assets/icons/shopping-cart.svg" alt="">
+                  </a>
+              </div>
+          </nav>
+  
+        <!-- navbar 2 -->
+        <div class="nav-links2">
+              <ul>
+                  <li>
+                      <div class="dropdown2">
+                          <a href="#">Home</a>
+                          <span class="arrow-down"><i class="fas fa-angle-down" style="color: #ffffff;"></i></span>
+                      <div class="dropdown-content2">
+                          <a href="#">Item 1</a>
+                          <a href="#">Item 2</a>
+                          <a href="#">Item 3</a>
+                      </div>
+                  </li>
+  
+                  <li>
+                      <div class="dropdown2">
+                          <a href="#">Products</a>
+                          <span class="arrow-down"><i class="fas fa-angle-down" style="color: #ffffff;"></i></span>
+                      </div>
+                      <div class="dropdown-content2">
+                          <a href="#">Category 1</a>
+                          <a href="#">Category 2</a>
+                          <a href="#">Category 3</a>
+                      </div>
+                  </li>
+  
+                  <li>
+                      <div class="dropdown2">
+                          <a href="#">Services</a>
+                          <span class="arrow-down"><i class="fas fa-angle-down" style="color: #ffffff;"></i></span>
+                      </div>
+                      <div class="dropdown-content2">
+                          <a href="#">Service 1</a>
+                          <a href="#">Service 2</a>
+                          <a href="#">Service 3</a>
+                      </div>
+                  </li>
+  
+                  <div class="contact">
+                      <a href="#">Contact</a>
+                  </div>
+              </ul>
         </div>
-        <div class="nav-links">
-            <ul>
-                <li class="dropdown">
-                    <a href="#">Home</a>
-                    <div class="dropdown-content">
-                        <a href="#">Item 1</a>
-                        <a href="#">Item 2</a>
-                        <a href="#">Item 3</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Products</a>
-                    <div class="dropdown-content">
-                        <a href="#">Category 1</a>
-                        <a href="#">Category 2</a>
-                        <a href="#">Category 3</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Services</a>
-                    <div class="dropdown-content">
-                        <a href="#">Service 1</a>
-                        <a href="#">Service 2</a>
-                        <a href="#">Service 3</a>
-                    </div>
-                </li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <button>Search</button>
-        </div>
-        
-        <div class="cart">    
-            <a href="#">
-                <img src="/assets/icons/shopping-cart.svg" alt="">
-            </a>
-        </div>
-    </nav>
-</header>
+      </header>
 
 <div class="mt-5 m-3">
     <div>
@@ -95,6 +154,8 @@
     </div>
 </div>
 
+
+<!-- footer -->
 <footer>
     <div class="socials-container">
         <div class="socials">
@@ -154,16 +215,25 @@
                 <p>Privacy Policy</p>
             </a>
         </div>
-        <div>
+        <div class="subscribe">
             <h4>Subscribe</h4>
             <p>Sign up to get the latest on sales, new releases and more …</p>
             <form action="" id="form1">
                 <input type="text" placeholder="Email*">
                 <br>
-                <button id="sign-up">Sign Up</button>
+                <button id="Lsign-up1">Sign Up</button>
             </form>
         </div>
-
+    </div>
+    <hr id="footer-hr2">
+    <div class="subscribe2">
+        <h4>Subscribe</h4>
+        <p>Sign up to get the latest on sales, new releases and more …</p>
+        <form action="" id="form1">
+            <input type="text" placeholder="Email*">
+            <br>
+            <button id="Lsign-up2">Sign Up</button>
+        </form>
     </div>
 
     <div class="copyright">
@@ -174,5 +244,6 @@
 
 <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
 <script src="login.js"></script>
+<script src="/landing.js"></script>
 </body>
 </html>

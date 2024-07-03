@@ -15,6 +15,10 @@
 
         <!-- nav section -->
           <nav class="navbar">
+              <div class="nav-toggle">
+                  <i class="fas fa-bars" id="toggle1"></i>
+                  <i class="fa-solid fa-xmark" id="toggle2"></i>
+              </div>
               <div class="logo">
                   <a href="/index.html">logo<img src="" alt=""></a>
               </div>
@@ -51,16 +55,70 @@
                   <input type="text" placeholder="Search...">
                   <button>Search</button>
               </div>
-              
+              <div class="user-account">
+                  <ul>
+                      <li>
+                          <a href="#"><i class="fa-solid fa-user fa-lg" style="color: #ffffff;"></i></a>
+                          <div class="user-dropdown-content">
+                              <a href="/member_area/mLogin.html" id="mLogin">Customer Login</a>
+                              <a href="/vendor_area/vLogin.html">Vendor Login</a>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
               <div class="cart">    
                   <a href="#">
                       <img src="/assets/icons/shopping-cart.svg" alt="">
                   </a>
               </div>
           </nav>
-    
-    
-      <div class="mt-5 m-3"
+  
+        <!-- navbar 2 -->
+        <div class="nav-links2">
+              <ul>
+                  <li>
+                      <div class="dropdown2">
+                          <a href="#">Home</a>
+                          <span class="arrow-down"><i class="fas fa-angle-down" style="color: #ffffff;"></i></span>
+                      <div class="dropdown-content2">
+                          <a href="#">Item 1</a>
+                          <a href="#">Item 2</a>
+                          <a href="#">Item 3</a>
+                      </div>
+                  </li>
+  
+                  <li>
+                      <div class="dropdown2">
+                          <a href="#">Products</a>
+                          <span class="arrow-down"><i class="fas fa-angle-down" style="color: #ffffff;"></i></span>
+                      </div>
+                      <div class="dropdown-content2">
+                          <a href="#">Category 1</a>
+                          <a href="#">Category 2</a>
+                          <a href="#">Category 3</a>
+                      </div>
+                  </li>
+  
+                  <li>
+                      <div class="dropdown2">
+                          <a href="#">Services</a>
+                          <span class="arrow-down"><i class="fas fa-angle-down" style="color: #ffffff;"></i></span>
+                      </div>
+                      <div class="dropdown-content2">
+                          <a href="#">Service 1</a>
+                          <a href="#">Service 2</a>
+                          <a href="#">Service 3</a>
+                      </div>
+                  </li>
+  
+                  <div class="contact">
+                      <a href="#">Contact</a>
+                  </div>
+              </ul>
+        </div>
+      </header>
+      
+      <div class="mt-5 m-3">
         <div>
             <h1 class="mb-4 vendor-login">Vendor Login</h1>
             <hr class="horizontal">
@@ -93,14 +151,16 @@
           </div>
     
       </div>
-      <footer>
+      
+<!-- footer -->
+    <footer>
         <div class="socials-container">
             <div class="socials">
                 <a href="https://web.facebook.com/McCprian" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
                 <a href="https://twitter.com/Mc_Cprian02" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
                 <a href="https://www.instagram.com/_obinesto_/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
             </div>
-  
+
         </div>
         <hr id="footer-hr">
         <div class="footer">
@@ -152,22 +212,31 @@
                     <p>Privacy Policy</p>
                 </a>
             </div>
-            <div>
+            <div class="subscribe">
                 <h4>Subscribe</h4>
                 <p>Sign up to get the latest on sales, new releases and more …</p>
                 <form action="" id="form1">
                     <input type="text" placeholder="Email*">
                     <br>
-                    <button id="sign-up">Sign Up</button>
+                    <button id="Lsign-up1">Sign Up</button>
                 </form>
             </div>
-  
         </div>
-  
+        <hr id="footer-hr2">
+        <div class="subscribe2">
+            <h4>Subscribe</h4>
+            <p>Sign up to get the latest on sales, new releases and more …</p>
+            <form action="" id="form1">
+                <input type="text" placeholder="Email*">
+                <br>
+                <button id="Lsign-up2">Sign Up</button>
+            </form>
+        </div>
+
         <div class="copyright">
             <h6>© 2024 iHub Nigeria.</h6>
         </div>
-  
+
     </footer>
     <script src="/landing.js"></script>
     <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
