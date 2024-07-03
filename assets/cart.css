@@ -1,8 +1,10 @@
 .cart-container {
     display: flex;
     align-items: center;
-    margin-top: 100px;
-    margin-left: 100px;
+    /* margin-top: 100px;
+    margin-left: 100px; */
+    height: auto;
+    padding: 2rem 1rem 2rem ;
 }
 
 
@@ -11,6 +13,7 @@
     position: relative;
     box-sizing: border-box;
     width: 900px;
+    height: auto;
     background-color: rgba(240, 231, 231, 0.5);
 
 }
@@ -35,6 +38,7 @@
 
 .horizontal-line{
     position: absolute;
+    padding-bottom: 2rem;
     top: 40px;
     border-bottom: 1px solid  rgba(0, 0, 0, 0.164);
     width: 900px;
@@ -63,4 +67,10 @@
 .related-products {
     display: flex;
     justify-content: space-between;
+}
+
+.img1a {
+   height: 50%;
+   position: absolute;
+   z-index: 3;
 }
