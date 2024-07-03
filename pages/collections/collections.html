@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -19,7 +18,7 @@
           <nav class="navbar">
               <div class="nav-toggle">
                   <i class="fas fa-bars" id="toggle1"></i>
-                  <i class="fa-solid fa-xmark" id="toggle2"></i>
+                  <i class="fas solid fa-xmark" id="toggle2"></i>
               </div>
               <div class="logo">
                   <a href="/index.html">logo<img src="" alt=""></a>
@@ -307,7 +306,36 @@
 </footer>
 
 
-    <script src="/landing.js"></script>
+    <script>
+        // navbar logic
+        document.addEventListener("DOMContentLoaded", function() {
+          var icon1 = document.getElementById("toggle1");
+          var icon2 = document.getElementById("toggle2");
+          const arrowDown =  document.querySelectorAll(".arrow-down i")
+
+         icon1.addEventListener("click", function() {
+         icon1.style.display = "none";
+
+        document.querySelector('.nav-links2').style.display = 'block'
+        icon2.style.display = "block";
+    });
+  
+        icon2.addEventListener("click", function() {
+        icon2.style.display = "none"
+        document.querySelector('.nav-links2').style.display = 'none';
+
+        icon1.style.display = "block"
+    });
+
+        arrowDown.forEach(arrowDowns =>{
+        arrowDowns.addEventListener('click', function(){
+        arrowDowns.classList.toggle('fa-angle-down')
+        arrowDowns.classList.toggle('fa-angle-up')
+})})
+
+});
+    </script>
+
     <script src="/assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
   </body>
   </html>
