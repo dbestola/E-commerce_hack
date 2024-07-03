@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (storedUser && loginEmail === storedUser.email && loginPassword === storedUser.password) {
                 // Successful login
                 alert('Login successful! Redirecting to dashboard.');
-                window.location.href = 'dashboard.html';
+                window.location.href = 'mprofile.html';
             } else {
                 // Incorrect credentials
                 alert('Invalid email or password. Please try again.');

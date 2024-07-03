@@ -11,7 +11,7 @@ function handleSignup(event) {
     
     // Function to validate email using regex
     function validateEmail(email) {
-        const regex1 = /^[a-zA-Z0-9. _-]+@[a-zA-Z0-9. -]+\. [a-zA-Z]{2,4}$/;
+        const regex1 = /^[a-zA-Z0-9. _-]+@[a-zA-Z0-9. -]+\.[a-zA-Z]{2,4}$/;
         return regex1.test(String(email).toLowerCase());
     }
 
