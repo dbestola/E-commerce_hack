@@ -1,3 +1,6 @@
+var desktopAddtoCart = document.getElementById('add-to-cart')
+var mobileAddtoCart = document.getElementById('M_add-to-cart')
+
 var Products = [
     {
         "id" : 1,
@@ -153,9 +156,11 @@ let products = JSON.parse(localStorage.getItem("products"))
 let cart = JSON.parse(localStorage.getItem("cart"))
 
 
+
 // adding the product in the cart
 
 function addItemToCart(productId) {
+
     let product = products.find(function (product) {  
         return product.id == productId;   
     });
@@ -171,8 +176,14 @@ function addItemToCart(productId) {
     }
 
     localStorage.setItem("cart", JSON.stringify(cart));
+
+  
 }
 
+desktopAddtoCart.addEventListener('click', addItemToCart)
+mobileAddtoCart.addEventListener('click', addItemToCart)
+
+// productId
 // addItemToCart(12);
 // addItemToCart(1);
 // addItemToCart(2);

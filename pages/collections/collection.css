@@ -1,5 +1,6 @@
 .container-div {
     display: flex;
+    /* flex-wrap: wrap; */
     margin-top: 100px;
     margin-left: 100px;
 }
@@ -139,25 +140,124 @@ background-color: rgba(240, 231, 231, 0.5);
     top: 300px;
 }
 
+.pmobile-display {
+    display: none;
+}
+
+
+
+@media (min-width: 799px) and (max-width: 1300px) {
+    .container-div, .product-display, .advert {
+        display: none;
+    }
+
+
+    .pmobile-display {
+       display: flex;
+       flex-wrap: wrap; 
+       justify-content: space-evenly;
+    }
+
+    #mobile_img {
+        margin-bottom: 30px; 
+    }
+
+    .product-details {  
+        padding: 10px;
+        background-color: rgba(240, 231, 231, 0.5);
+        height: 40vh;
+        width:60%;
+        margin-bottom: 30px;
+    }
+
+    #M_add-to-cart {
+        bottom: 35vh; 
+        background-color:  rgba(0, 0, 0, 0.164);
+        width:60%;
+        height: 50px;
+        border-radius: 5px;
+        }
+
+        .related-products{
+        display: flex;
+        flex-wrap: wrap; 
+       justify-content: space-evenly;
+       
+        } 
+        
+        #img2 {
+            margin-bottom: 30px; 
+        }
+
+} 
+
 @media (max-width: 798px) {
 
-    html {
-        overflow-x: auto !important;
-        width: 1380px;
+    .container-div, .product-display, .advert {
+        display: none;
     }
 
-    .container-div {
-        display: flex;
-       /* flex-direction: column; */
 
+    .pmobile-display {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       
     }
 
-    .product-display {
-        position: relative;
-        height: 100vh;
-        width: 900px;
+    #mobile_img {
+        margin-bottom: 30px; 
+    }
+
+    .product-details {  
+        padding: 10px;
         background-color: rgba(240, 231, 231, 0.5);
+        height: 40vh;
+        width:89%;
+        margin-bottom: 30px;
     }
-      
+
+    #M_add-to-cart {
+        bottom: 35vh; 
+        background-color:  rgba(0, 0, 0, 0.164);
+        width:89%;
+        height: 50px;
+        border-radius: 5px;
+        }
+
+        #img2 {
+            margin-bottom: 30px;
+            width:89%;
+        }
     
+
+    #m-description{
+        margin-left: 20px;
+    }
+
+    #M_price {
+        margin-left: 20px;   
+    }
+
+    #M_before-price{
+        margin-left: 20px;
+    }
+
+    #M_discount-percent{
+        margin-left: 20px;
+    }
+
+    .heading-related-posts {
+        margin-top: 100px;
+        text-align: center;
+    }
+
+
+
+    .related-products{
+        display: flex !important;
+        align-items: center;
+        flex-direction: column !important;
+    }    
 }
+
