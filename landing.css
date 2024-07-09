@@ -141,9 +141,13 @@ margin-right: 1rem;
 }
 
 .cart a, .user-account a {
-  color: var(--our-green);
+  color: #ffffff;
   padding: 10px 15px;
   text-decoration: none;
+}
+
+.cart a:hover, .user-account a:hover{
+  color: var(--our-green);
 }
 
 .user-account ul {
