@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Store</title>
+    <title>iHub-Nigeria</title>
     <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="landing.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="/assets/images/logo.svg" type="png">
 </head>
 <body>
     <header class="header">
@@ -18,34 +19,32 @@
                 <i class="fas fa-xmark" id="toggle2"></i>
             </div>
             <div class="logo">
-                <a href="/index.html">logo<img src="" alt=""></a>
+                <a href="index.html"><img src="/assets/images/logo.svg" alt="logo"></a>
             </div>
             <div class="nav-links">
                 <ul>
                     <li class="dropdown">
-                        <a href="#">Home</a>
-                        <div class="dropdown-content">
-                            <a href="#">Item 1</a>
-                            <a href="#">Item 2</a>
-                            <a href="#">Item 3</a>
-                        </div>
+                        <a href="index.html">Home</a>
                     </li>
+
                     <li class="dropdown">
                         <a href="#">Products</a>
                         <div class="dropdown-content">
-                            <a href="#">Category 1</a>
-                            <a href="#">Category 2</a>
-                            <a href="#">Category 3</a>
+                            <a href="#">iPhone</a>
+                            <a href="#">iPad</a>
+                            <a href="#">Mac</a>
                         </div>
                     </li>
+
                     <li class="dropdown">
                         <a href="#">Services</a>
                         <div class="dropdown-content">
-                            <a href="#">Service 1</a>
-                            <a href="#">Service 2</a>
-                            <a href="#">Service 3</a>
+                            <a href="#">Repairs</a>
+                            <a href="#">Trade-In</a>
+                            <a href="#">Financing</a>
                         </div>
                     </li>
+
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
@@ -58,26 +57,17 @@
                     <li>
                         <a href="#"><i class="fa-solid fa-user fa-lg" style="color: #ffffff;"></i></a>
                         <div class="user-dropdown-content">
-                            <a href="/member_area/mLogin.html" id="mLogin">Customer Login</a>
-                            <a href="/vendor_area/vLogin.html">Vendor Login</a>
+                            <a href="./member_area/mLogin.html" id="mLogin">Customer Login</a>
+                            <a href="./vendor_area/vLogin.html">Vendor Login</a>
                         </div>
                     </li>
                 </ul>
             </div>
-            
-
-            <div class="cart"> 
-                <a href="#" class="cart-img">
-                    <img src="/assets/icons/shopping-cart.svg" alt="AddToCart"> 
-                    
-                    
-              
-
-              <h6 class="cart-text"> Cart </h6> 
-
+            <div class="cart">    
+                <a href="#">
+                    <img src="./assets/icons/shopping-cart.svg" alt="">
                 </a>
-              </div>
-
+            </div>
         </nav>
 
         <!-- slider -->
@@ -117,36 +107,30 @@
             <ul>
                 <li>
                     <div class="dropdown2">
-                        <a href="#">Home</a>
-                        <span class="arrow-down"><i class="fas fa-angle-down" style="color: #ffffff;"></i></span>
-                    <div class="dropdown-content2">
-                        <a href="#">Item 1</a>
-                        <a href="#">Item 2</a>
-                        <a href="#">Item 3</a>
-                    </div>
+                        <a href="index.html">Home</a>
                 </li>
 
                 <li>
                     <div class="dropdown2">
                         <a href="#">Products</a>
-                        <span class="arrow-down"><i class="fas fa-angle-down" style="color: #ffffff;"></i></span>
+                        <span class="arrow-down"><i class="fas fa-angle-down dropA" style="color: #ffffff;"></i></span>
                     </div>
-                    <div class="dropdown-content2">
-                        <a href="#">Category 1</a>
-                        <a href="#">Category 2</a>
-                        <a href="#">Category 3</a>
+                    <div class="dropdown-content2" id="dropdown-content2a">
+                        <a href="#">iPhone</a>
+                        <a href="#">iPad</a>
+                        <a href="#">Mac</a>
                     </div>
                 </li>
 
                 <li>
                     <div class="dropdown2">
                         <a href="#">Services</a>
-                        <span class="arrow-down"><i class="fas fa-angle-down" style="color: #ffffff;"></i></span>
+                        <span class="arrow-down"><i class="fas fa-angle-down dropB" style="color: #ffffff;"></i></span>
                     </div>
-                    <div class="dropdown-content2">
-                        <a href="#">Service 1</a>
-                        <a href="#">Service 2</a>
-                        <a href="#">Service 3</a>
+                    <div class="dropdown-content2" id="dropdown-content2b">
+                        <a href="#">Repairs</a>
+                        <a href="#">Trade-In</a>
+                        <a href="#">Financing</a>
                     </div>
                 </li>
 
@@ -191,25 +175,31 @@
       <div>
         <h3 class=" h3-sample">Preview <span>sample services</span></h3>
       <div class="hr-container"> <hr class="medium-line"> </div>
+      <div class="serviceDescription">
+        <h4>Repairs</h4> <h4>Trade-In</h4> <h4>Financing</h4> <h4>Technical Support</h4>
+      </div>
         <div class="sample-2">
             <div id="img2" class="img2a">
                 <a href="/pages/services.html">
-                    <img src="/assets/images/Nigeria_iPhone_15_Pro_Web_Banner_400x.webp" alt="">
+                    <img src="/assets/images/repairs.avif" alt="">
                 </a>
             </div>
+
             <div id="img2" class="img2b">
                 <a href="/pages/services.html">
-                    <img src="/assets/images/Nigeria_iPhone_15_Web_Banner_400x.webp" alt="">
+                    <img src="/assets/images/swap.jpeg" alt="">
                 </a>
             </div>
+
             <div id="img2" class="img2c">
                 <a href="/pages/services.html">
-                    <img src="/assets/images/Nigeria_Series_9_Banner_400x.webp" alt="">
+                    <img src="/assets/images/financing.avif" alt="">
                 </a>
             </div>
+
             <div id="img2" class="img2d">
                 <a href="/pages/services.html">
-                    <img src="/assets/images/Nigeria_iPhone_15_Pro_Web_Banner_400x.webp" alt="">
+                    <img src="/assets/images/support.webp" alt="">
                 </a>
             </div>
 
