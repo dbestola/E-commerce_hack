@@ -1,3 +1,8 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+
 .container-div {
     display: flex;
     margin-top: 100px;
@@ -9,10 +14,13 @@
     height: 100vh;
     width: 900px;
     background-color: rgba(240, 231, 231, 0.5);
-
 }
 
-#img2 {
+
+.img2 {
+    position: absolute;
+    left: 20px;
+    top: 20px;
     height: 50vh !important;
     width: 50vh !important;
 }
@@ -23,109 +31,76 @@
     left: 20px;
 }
 
-#twitter-icon {
-    position: absolute;
-    bottom: 30vh;
-    left: 20px;
-}
-
-#linkedin-icon {
-    position: absolute;
-    bottom: 30vh;
-    left: 65px;
-}
-
+#twitter-icon,
+#linkedin-icon,
 #facebook-icon {
     position: absolute;
     bottom: 30vh;
-    left: 110px;
 }
+
+#twitter-icon { left: 20px; }
+#linkedin-icon { left: 65px; }
+#facebook-icon { left: 110px; }
 
 #add-to-cart {
     position: absolute;
     bottom: 35vh;
     right: 10px;
-    background-color:  rgba(0, 0, 0, 0.164);
-    width: 540px ;
+    background-color: rgba(0, 0, 0, 0.164);
+    width: 540px;
     height: 50px;
     border-radius: 5px;
 }
 
-#description {
+.product-name {
     position: absolute;
-    right: 50px;
+    left: 350px;
     top: 40px;
     color: black;
 }
 
-#price {
+.current-price {
     position: absolute;
-    right: 54vh;
+    left: 350px;
     top: 150px;
     color: black;
 }
 
 #before-price {
     position: absolute;
-    right: 39vh;
+    left: 590px;
     top: 170px;
     color: black;
 }
 
 #discount-percent {
     position: absolute;
-    right: 32vh;
+    left: 690px;
     top: 170px;
     color: black;
     background-color: rgba(255, 192, 203, 0.582);
 }
 
-.horizontal-line{
+.horizontal-line,
+.horizontal-line2,
+.horizontal-line3,
+.horizontal-line4 {
     position: absolute;
-    top: 120px;
-    right: 10px;
-    border-bottom: 1px solid  rgba(0, 0, 0, 0.164);
-    width: 540px;
-    height: 1px;
-    
-}
-
-.horizontal-line2{
-    position: absolute;
-    top: 240px;
-    right: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.164);
     width: 540px;
     height: 1px;
 }
 
-.horizontal-line3{
-    position: absolute;
-    top: 350px;
-    left: 18px;
-    border-bottom: 1px solid   rgba(0, 0, 0, 0.164);
-    width: 540px;
-    width: 320px;
-    height: 1px;
-}
-
-
-.horizontal-line4{
-    position: absolute;
-    top: 425px;
-    right: 10px;
-    border-bottom: 1px solid   rgba(0, 0, 0, 0.164);
-    width: 540px;
-    height: 1px;
-}
-
+.horizontal-line { top: 120px; right: 10px; }
+.horizontal-line2 { top: 240px; right: 10px; }
+.horizontal-line3 { top: 350px; left: 18px; width: 320px; }
+.horizontal-line4 { top: 425px; right: 10px; }
 
 .advert {
     height: 100vh;
     width: 250px;
     margin-left: 20px;
     background-color: rgba(240, 231, 231, 0.5);
-
 }
 
 .related-products {
@@ -149,130 +124,120 @@
     display: flex;
     justify-content: center;
     align-items: center;
-} 
+}
 
 .cart-text {
     position: absolute;
     right: 0;
     margin-right: 30px !important;
     color: #fff;
-    
-  }
+}
+
+.cart-icon {
+    position: absolute;
+}
 
 
 
-@media (min-width: 799px) and (max-width: 1300px) {
-    .container-div, .product-display, .advert {
-        display: none;
-    }
-
-
-    .pmobile-display {
-       display: flex;
-       flex-wrap: wrap; 
-       justify-content: space-evenly;
-    }
-
-    #mobile_img {
-        margin-bottom: 30px; 
-    }
-
-    .product-details {  
-        padding: 10px;
-        background-color: rgba(240, 231, 231, 0.5);
-        height: 40vh;
-        width:60%;
+/* Media queries */
+@media (max-width: 1300px) {
+    .container-div {
+        flex-direction: column;
+        align-items: center;
         margin-bottom: 30px;
     }
 
-    #M_add-to-cart {
-        bottom: 35vh; 
-        background-color:  rgba(0, 0, 0, 0.164);
-        width:60%;
-        height: 50px;
-        border-radius: 5px;
-        }
+    .product-display {
+        width: 80%;
+        margin: 0 auto;
+    }
 
-        .related-products{
-        display: flex;
-        flex-wrap: wrap; 
-       justify-content: space-evenly;
-       
-        } 
-        
-        #img2 {
-            margin-bottom: 30px; 
-        }
-
-} 
-
-@media (max-width: 798px) {
-
-    .container-div, .product-display, .advert {
+    .advert {
         display: none;
     }
 
-
-    .pmobile-display {
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       
-    }
-
-    #mobile_img {
-        margin-bottom: 30px; 
-    }
-
-    .product-details {  
-        padding: 10px;
-        background-color: rgba(240, 231, 231, 0.5);
-        height: 40vh;
-        width:89%;
+    .img2 {
+        position: relative;
+        object-fit: contain;
+        max-width: 48vh;
+        height: 50vh;
         margin-bottom: 30px;
     }
 
-    #M_add-to-cart {
-        bottom: 35vh; 
-        background-color:  rgba(0, 0, 0, 0.164);
-        width:89%;
-        height: 50px;
-        border-radius: 5px;
-        }
-
-        #img2 {
-            margin-bottom: 30px;
-            width:89%;
-        }
-    
-
-    #m-description{
-        margin-left: 20px;
+    #share-product,
+    #twitter-icon,
+    #linkedin-icon,
+    #facebook-icon,
+    #add-to-cart,
+    .product-name,
+    .current-price,
+    #before-price,
+    #discount-percent,
+    .horizontal-line,
+    .horizontal-line2,
+    .horizontal-line3,
+    .horizontal-line4,
+    .row {
+        position: static;
+        margin: 10px 0;
     }
 
-    #M_price {
-        margin-left: 20px;   
+    .horizontal-line,
+    .horizontal-line2,
+    .horizontal-line3,
+    .horizontal-line4 {
+        display: none;
     }
 
-    #M_before-price{
-        margin-left: 20px;
-    }
-
-    #M_discount-percent{
-        margin-left: 20px;
-    }
-
-    .heading-related-posts {
-        margin-top: 100px;
+    #add-to-cart {
+        width: 100%;
         text-align: center;
     }
 
-
-
-    .related-products{
-        display: flex !important;
+    .related-products {
+        flex-direction: column;
         align-items: center;
-        flex-direction: column !important;
-    }    
-}
+    }
 
+    .pmobile-display {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    #mobile_img {
+        margin-bottom: 30px;
+    }
+
+    .product-details {
+        padding: 40px;
+        background-color: rgba(240, 231, 231, 0.5);
+        height: 10vh;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .product-name{
+        margin-left: 40px;
+    }
+
+    .row,
+    .current-price, 
+    .before-price, 
+    .discount-percent {
+        margin-left: 20px !important;
+    }
+
+
+    .related-products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .cart-icon{
+        position: absolute;
+    }
+
+    
+}

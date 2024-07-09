@@ -86,6 +86,12 @@ body {
   
 }
 
+.cart:hover .img-cart {
+  background-color: var(--our-green);
+  color: var(--our-green) 
+ 
+}
+
 .cart:hover .cart-circle {
   background-color: var(--our-green) 
  
