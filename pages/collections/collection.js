@@ -233,7 +233,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (product) {
         const productDetails = document.getElementById('product-details');
-        const mobileProductDetails = document.getElementById('mobile-product-details');
 
         
 
@@ -280,13 +279,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
         `;
-
-
-        if (window.innerWidth > 799) {
-            productDetails.innerHTML = productHTML;
-        } else {
-            mobileProductDetails.innerHTML = productHTML;
-        }
 
         document.getElementById('add-to-cart').addEventListener('click', () => {
             // Implement add to cart functionality here
