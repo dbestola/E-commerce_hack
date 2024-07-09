@@ -1,158 +1,14 @@
 var desktopAddtoCart = document.getElementById('add-to-cart')
 var mobileAddtoCart = document.getElementById('M_add-to-cart')
 
-
-// var Products = [
-//     {
-//         "id" : 1,
-//         "image" : "assets/images/Nigeria_iPhone_15_Plus_Web_Banner_400x.webp",
-//         "name": "Product 1",
-//         "price": "284.50",
-//         "quantity": 1
-//     },
-//     {
-//         "id" : 2,
-//         "image" : "",
-//         "name": "",
-//         "price": "284.50",
-//         "quantity": 1
-//     },
-//     {
-//         "id" : 3,
-//         "image" : "",
-//         "name": "",
-//         "price": "284.50",
-//         "quantity": 1
-//     },
-//     {
-//         "id" : 4,
-//         "image" : "",
-//         "name": "",
-//         "price": "284.50",
-//         "quantity": 1
-//     },
-//     {
-//         "id" : 5,
-//         "image" : "",
-//         "name": "",
-//         "price": "284.50",
-//         "quantity": 1
-//     },
-//     {
-//         "id" : 6,
-//         "image" : "",
-//         "name": "",
-//         "price": "284.50",
-//         "quantity": 1
-//     },
-//     {
-//         "id" : 7,
-//         "image" : "",
-//         "name": "",
-//         "price": "284.50",
-//         "quantity": 1
-//     },
-//     {
-//         "id" : 8,
-//         "image" : "",
-//         "name": "",
-//         "price": "284.50",
-//         "quantity": 1
-//     },
-//     {
-//         "id" : 9,
-//         "image" : "",
-//         "name": "",
-//         "price": "284.50",
-//         "quantity": 1
-//     },
-//     {
-//         "id" : 10,
-//         "image" : "",
-//         "name": "",
-//         "price": "284.50",
-//         "quantity": 1
-//     },
-//     {
-//         "id" : 11,
-//         "image" : "",
-//         "name": "",
-//         "price": "284.50",
-//         "quantity": 1
-//     },
-//     {
-//         "id" : 12,
-//         "image" : "",
-//         "name": "",
-//         "price": "284.50",
-//         "quantity": 1
-//     },
-//     {
-//         "id" : 13,
-//         "image" : "",
-//         "name": "",
-//         "price": "284.50",
-//         "quantity": 1
-//     },
-//     {
-//         "id" : 14,
-//         "image" : "",
-//         "name": "",
-//         "price": "284.50",
-//         "quantity": 1
-//     },
-//     {
-//         "id" : 15,
-//         "image" : "",
-//         "name": "",
-//         "price": "284.50",
-//         "quantity": 1
-//     },
-//     {
-//         "id" : 16,
-//         "image" : "",
-//         "name": "",
-//         "price": "284.50",
-//         "quantity": 1
-//     },
-//     {
-//         "id" : 17,
-//         "image" : "",
-//         "name": "",
-//         "price": "284.50",
-//         "quantity": 1
-//     },
-//     {
-//         "id" : 18,
-//         "image" : "",
-//         "name": "",
-//         "price": "284.50",
-//         "quantity": 1
-//     },
-//     {
-//         "id" : 19,
-//         "image" : "",
-//         "name": "",
-//         "price": "284.50",
-//         "quantity": 1
-//     },
-//     {
-//         "id" : 20,
-//         "image" : "",
-//         "name": "",
-//         "price": "284.50",
-//         "quantity": 1
-//     },
-// ]
-
-
-
 var Products = [
     {
         "id": 1,
         "image": "/assets/images/Nigeria_iPhone_15_Plus_Web_Banner_400x.webp ",
         "name": "Apple IPhone 15 Plus",
         "price": "284.50",
+        "beforeprice": "330.70",
+        "discountprice": "-42%",
         "quantity": 1
     },
     {
@@ -160,6 +16,8 @@ var Products = [
         "image": "/assets/images/Nigeria_iPhone_15_Pro_Max_Web_Banner_400x.webp",
         "name": "Apple IPhone 15 Pro Max 256gb",
         "price": "300.00",
+        "beforeprice": "330.70",
+        "discountprice": "-42%",
         "quantity": 1
     },
     {
@@ -167,6 +25,8 @@ var Products = [
         "image": "/assets/images/Nigeria_Apple_Watch_Ultra2_Banner_400x.webp",
         "name": "Apple IWatch Ultra 2",
         "price": "400.00",
+        "beforeprice": "330.70",
+        "discountprice": "-42%",
         "quantity": 1
     },
     {
@@ -174,6 +34,8 @@ var Products = [
         "image": "/assets/images/Nigeria_iPhone_15_Pro_Max_Web_Banner_400x.webp",
         "name": "Apple IPhone 15 Pro Max 512gb",
         "price": "500.00",
+        "beforeprice": "330.70",
+        "discountprice": "-42%",
         "quantity": 1
     }
 ];
@@ -241,8 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="${product.image}" alt="${product.name}" class="img2">
             <h1 class="current-price">Price: $${product.price}</p>
            
-            <h4 id="before-price"> <s>₦ 3,300,000</s></h4>
-            <h4 id="discount-percent"> -42% </h4>
+            <h4 id="before-price"> <s> $${product.beforeprice}</s></h4>
+            <h4 id="discount-percent"> ${product.discountprice}  </h4>
 
              <div class="row">
             <div class="col-3">

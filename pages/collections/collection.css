@@ -188,6 +188,7 @@ body {
     .row {
         position: static;
         margin: 10px 0;
+        
     }
 
     .horizontal-line,
@@ -230,6 +231,17 @@ body {
         margin-left: 20px !important;
     }
 
+    #before-price{
+        margin-left: 20px; 
+    }
+
+    #discount-percent {
+        margin-left: 20px;
+        color: black;
+        background-color: rgba(255, 192, 203, 0.582);
+        width: 60px;
+    }
+
     .related-products-container{
         margin-top: 150px;
         
@@ -245,12 +257,12 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         margin: auto;
         
     }
 
     #img2{
+       
         margin-bottom: 20px;
     }
 
