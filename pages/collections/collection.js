@@ -5,7 +5,7 @@ const naira = '\u20A6'
 var Products = [
     {
         "id": 1,
-        "image": "../../assets/images/ipad/apple-ipad-pro-12.9-m22022-modelwi-ficellular-512gb-space-gray.jpg",
+        "image": "assets/images/ipad/apple-ipad-pro-12.9-m22022-modelwi-ficellular-512gb-space-gray.jpg",
         "name": "Apple IPad Pro 12 512gb (grey)",
         "price": "2,169,100",
         "beforeprice": "2,299,000",
@@ -14,7 +14,7 @@ var Products = [
     },
     {
         "id": 2,
-        "image": "../../assets/images/iphone/15/apple-iphone-15-pro-max-256gb-nano-sim-blue-titanium.jpg",
+        "image": "assets/images/iphone/15/apple-iphone-15-pro-max-256gb-nano-sim-blue-titanium.jpg",
         "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
         "price": "1,895,100",
         "beforeprice": "2,100,100",
@@ -23,7 +23,7 @@ var Products = [
     },
     {
         "id": 3,
-        "image": "../../assets/images/accessories/protection/apple-iphone-15-pro-max-finewoven-case-with-magsafe-taupe.webp",
+        "image": "assets/images/accessories/protection/apple-iphone-15-pro-max-finewoven-case-with-magsafe-taupe.webp",
         "name": "Apple IPhone 15 Pro Max case (with magsafe)",
         "price": "400.00",
         "beforeprice": "330.70",
@@ -32,7 +32,7 @@ var Products = [
     },
     {
         "id": 4,
-        "image": "../../assets/images/mac/apple-macbook-pro-16.2-32gb-1tb-10-cores-m1-max-silver.jpg",
+        "image": "assets/images/mac/apple-macbook-pro-16.2-32gb-1tb-10-cores-m1-max-silver.jpg",
         "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
         "price": "500.00",
         "beforeprice": "330.70",
