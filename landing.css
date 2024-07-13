@@ -483,12 +483,40 @@ font-weight: bolder;
   .footer h4{
     color: #fff;
   }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+  }
+  
+  .support{
+    animation: bounce 2.5s ease-in infinite;
+  }
+
+  .support a{
+    display: flex;
+    color: #ffffff;
+    padding-left: 1rem;
+    gap: 1vw;
+    text-decoration: none;
+  }
+
+  .support a:hover, .support h6:hover{
+    color: var(--our-green);
+  }
 
   .socials i {
     color: #fff;
     padding-right: 1rem;
   }
-  
+
   .socials i:hover{
     color: var(--our-green);
   }
@@ -695,6 +723,10 @@ font-weight: bolder;
   .footer {
     grid-template-columns: 10% 1fr 1fr 1fr;
     gap: .5vw;
+  }
+
+  .support a{
+    gap: 2vw;
   }
 
   .socials-container{

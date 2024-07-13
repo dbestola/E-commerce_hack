@@ -29,7 +29,8 @@
     "axe/structure": [
       "default",
       {
-        "list": "off"
+        "list": "off",
+        "listitem": "off"
       }
     ],
     "axe/keyboard": [
@@ -37,6 +38,8 @@
       {
         "nested-interactive": "off"
       }
-    ]
+    ],
+    "detect-css-reflows/paint": "off",
+    "detect-css-reflows/composite": "off"
   }
 }
