@@ -50,9 +50,10 @@
                   </ul>
               </div>
               <div class="search-bar">
-                  <input type="text" placeholder="Search...">
-                  <button>Search</button>
-              </div>
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-button">Search</button>
+            </div>
+            <div id="search-results"></div>
 
               <div class="user-account">
                   <ul>
@@ -66,20 +67,12 @@
                   </ul>
               </div>
 
-              <div class="cart"> 
-                <a href="#" class="cart-img">
-                    <img src="/assets/icons/shopping-cart.svg" alt="AddToCart">     
-                    
-              <div class="cart-circle">
-                
-                <h6 class="cart-length">70</h6>
-              </div>
-
-              <h6 class="cart-text"> Cart </h6> 
-
+              <div id="cart-icon-container">
+                <a href="/pages/cart/cart.html">
+                    <img src="/assets/icons/shopping-cart.svg" alt="Cart Icon" id="cart-icon">
+                    <div id="item-count-circle">0</div>
                 </a>
-
-              </div>
+            </div>
   
                   
                  </nav>
