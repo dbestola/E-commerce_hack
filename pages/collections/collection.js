@@ -33,7 +33,7 @@ var Products = [
         "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
         "price": "500.00",
         "beforeprice": "330.70",
-        "discountprice": "10%",
+        "discountprice": "-10%",
         "quantity": 1
     }
 ];
