@@ -48,38 +48,6 @@ if (!localStorage.getItem("cart")) {
 let products = JSON.parse(localStorage.getItem("products"));
 let cart = JSON.parse(localStorage.getItem("cart"));
 
-document.addEventListener('DOMContentLoaded', () => {
-    const productContainer = document.getElementById('product-container');
-
-    Products.forEach(product => {
-        const imgDiv = document.createElement('div');
-        imgDiv.classList.add('img')
-        imgDiv.id = `img${product.id}`
-
-        const anchor = document.createElement('a');
-        anchor.href = `/pages/collections/collections.html?id=${product.id}`;
-
-        const imgElement = document.createElement('img');
-        imgElement.src = product.image;
-        imgElement.alt = product.name;
-
-        const PDescription = document.createElement('h5')
-        PDescription.innerText = product.name
-
-        const CPrice = document.createElement('h6')
-        CPrice.innerHTML = `Price:${naira}${product.price}`
-
-        const BPrice = document.createElement('h6')
-        BPrice.innerHTML = `Before:<s>${naira}${product.beforeprice}</s>`
-
-        productContainer.appendChild(imgDiv);
-        anchor.appendChild(imgElement);
-        imgDiv.appendChild(anchor);
-        imgDiv.appendChild(PDescription)
-        imgDiv.appendChild(CPrice)
-        imgDiv.appendChild(BPrice)
-    });
-});
 
 // Function to render product details
 document.addEventListener('DOMContentLoaded', () => {
