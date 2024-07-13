@@ -4,96 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
+
+    <!-- <script src="https://js.paystack.co/v1/inline.js"></script> -->
+
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="/landing.css">
+    <link rel="stylesheet" href="/pages/collections/collection.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
+    <header class="header">
 
-      
-    <!-- nav section -->
-    <nav  class="navbar">
-        <div class="logo">
-            <a href="/index.html">logo<img src="" alt=""></a>
-        </div>
-        <div class="nav-links">
-            <ul>
-                <li class="dropdown">
-                    <a href="/index.html">Home</a>
-                </li>
+        <!-- nav section -->
+          <nav class="navbar">
+              <div class="nav-toggle">
+                  <i class="fas fa-bars" id="toggle1"></i>
+                  <i class="fas solid fa-xmark" id="toggle2"></i>
+              </div>
+              <div class="logo">
+                  <a href="/index.html">logo<img src="" alt=""></a>
+              </div>
+              <div class="nav-links">
+                  <ul>
+                      <li class="dropdown">
+                          <a href="#">Home</a>
+                      </li>
 
-                <li class="dropdown">
-                    <a href="#">Products</a>
-                    <div class="dropdown-content">
-                        <a href="#">Category 1</a>
-                        <a href="#">Category 2</a>
-                        <a href="#">Category 3</a>
-                    </div>
-                </li>
+                      <li class="dropdown">
+                          <a href="#">Products</a>
+                          <div class="dropdown-content">
+                              <a href="#">Category 1</a>
+                              <a href="#">Category 2</a>
+                              <a href="#">Category 3</a>
+                          </div>
+                      </li>
 
-                <li class="dropdown">
-                    <a href="#">Services</a>
-                    <div class="dropdown-content">
-                        <a href="#">Service 1</a>
-                        <a href="#">Service 2</a>
-                        <a href="#">Service 3</a>
-                    </div>
-                </li>
+                      <li class="dropdown">
+                          <a href="#">Services</a>
+                          <div class="dropdown-content">
+                              <a href="#">Service 1</a>
+                              <a href="#">Service 2</a>
+                              <a href="#">Service 3</a>
+                          </div>
+                      </li>
 
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <button>Search</button>
-        </div>
-        <div class="user-account">
-            <ul>
-                <li>
-                    <a href="#">User Account</a>
-                    <div class="user-dropdown-content">
-                        <a href="/member_area/login.html">Customer Login</a>
-                        <a href="/vendor_area/v_login.html">Vendor Login</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="cart">    
-            <a href="#">
-                <img src="/assets/icons/shopping-cart.svg" alt="">
-            </a>
-        </div>
-    </nav>
+                      <li><a href="#">Contact</a></li>
+                  </ul>
+              </div>
+              <div class="search-bar">
+                  <input type="text" placeholder="Search...">
+                  <button>Search</button>
+              </div>
 
-    <div class="cart-container">
+              <div class="user-account">
+                  <ul>
+                      <li>
+                          <a href="#"><i class="fa-solid fa-user fa-lg" style="color: #ffffff;"></i></a>
+                          <div class="user-dropdown-content">
+                              <a href="/member_area/mLogin.html" id="mLogin">Customer Login</a>
+                              <a href="/vendor_area/vLogin.html">Vendor Login</a>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
 
-        <div class="cart-list">
-            <h4 id="cart-heading">Cart</h4>
-            <div class="horizontal-line"></div> 
-
-            <div id="img" class="img1a">
-                <a href="/pages/collections/collections.html">  
-                    <img src="/assets/images/Nigeria_Apple_Watch_Ultra2_Banner_400x.webp" alt="">
-                    </a>
+              <div id="cart-icon-container">
+                <a href="cart.html">
+                    <img src="/assets/icons/shopping-cart.svg" alt="Cart Icon" id="cart-icon">
+                    <div id="item-count-circle">0</div>
+                </a>
             </div>
-            
+  
+                  
+                 </nav>
+  
+        <!-- navbar 2 -->
+        <div class="nav-links2">
+              <ul>
+                  <li>
+                      <div class="dropdown2">
+                          <a href="/index.html">Home</a>
+                  </li>
+  
+                  <li>
+                      <div class="dropdown2">
+                          <a href="#">Products</a>
+                          <span class="arrow-down"><i class="fas fa-angle-down" style="color: #ffffff;"></i></span>
+                      </div>
+                      <div class="dropdown-content2">
+                          <a href="#">Category 1</a>
+                          <a href="#">Category 2</a>
+                          <a href="#">Category 3</a>
+                      </div>
+                  </li>
+  
+                  <li>
+                      <div class="dropdown2">
+                          <a href="#">Services</a>
+                          <span class="arrow-down"><i class="fas fa-angle-down" style="color: #ffffff;"></i></span>
+                      </div>
+                      <div class="dropdown-content2">
+                          <a href="#">Service 1</a>
+                          <a href="#">Service 2</a>
+                          <a href="#">Service 3</a>
+                      </div>
+                  </li>
+  
+                  <div class="contact">
+                      <a href="#">Contact</a>
+                  </div>
+              </ul>
         </div>
+      </header>
 
-        <div class="cart-summary">
-            <h5 id="summary-heading">CART SUMMARY</h5>
-            <div class="horizontal-line2"></div>
-
-            <br>
-            <br>
-            <br>
-            <button id="checkout">
-
-                CHECKOUT
-            </button>
+    <h1>Your Cart</h1>
+    <div id="cart-container">
+        <table id="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Cart items will be rendered here -->
+            </tbody>
+        </table>
+        <div id="cart-summary">
+            <h2>Total: $<span id="cart-total">0.00</span></h2>
+            <button id="checkout-button">Checkout</button>
         </div>
     </div>
+
+   
 
     
 <div class="related-products-container">
@@ -213,7 +261,11 @@
     </div>
 
 </footer>
-  
+     
+
     <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/collection.js"></script>
+    <script src="cart.js"></script>
+    <script src="/landing.js"></script>
   </body>
   </html>
