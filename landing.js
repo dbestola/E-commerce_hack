@@ -45,8 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 })
 
-var desktopAddtoCart = document.getElementById('add-to-cart')
-var mobileAddtoCart = document.getElementById('M_add-to-cart')
+
 const naira = '\u20A6'
 
 var Products = [
