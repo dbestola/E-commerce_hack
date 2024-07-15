@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         productDetails.innerHTML = `
             <h2 class="product-name">${product.name}</h2>
             <img src="${product.image}" alt="${product.name}" class="img2">
-            <h1 class="current-price">Price: $${product.price}</h1>
+            <h2 class="current-price">Price: $${product.price}</h2>
             <h4 id="before-price"><s>$${product.beforeprice}</s></h4>
             <h4 id="discount-percent">${product.discountprice}</h4>
             <div class="row">

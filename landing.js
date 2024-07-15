@@ -131,3 +131,40 @@ document.addEventListener('DOMContentLoaded', () => {
         imgDiv.appendChild(BPrice)
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('search-input');
+  const searchResults = document.getElementById('search-results');
+
+  searchInput.addEventListener('input', function() {
+      const query = searchInput.value.toLowerCase();
+      searchProducts(query);
+  });
+
+  function searchProducts(query) {
+      // Clear previous results
+      searchResults.innerHTML = '';
+
+      // Filter products based on the query
+      const filteredProducts = Products.filter(product => product.name.toLowerCase().includes(query));
+
+      // Display the filtered products
+      if (filteredProducts.length > 0) {
+          filteredProducts.forEach(product => {
+              const productDiv = document.createElement('div');
+              productDiv.classList.add('search-result-item');
+              productDiv.innerHTML = `
+                  <a href="/pages/collections/collections.html?id=${product.id}">
+                      <img src="${product.image}" alt="${product.name}">
+                      <span>${product.name}</span>
+                  </a>
+              `;
+              searchResults.appendChild(productDiv);
+          });
+      } else {
+          searchResults.innerHTML = '<p>No products found.</p>';
+      }
+  }
+});
+
