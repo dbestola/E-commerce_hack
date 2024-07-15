@@ -1,3 +1,4 @@
+// create alert
 function CustomAlert(message, callback) {
     
     // alert container
@@ -31,6 +32,32 @@ function CustomAlert(message, callback) {
     }, 3000);
 }
 
+// Function to display error messages
+function displayError(inputId, message, duration) {
+    const inputField = document.getElementById(inputId);
+    clearError(inputId);  // Clear existing error if any
+    const errorMessage = document.createElement('span');
+    errorMessage.className = 'error-message';
+    errorMessage.textContent = message;
+    inputField.parentNode.appendChild(errorMessage);
+    inputField.classList.add('error');
+
+    // Remove the error message after the specified time
+    setTimeout(() => {
+        clearError(inputId);
+    }, duration);
+}
+
+// Function to clear error messages
+function clearError(inputId) {
+    const inputField = document.getElementById(inputId);
+    const errorMessage = inputField.parentNode.querySelector('.error-message');
+    if (errorMessage) {
+        errorMessage.remove();
+    }
+    inputField.classList.remove('error');
+}
+
 //function to handle login form
 document.addEventListener('DOMContentLoaded', function() {
     const loginForm = document.getElementById('loginForm');
@@ -42,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const loginEmail = document.getElementById('inputEmail').value.trim();
             const loginPassword = document.getElementById('inputPassword').value.trim();
 
-            console.log(loginEmail, loginPassword);
+            // console.log(loginEmail, loginPassword);
 
             // Retrieve stored users array from localStorage
             const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
@@ -53,7 +80,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (user) {
                 // Successful login
                 CustomAlert('Login successful! Redirecting to dashboard.', function() {
-                    window.location.href = 'mprofile.html';
+                    localStorage.setItem('isLoggedIn', 'true');
+                    localStorage.setItem('userEmail', loginEmail);
+                    window.location.href = '../index.html';
                 });
             } else {
                 // Incorrect credentials

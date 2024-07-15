@@ -53,8 +53,6 @@ body {
   position: relative;
 }
 
-
-
 .cart-img {
   position: relative;
   display: flex;
@@ -202,6 +200,32 @@ margin-right: 1rem;
   background-color: var(--our-grey);
   color: var(--our-white);
 }
+
+.handleSearchResults{
+  position: absolute;
+  background-color: var(--our-black);
+  width: 20vw;
+  height: 20vh;
+  padding: 5px;
+  top: 11%;
+  left: 58.3%;
+  z-index: 10;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.handleSearchResults a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 10px;
+}
+
+.handleSearchResults img{
+  height: 30px;
+  width: 20px;
+}
+
 
 .user-account, .cart {
   display: flex;
