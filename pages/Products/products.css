@@ -1,0 +1,33 @@
+.product-img{
+    margin-top: 1.3rem;
+}
+.iphone{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.iphone-img{
+    width: 100%;
+    height: 100%;
+}
+.iphone-img img{
+    width: 100%;
+    height: 60%;
+    object-fit: contain;
+}
+.iphone-banner{
+    width: 100%;
+}
+.iphone-banner img{
+    width: 100%;
+    object-fit: fill;
+}
+
+
+
+
+/* media query */
+@media (max-width: 800px) {
+    .iphone{
+        grid-template-columns: 1fr 1fr;
+    }
+}
