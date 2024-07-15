@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 
-const naira = '\u20A6'
+const nairaSymbol = '\u20A6'
 
 var Products = [
     {
@@ -118,10 +118,10 @@ document.addEventListener('DOMContentLoaded', () => {
         PDescription.innerText = product.name
 
         const CPrice = document.createElement('h6')
-        CPrice.innerHTML = `Price:${naira}${product.price}`
+        CPrice.innerHTML = `Price:${nairaSymbol}${product.price}`
 
         const BPrice = document.createElement('h6')
-        BPrice.innerHTML = `Before:<s>${naira}${product.beforeprice}</s>`
+        BPrice.innerHTML = `Before:<s>${nairaSymbol}${product.beforeprice}</s>`
 
         productContainer.appendChild(imgDiv);
         anchor.appendChild(imgElement);
@@ -135,7 +135,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('search-input');
-  const searchResults = document.getElementById('search-results');
+  const searchResults = document.createElement('div')
+  searchResults.className = 'handleSearchResults'
+
 
   searchInput.addEventListener('input', function() {
       const query = searchInput.value.toLowerCase();
@@ -161,6 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   </a>
               `;
               searchResults.appendChild(productDiv);
+              document.body.appendChild(searchResults)
           });
       } else {
           searchResults.innerHTML = '<p>No products found.</p>';
@@ -168,3 +171,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// check login status
+function checkLoginStatus() {
+  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+  if (isLoggedIn) {
+    document.querySelector('.user-account').style.display = 'none'
+      // window.location.href = '../index.html';
+  }// else{
+  //     loginForm()
+  // }
+}
