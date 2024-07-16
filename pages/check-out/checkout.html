@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collections</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="checkout.css">
     <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="collection.css">
+    <link rel="stylesheet" href="/pages/collections/collection.css">
     <link rel="stylesheet" href="/landing.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -115,92 +116,80 @@
         </div>
       </header>
 
-<div class="container-div">
+      <div class="handle-flex">
 
-<div class="product-display" id="product-details">
-
-    <div>
-        <a href="/pages/services.html">
-            <img src="/assets/images/Nigeria_iPhone_15_Pro_Web_Banner_400x.webp" alt="">
-        </a>
-    </div>
-
-</div>
-
-
-<div class="advert">
-    <h5>DELIVERY & RETURNS</h5>
-    <hr>
-    <p>IHUB <span style="color: red;">Express</span></p>
-    <h6>Free delivery on thousands of products in Lagos, Ibadan & Abuja </h6>
-    <hr>
-
+        <h1 style="position: absolute; top: 100px; left: 50px;">Checkout Details</h1>
+        
+        <form id="form">
+           
+            <h2>Shipping Address</h2>
     
-    <h5>Choose your location</h5>
-    <select>
-        <option>DRC</option>
-        <option>Nigeria</option>
-        <option>Ghana</option>
-        <option>Togo</option>
-        <option>Mali</option>
-        <option>South Africa</option>
-        <option>Uganda</option>
-        <option>Malawi</option>
-        <option>Zenegal</option>
-        <option>Cotedevouir</option>
-    </select>
-    <hr>
-
-    <p> <img src="/assets/images/adverts/pickup.png" alt="" width="40px">Pickup Station</p>
-    <h6>Delivery Fees ₦ 640 <br> Arriving at pickup station between 24 July & 26 July when you order within next 3hrs 45mins</h6>
-    <p> <img src="/assets/images/adverts/doordelivery.png" alt="" width="40px"> Door Delivery</p>
-    <h6>Delivery Fees ₦ 1,110 <br> Ready for delivery between 24 July & 26 July when you order within next 3hrs 45mins</h6>
-    <hr>
-    <p> <img src="/assets/images/adverts/returnpolicy.png" alt="" width="40px">Return Policy</p>
-    <h6>Free return within 7 days for ALL eligible itemsDetails</h6>
-</div>
-
-
-</div>
-
-
-<div class="related-products-container">
-
-    <h2 class="heading-related-posts"> You may also like</h2>
-
-    <div  class="related-products">
-
-    <div id="img2">
-        <a href="/pages/services.html">
-            <img src="/assets/images/Nigeria_iPhone_15_Pro_Web_Banner_400x.webp" alt="">
-        </a>
-    </div>
-    <div id="img2">
-        <a href="/pages/services.html">
-            <img src="/assets/images/Nigeria_iPhone_15_Web_Banner_400x.webp" alt="">
-        </a>
-    </div>
-    <div id="img2">
-        <a href="/pages/services.html">
-            <img src="/assets/images/Nigeria_Series_9_Banner_400x.webp" alt="">
-        </a>
-    </div>
-    <div id="img2">
-        <a href="/pages/services.html">
-            <img src="/assets/images/Nigeria_iPhone_15_Pro_Web_Banner_400x.webp" alt="">
-        </a>
-    </div>
-
-    </div>
-
-</div>
-
-
-
+            <div class="form-field">
+            <Label for="name" id="label-name">Recipient Name</Label> 
+            <input type="text" id="name" placeholder="recipient name">              
+        </div>
     
-   
- <!-- footer -->
- <footer>
+            <div class="form-field">
+            <Label for="email" id="label-email">Address:</Label> 
+            <input type="email" id="email" placeholder="line 1"> 
+        </div>
+    
+            <div class="form-field">
+            <Label for="age" id="label-age">City:</Label>  
+            <input type="text" id="age" placeholder="city"> 
+        </div>
+        <div class="form-field">
+            <Label for="name" id="label-name">State:</Label> 
+            <input type="text" id="name" placeholder="state">              
+        </div>
+    
+            <div class="form-field">
+            <Label for="email" id="label-email">Country</Label> 
+            <select>
+                <option>Select Country</option>
+                <option>DRC</option>
+                <option>Nigeria</option>
+                <option>Ghana</option>
+                <option>Togo</option>
+                <option>Mali</option>
+                <option>South Africa</option>
+                <option>Uganda</option>
+                <option>Malawi</option>
+                <option>Zenegal</option>
+                <option>Cotedevouir</option>
+            </select>
+        </div>
+    
+            <div class="form-field">
+            <Label for="age" id="label-age">Phone:</Label>  
+            <input type="text" id="age" placeholder="phone"> 
+        </div>
+        <div class="form-field">
+            <Label for="age" id="label-age">Alt Phone/Whatsapp:</Label>  
+            <input type="text" id="age" placeholder="phone"> 
+        </div>
+
+        <input type="submit" id="submit-hover" value="Proceed to Checkout">
+    </form>
+
+    <div class="checkoutSummary" id="Checkout_summary">
+        <h3>Checkout Summary</h3>
+
+        <p style="display: inline-block; font-weight: bold;"> Cart Item(s): <span id="cart-numberofitems">0</span> </p>
+
+        <div id="shoppingcart-items"></div>
+        <div id="cart-summary">
+            <h2>Total: $<span id="cart-total">0.00</span></h2>
+        </div>
+            
+       
+        
+    </div>
+
+</div>
+
+   <!-- footer -->
+   <footer>
     <div class="socials-container">
         <div class="support">
             <a href="https://wa.me/2348102992504" target="_blank"><i class="fab fa-whatsapp fa-2x"></i>
@@ -291,39 +280,9 @@
 
 </footer>
 
-
-    <script>
-        // navbar logic
-        document.addEventListener("DOMContentLoaded", function() {
-          var icon1 = document.getElementById("toggle1");
-          var icon2 = document.getElementById("toggle2");
-          const arrowDown =  document.querySelectorAll(".arrow-down i")
-
-         icon1.addEventListener("click", function() {
-         icon1.style.display = "none";
-
-        document.querySelector('.nav-links2').style.display = 'block'
-        icon2.style.display = "block";
-    });
-  
-        icon2.addEventListener("click", function() {
-        icon2.style.display = "none"
-        document.querySelector('.nav-links2').style.display = 'none';
-
-        icon1.style.display = "block"
-    });
-
-        arrowDown.forEach(arrowDowns =>{
-        arrowDowns.addEventListener('click', function(){
-        arrowDowns.classList.toggle('fa-angle-down')
-        arrowDowns.classList.toggle('fa-angle-up')
-})})
-
-});
-    </script>
-
-   
-    <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="collection.js"></script>
-  </body>
-  </html>
+<script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/pages/collections/collection.js"></script>
+    <script src="checkout.js"></script>
+    <script src="/pages/cart/cart.js"></script>
+</body>
+</html>

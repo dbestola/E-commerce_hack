@@ -13,8 +13,7 @@ h1 {
 }
 
 #cart-container {
-    max-width: 800px;
-    margin: 20px auto;
+    margin: 20px ;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -51,7 +50,7 @@ input[type="number"] {
     border-radius: 4px;
 }
 
-button {
+#clearcart-button {
     background-color: #ff5722;
     color: #fff;
     border: none;
@@ -86,3 +85,52 @@ button:hover {
 .remove-btn:hover {
     background-color: #d50000;
 }
+
+.leadmetoCheckout {
+    background-color: #fff;
+    max-width: 500px;
+    width: 500px;
+    height: fit-content;
+    margin: 20px;
+    padding: 30px 20px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.form-field {
+    text-align: left;
+    margin-bottom: 25px;
+}
+.form-field label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+ #checkout-button {
+background-color: rgba(0, 0, 0, 0.164);
+border: 1px solid #777;
+border-radius: 2px;
+font-family: inherit;
+font-size: 21px;
+display: block;
+width: 100%;
+margin-top: 50px;
+margin-bottom: 20px;
+}
+
+#checkout-button:hover {
+    background-color: var(--our-green);
+    color: #fff;
+    transform: scale(1);
+}
+
+.continue-shopping a{
+text-decoration: none;
+color: black;
+}
+
+.continue-shopping:hover a{
+    color: var(--our-green);
+    cursor: pointer;
+}
+

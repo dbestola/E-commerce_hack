@@ -99,8 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Call the function on page load to set the initial count
     updateItemCount();
 
-    // Checkout functionality
-    document.getElementById('checkout-button').addEventListener('click', () => {
+
+    
+       // Checkout functionality
+       document.getElementById('clearcart-button').addEventListener('click', () => {
         checkout();
     });
 
@@ -110,24 +112,45 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const order = {
-            items: cart,
-            total: getTotal(),
-            date: new Date().toISOString()
-        };
-
-        // Save the order to localStorage (for demonstration purposes)
-        let orders = JSON.parse(localStorage.getItem('orders')) || [];
-        orders.push(order);
-        localStorage.setItem('orders', JSON.stringify(orders));
-
         // Clear the cart
         cart = [];
         localStorage.setItem('cart', JSON.stringify(cart));
         renderCart();
 
-        alert("Thank you for your purchase!");
+        alert("Your Cart is Cleared Successfully!");
     }
+
+
+
+    // // Checkout functionality
+    // document.getElementById('checkout-button').addEventListener('click', () => {
+    //     checkout();
+    // });
+
+    // function checkout() {
+    //     if (cart.length === 0) {
+    //         alert("Your cart is empty!");
+    //         return;
+    //     }
+
+    //     const order = {
+    //         items: cart,
+    //         total: getTotal(),
+    //         date: new Date().toISOString()
+    //     };
+
+    //     // Save the order to localStorage (for demonstration purposes)
+    //     let orders = JSON.parse(localStorage.getItem('orders')) || [];
+    //     orders.push(order);
+    //     localStorage.setItem('orders', JSON.stringify(orders));
+
+    //     // Clear the cart
+    //     cart = [];
+    //     localStorage.setItem('cart', JSON.stringify(cart));
+    //     renderCart();
+
+    //     alert("Thank you for your purchase!");
+    // }
 });
 
 
@@ -136,53 +159,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-//  // Checkout functionality with Paystack
-//  document.getElementById('checkout-button').addEventListener('click', () => {
-//     checkout();
-// });
-
-// function checkout() {
-//     if (cart.length === 0) {
-//         alert("Your cart is empty!");
-//         return;
-//     }
-
-//     const orderTotal = getTotal();
-//     const email = prompt("Please enter your email for the receipt:");
-
-//     if (email) {
-//         // Initialize Paystack payment
-//         var handler = PaystackPop.setup({
-//             key: 'YOUR_PAYSTACK_PUBLIC_KEY', // Replace with your Paystack public key
-//             email: email,
-//             amount: orderTotal * 100, // Paystack amount is in kobo, so multiply by 100
-//             currency: 'USD', // Replace with your currency
-//             ref: 'PS_' + Math.floor((Math.random() * 1000000000) + 1), // Generate a random reference number
-//             callback: function(response) {
-//                 // Payment successful
-//                 alert('Payment successful! Transaction reference: ' + response.reference);
-
-//                 // Save the order to localStorage (for demonstration purposes)
-//                 const order = {
-//                     items: cart,
-//                     total: orderTotal,
-//                     date: new Date().toISOString(),
-//                     transactionRef: response.reference
-//                 };
-
-//                 let orders = JSON.parse(localStorage.getItem('orders')) || [];
-//                 orders.push(order);
-//                 localStorage.setItem('orders', JSON.stringify(orders));
-
-//                 // Clear the cart
-//                 cart = [];
-//                 localStorage.setItem('cart', JSON.stringify(cart));
-//                 renderCart();
-//             },
-//             onClose: function() {
-//                 alert('Payment process was not completed.');
-//             }
-//         });
-//         handler.openIframe();
-//     }
-// }
