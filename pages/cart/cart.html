@@ -21,42 +21,42 @@
           <nav class="navbar">
               <div class="nav-toggle">
                   <i class="fas fa-bars" id="toggle1"></i>
-                  <i class="fas solid fa-xmark" id="toggle2"></i>
+                  <i class="fas fa-xmark" id="toggle2"></i>
               </div>
               <div class="logo">
-                  <a href="/index.html">logo<img src="" alt=""></a>
+                  <a href="/index.html"><img src="/assets/images/logos/logo.svg" alt="logo"></a>
               </div>
               <div class="nav-links">
                   <ul>
                       <li class="dropdown">
-                          <a href="#">Home</a>
+                          <a href="/index.html">Home</a>
                       </li>
-
+  
                       <li class="dropdown">
                           <a href="#">Products</a>
                           <div class="dropdown-content">
-                              <a href="#">Category 1</a>
-                              <a href="#">Category 2</a>
-                              <a href="#">Category 3</a>
+                              <a href="pages/Products/iphone.html">iPhone</a>
+                              <a href="pages/Products/ipad.html">iPad</a>
+                              <a href="pages/Products/mac.html">Mac</a>
                           </div>
                       </li>
-
+  
                       <li class="dropdown">
                           <a href="#">Services</a>
                           <div class="dropdown-content">
-                              <a href="#">Service 1</a>
-                              <a href="#">Service 2</a>
-                              <a href="#">Service 3</a>
+                              <a href="pages/Services/repairs.html">Repairs</a>
+                              <a href="pages/Services/trading.html">Trade-In</a>
+                              <a href="pages/Services/financing.html">Financing</a>
                           </div>
                       </li>
-
-                      <li><a href="#">Contact</a></li>
+  
+                      <li><a href="pages/contact.html">Contact</a></li>
                   </ul>
               </div>
               <div class="search-bar">
-                  <input type="text" placeholder="Search...">
-                  <button>Search</button>
-              </div>
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-button">Search</button>
+            </div>
 
               <div class="user-account">
                   <ul>
@@ -71,7 +71,7 @@
               </div>
 
               <div id="cart-icon-container">
-                <a href="cart.html">
+                <a href="/pages/cart/cart.html">
                     <img src="/assets/icons/shopping-cart.svg" alt="Cart Icon" id="cart-icon">
                     <div id="item-count-circle">0</div>
                 </a>

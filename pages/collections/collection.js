@@ -96,8 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="horizontal-line4"></div>
             <h4 id="share-product">SHARE THIS PRODUCT</h4>
             <img id="twitter-icon" src="/assets/icons/kisspng-social-media-computer-icons-tulane-university-face-drawing-vector-twitter-5ab02d6b50a397.8866567515214954033303.PNG" alt="twitter" width="40px" height="40px">
+            <img id="facebook-icon" src="/assets/icons/facebook-icon.PNG" alt="facebook" width="40px" height="40px">
             <img id="linkedin-icon" src="/assets/icons/kisspng-linkedin-logo-computer-icons-business-symbol-linkedin-icon-5ab1765660baa8.1191823015215796063962.PNG" alt="linkedin" width="40px" height="40px">
-            <img id="facebook-icon" src="/assets/icons/kisspng-social-media-computer-icons-clip-art-social-icons-5ac4e895b64846.5816704315228540377466.PNG" alt="facebook" width="40px" height="40px">
         `;
 
 
@@ -154,23 +154,25 @@ function updateItemCount() {
 document.addEventListener('DOMContentLoaded', updateItemCount);
 
 
-
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('search-input');
-    const searchResults = document.getElementById('search-results');
-
+  const searchButton = document.getElementById('search-button');
+    const searchResults = document.createElement('div')
+    searchResults.className = 'handleSearchResults'
+  
+  
     searchInput.addEventListener('input', function() {
         const query = searchInput.value.toLowerCase();
         searchProducts(query);
     });
-
+  
     function searchProducts(query) {
         // Clear previous results
         searchResults.innerHTML = '';
-
+  
         // Filter products based on the query
         const filteredProducts = Products.filter(product => product.name.toLowerCase().includes(query));
-
+  
         // Display the filtered products
         if (filteredProducts.length > 0) {
             filteredProducts.forEach(product => {
@@ -183,9 +185,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     </a>
                 `;
                 searchResults.appendChild(productDiv);
+                document.body.appendChild(searchResults)
             });
         } else {
-            searchResults.innerHTML = '<p>Sorry...! We do not have the product you are looking for at the moment.</p>';
+            searchResults.innerHTML = '<p>No products found.</p>';
         }
     }
-});
+  
+    // Event listener for the search button
+    searchButton.addEventListener('click', function() {
+      const query = searchInput.value;
+      searchProducts(query);
+  });
+  });

@@ -103,12 +103,8 @@ body {
     background-color: rgba(240, 231, 231, 0.5);
 }
 
-.advert img {
-    max-width: 230px;
-    max-height: 100vh;
-    margin-bottom: 20px;
-    object-fit: contain;
-    margin-left: 10px;
+ h5, p, h6, select {
+margin: 10px;
 }
 
 .related-products {
