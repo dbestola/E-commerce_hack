@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 searchResults.appendChild(productDiv);
             });
         } else {
-            searchResults.innerHTML = '<p>No products found.</p>';
+            searchResults.innerHTML = '<p>Sorry...! We do not have the product you are looking for at the moment.</p>';
         }
     }
 });

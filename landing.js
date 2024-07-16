@@ -135,6 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('search-input');
+const searchButton = document.getElementById('search-button');
   const searchResults = document.createElement('div')
   searchResults.className = 'handleSearchResults'
 
@@ -169,6 +170,12 @@ document.addEventListener('DOMContentLoaded', () => {
           searchResults.innerHTML = '<p>No products found.</p>';
       }
   }
+
+  // Event listener for the search button
+  searchButton.addEventListener('click', function() {
+    const query = searchInput.value;
+    searchProducts(query);
+});
 });
 
 // check login status
@@ -181,3 +188,6 @@ function checkLoginStatus() {
   //     loginForm()
   // }
 }
+
+
+

@@ -54,21 +54,21 @@ body {
 
 .product-name {
     position: absolute;
-    left: 350px;
+    left: 390px;
     top: 40px;
     color: black;
 }
 
 .current-price {
     position: absolute;
-    left: 350px;
+    left: 390px;
     top: 150px;
     color: black;
 }
 
 #before-price {
     position: absolute;
-    left: 620px;
+    left: 650px;
     top: 170px;
     color: black;
 }
@@ -87,20 +87,28 @@ body {
 .horizontal-line4 {
     position: absolute;
     border-bottom: 1px solid rgba(0, 0, 0, 0.164);
-    width: 540px;
+    width: 510px;
     height: 1px;
 }
 
 .horizontal-line { top: 120px; right: 10px; }
 .horizontal-line2 { top: 240px; right: 10px; }
-.horizontal-line3 { top: 350px; left: 18px; width: 320px; }
-.horizontal-line4 { top: 425px; right: 10px; }
+.horizontal-line3 { top: 400px; left: 18px; width: 320px; }
+.horizontal-line4 { top: 480px; right: 10px; width: 540px;}
 
 .advert {
     height: 100vh;
     width: 250px;
     margin-left: 20px;
     background-color: rgba(240, 231, 231, 0.5);
+}
+
+.advert img {
+    max-width: 230px;
+    max-height: 100vh;
+    margin-bottom: 20px;
+    object-fit: contain;
+    margin-left: 10px;
 }
 
 .related-products {
@@ -153,12 +161,16 @@ body {
 } 
 
 #search-results {
+    position: fixed;
+    right: 100px;
+    top:60px;
+    z-index: 500;
     margin-top: 10px;
     max-height: 300px;
     overflow-y: auto;
     border: 1px solid #ccc;
     padding: 10px;
-    background-color: #fff;
+    background-color: #fdf7f7f3;
 }
 
 .search-result-item {

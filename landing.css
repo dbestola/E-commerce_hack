@@ -202,7 +202,7 @@ margin-right: 1rem;
 }
 
 .handleSearchResults{
-  position: absolute;
+  position: fixed;
   background-color: var(--our-black);
   width: 20vw;
   height: 20vh;
@@ -598,7 +598,7 @@ font-weight: bolder;
     overflow-y: auto;
     border: 1px solid #ccc;
     padding: 10px;
-    background-color: #ffffffad;
+    background-color: #ffffff60;
 }
 
 .search-result-item {
