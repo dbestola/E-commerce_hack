@@ -53,66 +53,9 @@ body {
   position: relative;
 }
 
-.cart-img {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  text-decoration: none;
-  
-}
 
-.cart-circle {
-  position: absolute;
-  top: 0;
-  right: 30px;
-  margin-right: 30px;
-  text-align: center;
-  width: 20px;
-  height: 20px;
-  background-color: white; 
-  border-radius: 50%;
-  color: black; 
-  
-}
-
-.cart-text {
-  position: absolute;
-  right: 0;
-  top: 5px;
-  margin-right: 35px;
-  color: #fff;
-  
-}
-
-.cart:hover .img-cart {
-  background-color: var(--our-green);
-  color: var(--our-green) 
- 
-}
-
-.cart:hover .cart-circle {
-  background-color: var(--our-green) 
- 
-}
-
-.cart:hover .cart-text {
-  color: var(--our-green) 
-}
-
-.cart:hover .cart-length {
-  color: #fff; 
-}
-
-
-.cart:hover .cart-circle,
-.cart:hover .cart-text,
-.cart:hover .cart-length {
+.cart a:hover{
   transition: color 0.3s ease, background-color 0.3s ease; 
-}
-
-
-.cart .cart-img img{
- margin-right: 74px;
 }
 
 

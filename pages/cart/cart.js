@@ -1,3 +1,4 @@
+const nairaSymbol = '\u20A6'
 document.addEventListener('DOMContentLoaded', () => {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     
@@ -9,29 +10,31 @@ document.addEventListener('DOMContentLoaded', () => {
         const cartTotalElement = document.getElementById('cart-total');
         cartItemsContainer.innerHTML = '';
         let total = 0;
-
+    
         cart.forEach(item => {
-            const itemTotal = parseFloat(item.price) * item.quantity;
+            const itemTotalRaw = (item.price).replace(/,/g, ''); // remove commas to aid summation
+            const itemTotal = parseInt(itemTotalRaw, 10) * item.quantity;
             total += itemTotal;
-
+    
             const itemRow = document.createElement('tr');
             itemRow.innerHTML = `
                 <td>${item.name}</td>
-                <td>$${item.price}</td>
+                <td>${nairaSymbol}${item.price}</td>
                 <td>
                     <input type="number" value="${item.quantity}" min="1" data-id="${item.id}" class="quantity-input">
                 </td>
-                <td>$${itemTotal.toFixed(2)}</td>
+                <td>${nairaSymbol}${itemTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</td>
                 <td>
                     <button class="remove-btn" data-id="${item.id}">Remove</button>
                 </td>
             `;
-
+    
             cartItemsContainer.appendChild(itemRow);
         });
-
-        cartTotalElement.textContent = total.toFixed(2);
-
+    
+        // Format *total* with commas and set it to *cartTotalElement*
+        cartTotalElement.textContent = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    
         // Add event listeners for quantity changes and remove buttons
         document.querySelectorAll('.quantity-input').forEach(input => {
             input.addEventListener('change', (event) => {
@@ -40,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateQuantity(productId, newQuantity);
             });
         });
-
+    
         document.querySelectorAll('.remove-btn').forEach(button => {
             button.addEventListener('click', (event) => {
                 const productId = parseInt(event.target.getAttribute('data-id'));
@@ -48,6 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+    
+    
 
     function addItemToCart(productId) {
         let product = products.find(product => product.id == productId);
