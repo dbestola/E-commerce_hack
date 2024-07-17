@@ -1,3 +1,6 @@
+
+const nairasymbol ='\u20A6'
+
 document.addEventListener('DOMContentLoaded', () => {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     
@@ -11,17 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
         let total = 0;
 
         cart.forEach(item => {
-            const itemTotal = parseFloat(item.price) * item.quantity;
+            const itemTotalRaw = (item.price).replace(/,/g, ''); // remove commas to aid summation
+            const itemTotal = parseInt(itemTotalRaw, 10) * item.quantity;
             total += itemTotal;
 
             const itemRow = document.createElement('tr');
             itemRow.innerHTML = `
-                <td>${item.name}</td>
-                <td>$${item.price}</td>
+                <td> <img src='${item.image}' width='40px'> ${item.name}</td>
+                <td> ₦ ${item.price}</td>
                 <td>
                     <input type="number" value="${item.quantity}" min="1" data-id="${item.id}" class="quantity-input">
                 </td>
-                <td>$${itemTotal.toFixed(2)}</td>
+                <td>${nairasymbol} ${itemTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</td>
                 <td>
                     <button class="remove-btn" data-id="${item.id}">Remove</button>
                 </td>
@@ -30,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cartItemsContainer.appendChild(itemRow);
         });
 
-        cartTotalElement.textContent = total.toFixed(2);
+        cartTotalElement.innerHTML =  total.toFixed(2)
 
         // Add event listeners for quantity changes and remove buttons
         document.querySelectorAll('.quantity-input').forEach(input => {
