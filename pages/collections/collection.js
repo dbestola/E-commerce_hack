@@ -1,4 +1,4 @@
-
+const nairaSymbol = '\u20A6'
 var Products = [
     {
         "id": 1,
@@ -69,8 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
         productDetails.innerHTML = `
             <h2 class="product-name">${product.name}</h2>
             <img src="${product.image}" alt="${product.name}" class="img2">
-            <h2 class="current-price">Price: $${product.price}</h2>
-            <h4 id="before-price"><s>$${product.beforeprice}</s></h4>
+            <h2 class="current-price">Price: ${nairaSymbol}${product.price}</h2>
+            <h4 id="before-price"><s>${nairaSymbol}${product.beforeprice}</s></h4>
             <h4 id="discount-percent">${product.discountprice}</h4>
             <div class="row">
                 <div class="col-3">
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <button id="add-to-cart">
                 <div class="cart-icon">
                     <a href="#">
-                        <img src="/assets/icons/shopping-cart.svg" alt="">
+                        <img src="../../assets/icons/shopping-cart.svg" alt="">
                     </a>
                 </div>
                 Add to Cart

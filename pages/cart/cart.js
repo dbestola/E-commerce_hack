@@ -12,12 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const cartTotalElement = document.getElementById('cart-total');
         cartItemsContainer.innerHTML = '';
         let total = 0;
-
+    
         cart.forEach(item => {
             const itemTotalRaw = (item.price).replace(/,/g, ''); // remove commas to aid summation
             const itemTotal = parseInt(itemTotalRaw, 10) * item.quantity;
+            const itemTotalRaw = (item.price).replace(/,/g, ''); // remove commas to aid summation
+            const itemTotal = parseInt(itemTotalRaw, 10) * item.quantity;
             total += itemTotal;
-
+    
             const itemRow = document.createElement('tr');
             itemRow.innerHTML = `
                 <td> <img src='${item.image}' width='40px'> ${item.name}</td>
@@ -30,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button class="remove-btn" data-id="${item.id}">Remove</button>
                 </td>
             `;
-
+    
             cartItemsContainer.appendChild(itemRow);
         });
 
@@ -44,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateQuantity(productId, newQuantity);
             });
         });
-
+    
         document.querySelectorAll('.remove-btn').forEach(button => {
             button.addEventListener('click', (event) => {
                 const productId = parseInt(event.target.getAttribute('data-id'));
@@ -52,6 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+    
+    
 
     function addItemToCart(productId) {
         let product = products.find(product => product.id == productId);
