@@ -16,8 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
         cart.forEach(item => {
             const itemTotalRaw = (item.price).replace(/,/g, ''); // remove commas to aid summation
             const itemTotal = parseInt(itemTotalRaw, 10) * item.quantity;
-            const itemTotalRaw = (item.price).replace(/,/g, ''); // remove commas to aid summation
-            const itemTotal = parseInt(itemTotalRaw, 10) * item.quantity;
             total += itemTotal;
     
             const itemRow = document.createElement('tr');
