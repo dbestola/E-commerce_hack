@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 CustomAlert('Login successful! Redirecting to dashboard.', function() {
                     localStorage.setItem('isLoggedIn', 'true');
                     localStorage.setItem('userEmail', loginEmail);
+                    localStorage.setItem('createProfile', JSON.stringify(user) )
                     window.location.href = '../index.html';
                 });
             } else {

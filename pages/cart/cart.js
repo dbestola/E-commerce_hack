@@ -26,20 +26,16 @@ document.addEventListener("DOMContentLoaded", () => {
                       item.quantity
                     }" min="1" data-id="${item.id}" class="quantity-input">
                 </td>
-                <td>${nairasymbol} ${itemTotal
-        .toString()
-        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</td>
+                <td>${nairasymbol} ${itemTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</td>
                 <td>
-                    <button class="remove-btn" data-id="${
-                      item.id
-                    }">Remove</button>
+                    <button class="remove-btn" data-id="${item.id}">Remove</button>
                 </td>
             `;
 
       cartItemsContainer.appendChild(itemRow);
     });
 
-    cartTotalElement.innerHTML = total.toFixed(2);
+    cartTotalElement.innerHTML = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
     // Add event listeners for quantity changes and remove buttons
     document.querySelectorAll(".quantity-input").forEach((input) => {
