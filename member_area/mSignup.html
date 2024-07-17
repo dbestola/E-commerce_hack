@@ -3,81 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="mSignup.css">
-    <link rel="stylesheet" href="/landing.css">
+    <link rel="stylesheet" href="../landing.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Sign up</title>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <title>i-Hub-Nigeria-Sign up</title>
 </head>
 <body>
     <header class="header">
-
         <!-- nav section -->
-          <nav class="navbar">
-              <div class="nav-toggle">
-                  <i class="fas fa-bars" id="toggle1"></i>
-                  <i class="fa-solid fa-xmark" id="toggle2"></i>
-              </div>
-              <div class="logo">
-                  <a href="/index.html">logo<img src="" alt=""></a>
-              </div>
-              <div class="nav-links">
-                  <ul>
-                      <li class="dropdown">
-                          <a href="#">Home</a>
-                      </li>
+        <nav class="navbar">
+            <div class="nav-toggle">
+                <i class="fas fa-bars" id="toggle1"></i>
+                <i class="fas fa-xmark" id="toggle2"></i>
+            </div>
+            <div class="logo">
+                <a href="../index.html"><img src="../assets/images/logos/logo.svg" alt="logo"></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li class="dropdown">
+                        <a href="index.html">Home</a>
+                    </li>
 
-                      <li class="dropdown">
-                          <a href="#">Products</a>
-                          <div class="dropdown-content">
-                              <a href="#">Category 1</a>
-                              <a href="#">Category 2</a>
-                              <a href="#">Category 3</a>
-                          </div>
-                      </li>
+                    <li class="dropdown">
+                        <a href="#">Products</a>
+                        <div class="dropdown-content">
+                            <a href="pages/Products/iphone.html">iPhone</a>
+                            <a href="pages/Products/ipad.html">iPad</a>
+                            <a href="pages/Products/mac.html">Mac</a>
+                        </div>
+                    </li>
 
-                      <li class="dropdown">
-                          <a href="#">Services</a>
-                          <div class="dropdown-content">
-                              <a href="#">Service 1</a>
-                              <a href="#">Service 2</a>
-                              <a href="#">Service 3</a>
-                          </div>
-                      </li>
+                    <li class="dropdown">
+                        <a href="#">Services</a>
+                        <div class="dropdown-content">
+                            <a href="pages/Services/repairs.html">Repairs</a>
+                            <a href="pages/Services/trading.html">Trade-In</a>
+                            <a href="pages/Services/financing.html">Financing</a>
+                        </div>
+                    </li>
 
-                      <li><a href="#">Contact</a></li>
-                  </ul>
-              </div>
-              <div class="search-bar">
-                  <input type="text" placeholder="Search...">
-                  <button>Search</button>
-              </div>
-              <div class="user-account">
-                  <ul>
-                      <li>
-                          <a href="#"><i class="fa-solid fa-user fa-lg" style="color: #ffffff;"></i></a>
-                          <div class="user-dropdown-content">
-                              <a href="/member_area/mLogin.html" id="mLogin">Customer Login</a>
-                              <a href="/vendor_area/vLogin.html">Vendor Login</a>
-                          </div>
-                      </li>
-                  </ul>
-              </div>
-              
-            <div class="cart"> 
-                <a href="#" class="cart-img">
-                    <img src="/assets/icons/shopping-cart.svg" alt="AddToCart"> 
-                    
-                    
-              
-
-              <h6 class="cart-text"> Cart </h6> 
-
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-button">Search</button>
+            </div>
+      
+            
+            <div class="user-account">
+                <ul>
+                    <li>
+                        <a href="#"><i class="fa-solid fa-user fa-lg"></i></a>
+                        <div class="user-dropdown-content">
+                            <a href="member_area/mLogin.html" id="mLogin">Customer Login</a>
+                            <a href="vendor_area/vLogin.html">Vendor Login</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cart">    
+                <a href="/pages/cart/cart.html">
+                    <i data-feather="shopping-cart"></i>
+                    <span>cart</span>
                 </a>
-              </div>
-
-          </nav>
-  
+            </div>
+        </nav>  
         <!-- navbar 2 -->
         <div class="nav-links2">
               <ul>
@@ -253,9 +248,11 @@
     </div>
 
 </footer>
-
-<script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    feather.replace();
+</script>
+<script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
 <script src="signUp.js"></script>
-<script src="/landing.js"></script>
+<script src="../landing.js"></script>
 </body>
 </html>

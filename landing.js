@@ -179,15 +179,17 @@ const searchButton = document.getElementById('search-button');
 });
 
 // check login status
-function checkLoginStatus() {
+document.addEventListener('DOMContentLoaded', () => {
+  const getProfile = JSON.parse(localStorage.getItem('createProfile'))
   const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-  if (isLoggedIn) {
-    document.querySelector('.user-account').style.display = 'none'
-      // window.location.href = '../index.html';
-  }// else{
-  //     loginForm()
-  // }
-}
+    if (isLoggedIn) {
+      document.querySelector('.user-account').style.display = 'none'
+      const profileAccount = document.createElement('div')
+      profileAccount.className = 'profileAccount'
+      profileAccount.innerHTML = `<span>Hi <span class="profileAccountName">${getProfile.firstName}</span></span>`
+      document.querySelector('.handleUserStates').appendChild(profileAccount)
+    }
+  })
 
 
 

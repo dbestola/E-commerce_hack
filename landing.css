@@ -169,6 +169,17 @@ margin-right: 1rem;
   width: 20px;
 }
 
+.handleUserStates{
+  display: flex;
+}
+
+.profileAccount{
+  color: #ffffff;
+}
+
+.profileAccountName{
+  color: var(--our-green);
+}
 
 .user-account, .cart {
   display: flex;
