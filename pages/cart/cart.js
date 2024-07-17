@@ -107,12 +107,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // Call the function on page load to set the initial count
   updateItemCount();
 
-  // Checkout functionality
+  // ClearCart functionality
   document.getElementById("clearcart-button").addEventListener("click", () => {
-    checkout();
+    clearCart();
   });
 
-  function checkout() {
+  function clearCart() {
     if (cart.length === 0) {
       alert("Your cart is empty!");
       return;
@@ -125,6 +125,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     alert("Your Cart is Cleared Successfully!");
   }
+
+  // Checkout functionality
+  document.getElementById('checkout-button').addEventListener('click',  () => {
+    checkOut();
+  });
+
+  function checkOut() {
+    window.location.href = '../check-out/checkout.html'
+}
 
   // // Checkout functionality
   // document.getElementById('checkout-button').addEventListener('click', () => {
