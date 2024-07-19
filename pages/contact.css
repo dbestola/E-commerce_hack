@@ -65,8 +65,7 @@
     .contact-container{
         grid-template-columns:1fr;
     }
-
-    body{
+     body{
         padding: .2rem;
     }
     .textarea{
