@@ -179,6 +179,7 @@ margin-right: 1rem;
 
 .profileAccountName{
   color: var(--our-green);
+  cursor: pointer;
 }
 
 .user-account, .cart {
@@ -620,6 +621,13 @@ font-weight: bolder;
 @media (max-width: 855px){
   .search-bar input{
     width: 70%;
+  }
+  
+  .cart span{
+    display: none;
+  }
+  .profileAccount{
+    padding-left: .4rem;
   }
 }
 
