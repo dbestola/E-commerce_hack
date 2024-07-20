@@ -97,10 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="horizontal-line3"></div>
             <div class="horizontal-line4"></div>
             <h4 id="share-product">SHARE THIS PRODUCT</h4>
-            <img id="twitter-icon" src="/assets/icons/kisspng-social-media-computer-icons-tulane-university-face-drawing-vector-twitter-5ab02d6b50a397.8866567515214954033303.PNG" alt="twitter" width="40px" height="40px">
-            <img id="facebook-icon" src="/assets/icons/facebook-icon.PNG" alt="facebook" width="40px" height="40px">
-            <img id="linkedin-icon" src="/assets/icons/kisspng-linkedin-logo-computer-icons-business-symbol-linkedin-icon-5ab1765660baa8.1191823015215796063962.PNG" alt="linkedin" width="40px" height="40px">
 
+            <div id="social-media-share">
+            <img id="twitter-share" src="/assets/icons/kisspng-social-media-computer-icons-tulane-university-face-drawing-vector-twitter-5ab02d6b50a397.8866567515214954033303.PNG" alt="twitter" width="40px" height="40px">
+            <img id="facebook-share" src="/assets/icons/facebook-icon.PNG" alt="facebook" width="40px" height="40px">
+            <img id="linkedin-share" src="/assets/icons/kisspng-linkedin-logo-computer-icons-business-symbol-linkedin-icon-5ab1765660baa8.1191823015215796063962.PNG" alt="linkedin" width="40px" height="40px">
+            </div>
+            
              <p class='product-text'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat.</p>
         `;
 
@@ -202,3 +205,39 @@ document.addEventListener('DOMContentLoaded', () => {
       searchProducts(query);
   });
   });
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Your existing code here...
+
+    // Function to share on social media
+    function shareOnSocialMedia(platform) {
+        const url = window.location.href;
+        let shareUrl = '';
+
+        switch (platform) {
+            case 'facebook':
+                shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+                break;
+            case 'twitter':
+                shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}`;
+                break;
+            case 'linkedin':
+                shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}`;
+                break;
+        }
+
+        window.open(shareUrl, '_blank');
+    }
+
+    // Add event listeners to social media icons
+    document.getElementById('facebook-share').addEventListener('click', function() {
+        shareOnSocialMedia('facebook');
+    });
+    document.getElementById('twitter-share').addEventListener('click', function() {
+        shareOnSocialMedia('twitter');
+    });
+    document.getElementById('linkedin-share').addEventListener('click', function() {
+        shareOnSocialMedia('linkedin');
+    });
+});

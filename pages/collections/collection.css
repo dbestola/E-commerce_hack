@@ -36,16 +36,12 @@
     left: 20px;
 }
 
-#twitter-icon,
-#linkedin-icon,
-#facebook-icon {
+#social-media-share {
     position: absolute;
-    bottom: 30vh;
+    bottom: 29vh;
+    left: 20px;
 }
 
-#twitter-icon { left: 20px; }
-#linkedin-icon { left: 65px; }
-#facebook-icon { left: 110px; }
 
 #add-to-cart {
     position: absolute;
@@ -177,21 +173,6 @@ margin: 10px;
 .search-result-item span {
     font-size: 16px;
 }
-
-/* .form-field input,
-.form-field select,
-.form-field textarea {
-     border: 1px solid #777;
-    border-radius: 2px;
-    font-family: inherit;
-    padding: 10px;
-    display: block;
-    width: 95%;
- } */
-
-
-
-
 
 
 

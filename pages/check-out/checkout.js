@@ -162,6 +162,7 @@ function makePayment(amount, customerName,phone_number, email) {
     window.location.href = 'confirmation.html'; // Redirect to confirmation page
 }
 
+// fuction that create orders and save orders to local storage
 function saveOrderLocally(orderDetails) {
     const orders = JSON.parse(localStorage.getItem('orders')) || [];
     orders.push(orderDetails);
