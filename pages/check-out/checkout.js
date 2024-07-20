@@ -1,8 +1,8 @@
-const nairasymbol ='\u20A6'
+const nairasymbol = '\u20A6'
 
 document.addEventListener('DOMContentLoaded', () => {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    
+
     // Call renderCart on page load to display items in the cart
     renderCart();
 
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cartItemsContainer.appendChild(itemRow);
         });
 
-        cartTotalElement.innerHTML =  total.toFixed(2)
+        cartTotalElement.innerHTML = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
         // Add event listeners for quantity changes and remove buttons
         document.querySelectorAll('.quantity-input').forEach(input => {
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateItemCount();
     }
 
-    function getTotal() {
+   const totalAmount = function getTotal() {
         let total = cart.reduce((sum, item) => sum + parseFloat(item.price) * item.quantity, 0);
         return total.toFixed(2);
     }
@@ -101,41 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Call the function on page load to set the initial count
     updateItemCount();
 
-    // Checkout functionality
-    document.getElementById('checkout-button').addEventListener('click', () => {
-        checkout();
-    });
-
-    function checkout() {
-        if (cart.length === 0) {
-            alert("Your cart is empty!");
-            return;
-        }
-
-        const order = {
-            items: cart,
-            total: getTotal(),
-            date: new Date().toISOString()
-        };
-
-        // Save the order to localStorage (for demonstration purposes)
-        let orders = JSON.parse(localStorage.getItem('orders')) || [];
-        orders.push(order);
-        localStorage.setItem('orders', JSON.stringify(orders));
-
-        // Clear the cart
-        cart = [];
-        localStorage.setItem('cart', JSON.stringify(cart));
-        renderCart();
-
-        alert("Thank you for your purchase!");
-    }
-});
-
-
-
-
-// Function to update the item count in the circle
+    // Function to update the item count in the circle
 function updateItemCount() {
     const CartitemCount = document.getElementById('cart-numberofitems');
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -145,87 +111,109 @@ function updateItemCount() {
 // Call the function on page load to set the initial count
 document.addEventListener('DOMContentLoaded', updateItemCount);
 
+    // Checkout functionality
+    document.getElementById('form').addEventListener('submit', function(event) {
+
+        const sellerInfo = document.getElementById('seller-info');
+
+        event.preventDefault(); // Prevent the form from submitting normally
         
+        // Retrieve the selected payment method from localStorage
+        const selectedPaymentMethod = localStorage.getItem('paymentMethod');
+
+        // Process the customer details (this is just an example, replace with your actual logic)
+        const customerName = document.getElementById('name').value;
+        const customerEmail = localStorage.getItem('userEmail')
+        const customerAddress = document.getElementById('address').value;
+
+         // Store customer details in localStorage
+         localStorage.setItem('customerName', customerName);
+         localStorage.setItem('customerEmail', customerEmail);
+         localStorage.setItem('customerAddress', customerAddress);
+
+        // Depending on the selected payment method, route accordingly
+        if (selectedPaymentMethod === 'card') {
+            // Redirect to Flutterwave payment platform
+            makePayment(totalAmount );
+        } else if (selectedPaymentMethod === 'delivery') {
+            // Handle pay on delivery option
+            handlePayOnDelivery(customerName, customerEmail, customerAddress);
+        }
+
+        
+    });
 
 
 
-//  // Checkout functionality with Paystack
-//  document.getElementById('checkout-button').addEventListener('click', () => {
-//     checkout();
-// });
+});
 
-// function checkout() {
-//     if (cart.length === 0) {
-//         alert("Your cart is empty!");
-//         return;
-//     }
 
-//     const orderTotal = getTotal();
-//     const email = prompt("Please enter your email for the receipt:");
+function makePayment(amount, customerName,phone_number, email) {
+    FlutterwaveCheckout({
+        public_key: "FLWPUBK_TEST-02b9b5fc6406bd4a41c3ff141cc45e93-X",
+        tx_ref: "txref-DI0NzMx13",
+        amount: amount,
+        currency: "NGN",
+        payment_options: "card, banktransfer, ussd",
+        meta: {
+            source: "docs-inline-test",
+            consumer_mac: "92a3-912ba-1192a",
+        },
+        customer: {
+            email: "test@mailinator.com",
+            phone_number: "08100000000",
+            name: "Ayomide Jimi-Oni",
+        },
+        customizations: {
+            title: "Flutterwave Developers",
+            description: "Test Payment",
+            logo: "https://checkout.flutterwave.com/assets/img/rave-logo.png",
+        },
+        callback: function (data) {
+            console.log("payment callback:", data);
+        },
+        onclose: function () {
+            console.log("Payment cancelled!");
+        }
+    });
+}
 
-//     if (email) {
-//         // Initialize Paystack payment
-//         var handler = PaystackPop.setup({
-//             key: 'YOUR_PAYSTACK_PUBLIC_KEY', // Replace with your Paystack public key
-//             email: email,
-//             amount: orderTotal * 100, // Paystack amount is in kobo, so multiply by 100
-//             currency: 'USD', // Replace with your currency
-//             ref: 'PS_' + Math.floor((Math.random() * 1000000000) + 1), // Generate a random reference number
-//             callback: function(response) {
-//                 // Payment successful
-//                 alert('Payment successful! Transaction reference: ' + response.reference);
+ // Function to handle Pay on Delivery option
+ function handlePayOnDelivery(name, email, address) {
+    const orderDetails = {
+        orderId: Date.now(), // Unique order ID
+        customerName: name,
+        customerEmail: email,
+        customerAddress: address,
+        paymentMethod: 'Pay on Delivery',
+        cart: getCartItems() // Get items from the cart
+    };
+    saveOrderLocally(orderDetails);
+    localStorage.setItem('currentOrderId', orderDetails.orderId); // Save current order ID
 
-//                 // Save the order to localStorage (for demonstration purposes)
-//                 const order = {
-//                     items: cart,
-//                     total: orderTotal,
-//                     date: new Date().toISOString(),
-//                     transactionRef: response.reference
-//                 };
+    // clearCart();
 
-//                 let orders = JSON.parse(localStorage.getItem('orders')) || [];
-//                 orders.push(order);
-//                 localStorage.setItem('orders', JSON.stringify(orders));
+    window.location.href = 'confirmation.html'; // Redirect to confirmation page
+}
 
-//                 // Clear the cart
-//                 cart = [];
-//                 localStorage.setItem('cart', JSON.stringify(cart));
-//                 renderCart();
-//             },
-//             onClose: function() {
-//                 alert('Payment process was not completed.');
-//             }
-//         });
-//         handler.openIframe();
-//     }
+function saveOrderLocally(orderDetails) {
+    const orders = JSON.parse(localStorage.getItem('orders')) || [];
+    orders.push(orderDetails);
+    localStorage.setItem('orders', JSON.stringify(orders));
+}
+
+function getCartItems() {
+    return JSON.parse(localStorage.getItem('cart')) || [];
+}
+
+// function clearCart() {
+//     localStorage.removeItem('cart')
 // }
 
-// document.getElementById('checkout-button').addEventListener('click', () => {
-//     checkout();
-// });
 
-// function checkout() {
-//     if (cart.length === 0) {
-//         alert("Your cart is empty!");
-//         return;
-//     }
 
-//     const order = {
-//         items: cart,
-//         total: getTotal(),
-//         date: new Date().toISOString()
-//     };
-
-//     // Save the order to localStorage (for demonstration purposes)
-//     let orders = JSON.parse(localStorage.getItem('orders')) || [];
-//     orders.push(order);
-//     localStorage.setItem('orders', JSON.stringify(orders));
-
-//     // Clear the cart
-//     cart = [];
-//     localStorage.setItem('cart', JSON.stringify(cart));
-//     renderCart();
-
-//     alert("Thank you for your purchase!");
+// Example function to clear the cart
+// function clearCart() {
+//     localStorage.removeItem('cart');
 // }
 

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+
+*{
+  font-family: "Annie Use Your Telescope", cursive;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+}
+        body{
+            height: 90vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+        .receipt{
+            height: 75vh;
+            width: 70vh;
+            display: flex;
+            flex-direction: column;
+            text-align: center; 
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);  
+        }
+
+        #confirmation-message{
+            background-color: yellowgreen;
+            margin: 10px;
+            border: black solid 1px;
+        }
+
+        #confirmation-details{
+            border: yellowgreen solid 1px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .alertMessage{
+           
+            color: red;
+            
+        }
+
+        .print{
+            position: absolute;
+            bottom: 50px;
+            left: 650px;
+            background-color: red;
+            color: #fff;
+            width: 100px;
+            font-size: 15px;
+        }
+
+        @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+  }
+  
+  .alertMessage{
+    animation: bounce 2.5s ease-in infinite;
+  }
+    </style>
+    
+</head>
+<body>
+    
+    
+    <div class="receipt">
+        <div class="logo">
+            <img src="/assets/images/logos/logo.svg" alt="" width="50px">
+        </div>
+    <div id="confirmation-message"></div>
+    <div id="confirmation-details"></div>
+    <h3 class='alertMessage'> Note that: </br> you will present this details </br>
+        to claim your order when it arrives, </br>
+          kindly keep record of it. </h3>
+    <button class="print" id="print-button">Print Order</button>
+    </div>
+    
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentOrderId = localStorage.getItem('currentOrderId');
+            const orders = JSON.parse(localStorage.getItem('orders')) || [];
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const currentOrder = orders.find(order => order.orderId == currentOrderId);
+
+            if (currentOrder) {
+                document.getElementById('confirmation-message').textContent = 'Order placed successfully! You will pay on delivery.';
+                document.getElementById('confirmation-details').innerHTML = `
+                    <p>Name: ${currentOrder.customerName}</p>
+                    <p>Order-Id: ${currentOrderId}</p>
+                    <p>Email: ${currentOrder.customerEmail}</p>
+                    <p>Address: ${currentOrder.customerAddress}</p>
+                  
+                `;
+             } 
+             else {
+                document.getElementById('confirmation-message').textContent = 'No order found.';
+            }
+        });
+
+        document.getElementById('print-button').addEventListener('click', function() {
+            window.print();
+        });
+    </script>
+    
+</body>
+</html>

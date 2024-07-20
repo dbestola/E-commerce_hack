@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
 </head>
 <body>
     <header class="header">
@@ -120,21 +121,21 @@
         </div>
     
             <div class="form-field">
-            <Label for="email" id="label-email">Address:</Label> 
-            <input type="email" id="email" placeholder="line 1"> 
+            <Label for="address" id="label-address">Address:</Label> 
+            <input type="text" id="address" placeholder="line 1"> 
         </div>
     
             <div class="form-field">
-            <Label for="age" id="label-age">City:</Label>  
-            <input type="text" id="age" placeholder="city"> 
+            <Label for="city" id="label-city">City:</Label>  
+            <input type="text" id="city" placeholder="city"> 
         </div>
         <div class="form-field">
-            <Label for="name" id="label-name">State:</Label> 
-            <input type="text" id="name" placeholder="state">              
+            <Label for="state" id="label-state">State:</Label> 
+            <input type="text" id="state" placeholder="state">              
         </div>
     
             <div class="form-field">
-            <Label for="email" id="label-email">Country</Label> 
+            <Label for="country" id="label-country">Country</Label> 
             <select>
                 <option>Select Country</option>
                 <option>DRC</option>
@@ -151,12 +152,12 @@
         </div>
     
             <div class="form-field">
-            <Label for="age" id="label-age">Phone:</Label>  
-            <input type="text" id="age" placeholder="phone"> 
+            <Label for="phone" id="label-phone">Phone:</Label>  
+            <input type="text" id="phone" placeholder="phone"> 
         </div>
         <div class="form-field">
-            <Label for="age" id="label-age">Alt Phone/Whatsapp:</Label>  
-            <input type="text" id="age" placeholder="phone"> 
+            <Label for="altPhone" id="label-age">Alt Phone/Whatsapp:</Label>  
+            <input type="text" id="altPhone" placeholder="phone"> 
         </div>
 
         <input type="submit" id="submit-hover" value="Proceed to Checkout">
@@ -171,12 +172,13 @@
         <div id="cart-summary">
             <h2>Total: ₦<span id="cart-total">0.00</span></h2>
         </div>
-            
-       
-        
+                
     </div>
 
 </div>
+
+    <div id="confirmation-message"></div>
+    <div id="confirmation-details"></div>
 
    <!-- footer -->
    <footer>
