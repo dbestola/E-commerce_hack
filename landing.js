@@ -188,8 +188,15 @@ document.addEventListener('DOMContentLoaded', () => {
       profileAccount.className = 'profileAccount'
       profileAccount.innerHTML = `<span>Hi <span class="profileAccountName">${getProfile.firstName}</span></span>`
       document.querySelector('.handleUserStates').appendChild(profileAccount)
+      profileAccount.addEventListener('click', () =>{
+        handleProfile()
+      })
     }
   })
+
+  function handleProfile() {
+    window.location.href = 'member_area/mprofile.html'
+}
 
 
 
