@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+
+/* *{
+  font-family: "Annie Use Your Telescope", cursive;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 15px;
+} */
+  
+
 .container-div {
     display: flex;
     margin-top: 100px;
@@ -54,26 +64,16 @@
     color: black;
 }
 
-.current-price {
+.pricelist{
     position: absolute;
     left: 390px;
-    top: 150px;
-    color: black;
+    top: 175px;
+    display: flex;
 }
 
-#before-price {
+.product-text {
     position: absolute;
-    left: 650px;
-    top: 170px;
-    color: black;
-}
-
-#discount-percent {
-    position: absolute;
-    left: 790px;
-    top: 170px;
-    color: black;
-    background-color: rgba(255, 192, 203, 0.582);
+    bottom: 100px;
 }
 
 .horizontal-line,
@@ -88,14 +88,17 @@
 
 .horizontal-line { top: 120px; right: 10px; }
 .horizontal-line2 { top: 240px; right: 10px; }
-.horizontal-line3 { top: 400px; left: 18px; width: 320px; }
-.horizontal-line4 { top: 480px; right: 10px; width: 540px;}
+.horizontal-line3 { top: 370px; left: 18px; width: 320px; }
+.horizontal-line4 { top: 430px; right: 10px; width: 540px;}
 
 .advert {
-    height: 100vh;
+    height: fit-content;
     width: 250px;
     margin-left: 20px;
     background-color: rgba(240, 231, 231, 0.5);
+    font-family: "Annie Use Your Telescope", cursive;
+    font-weight: 600;
+    font-style: normal;
 }
 
  h5, p, h6, select {

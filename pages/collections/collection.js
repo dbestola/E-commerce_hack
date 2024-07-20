@@ -69,9 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
         productDetails.innerHTML = `
             <h2 class="product-name">${product.name}</h2>
             <img src="${product.image}" alt="${product.name}" class="img2">
-            <h2 class="current-price">Price: ${nairaSymbol}${product.price}</h2>
-            <h4 id="before-price"><s>${nairaSymbol}${product.beforeprice}</s></h4>
-            <h4 id="discount-percent">${product.discountprice}</h4>
+            <div class='pricelist'>
+            <h4 style='font-weight: 600;' class="current-price">${nairaSymbol}${product.price}</h4>
+            <h6 id="before-price"><s>${nairaSymbol}${product.beforeprice}</s></h6>
+            <h6 style='background-color: rgba(255, 192, 203, 0.582);' id="discount-percent">${product.discountprice}</h6>
+            </div>
             <div class="row">
                 <div class="col-3">
                     <span class="glyphicon glyphicon-star"></span>
@@ -98,6 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <img id="twitter-icon" src="/assets/icons/kisspng-social-media-computer-icons-tulane-university-face-drawing-vector-twitter-5ab02d6b50a397.8866567515214954033303.PNG" alt="twitter" width="40px" height="40px">
             <img id="facebook-icon" src="/assets/icons/facebook-icon.PNG" alt="facebook" width="40px" height="40px">
             <img id="linkedin-icon" src="/assets/icons/kisspng-linkedin-logo-computer-icons-business-symbol-linkedin-icon-5ab1765660baa8.1191823015215796063962.PNG" alt="linkedin" width="40px" height="40px">
+
+             <p class='product-text'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat.</p>
         `;
 
 

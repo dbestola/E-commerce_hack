@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
             itemRow.innerHTML = `
                 <p> <img src='${item.image}' width='40px'> ${item.name}</p>
                 <hr/>
-                <p> Price ₦ ${item.price}</p>
-                <hr/>
                 <p> Quantity: ${item.quantity} </p>
                 <hr/>
-               <p> Sub Total: ${nairasymbol} ${itemTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
+                 <p> Unit Price ₦ ${item.price}</p>
+                <hr/>
+               <p> Set Price: ${nairasymbol} ${itemTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
                 
             `;
 
