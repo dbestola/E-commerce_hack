@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Confirmation</title>
-
     <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
@@ -23,8 +23,8 @@
             background-color: #f5f5f5;
         }
         .receipt{
-            height: 90vh;
-            width: 70vh;
+            height: 80vh;
+            width: 30vw;
             display: flex;
             flex-direction: column;
             text-align: center; 
@@ -46,26 +46,41 @@
         }
 
         .alertMessage{
-           
+            animation: bounce 2.5s ease-in infinite;
             color: red;
-            
         }
 
         .print{
             position: absolute;
-            bottom: 10px;
-            left: 650px;
+            bottom: 7%;
+            margin: auto;
             background-color: red;
             color: #fff;
             width: 100px;
             font-size: 15px;
+            border-radius: .5rem;
+            border-style: hidden;
         }
 
         .logo {
-            background-color: rgba(0, 0, 0, 0.719);
+            background-color: black;
             margin: 10px;
+            padding: 5px;
             border-radius: 10px;
-            height: 110px;
+            height: 8vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo span{
+            color: #fff;
+            margin-top: -1rem;
+        }
+
+        .logo img{
+            margin-top: -1rem;
         }
 
    
@@ -75,15 +90,11 @@
         transform: translateY(0);
     }
     40% {
-        transform: translateY(-30px);
+        transform: translateY(-25px);
     }
     60% {
         transform: translateY(-15px);
     }
-  }
-  
-  .alertMessage{
-    animation: bounce 2.5s ease-in infinite;
   }
     </style>
     
@@ -93,15 +104,17 @@
     
     <div class="receipt">
         <div class="logo">
-            <img src="/assets/images/logos/logo.svg" alt="" width="60px">
+            <img src="../../assets/images/logos/logo.svg" alt="" width="60px">
+            <span>i-Hub Nigeria</span>
         </div>
     <div id="confirmation-message"></div>
     <div id="confirmation-details"></div>
     <h3 class='alertMessage'> Note that: </br> you will present this details </br>
         to claim your order when it arrives, </br>
           kindly keep record of it. </h3>
-    <button class="print" id="print-button">Print Order</button>
     </div>
+    <button class="print" id="print-button">Print Order</button>
+
     
 
 
