@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     // Call renderCart on page load to display items in the cart
-    renderCart();
+    renderCartsummary();
 
-    function renderCart() {
+    function renderCartsummary() {
         const cartItemsContainer = document.getElementById('shoppingcart-items');
         const cartTotalElement = document.getElementById('cart-total');
         cartItemsContainer.innerHTML = '';
@@ -20,12 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const itemRow = document.createElement('div');
             itemRow.className = 'handleDivStyling';
             itemRow.innerHTML = `
-                 <td> <img src='${item.image}' width='40px'> ${item.name}</td>
-                <td> ₦ ${item.price}</td>
-                <td>
-                    <input type="number" value="${item.quantity}" min="1" data-id="${item.id}" class="quantity-input">
-                </td>
-               <p>${nairasymbol} ${itemTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
+                <p> <img src='${item.image}' width='40px'> ${item.name}</p>
+                <hr/>
+                <p> Price ₦ ${item.price}</p>
+                <hr/>
+                <p> Quantity: ${item.quantity} </p>
+                <hr/>
+               <p> Sub Total: ${nairasymbol} ${itemTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</p>
                 
             `;
 
@@ -33,83 +34,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         cartTotalElement.innerHTML = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
-        // Add event listeners for quantity changes and remove buttons
-        document.querySelectorAll('.quantity-input').forEach(input => {
-            input.addEventListener('change', (event) => {
-                const productId = parseInt(event.target.getAttribute('data-id'));
-                const newQuantity = parseInt(event.target.value);
-                updateQuantity(productId, newQuantity);
-            });
-        });
-
-        document.querySelectorAll('.remove-btn').forEach(button => {
-            button.addEventListener('click', (event) => {
-                const productId = parseInt(event.target.getAttribute('data-id'));
-                removeItemFromCart(productId);
-            });
-        });
+        
     }
 
-    function addItemToCart(productId) {
-        let product = products.find(product => product.id == productId);
-
-        if (product) {
-            let cartItem = cart.find(item => item.id == productId);
-            if (cartItem) {
-                cartItem.quantity += 1;
-            } else {
-                cart.push({ ...product, quantity: 1 });
-            }
-            localStorage.setItem("cart", JSON.stringify(cart));
-            renderCart();
-            updateItemCount();
-        }
-    }
-
-    function removeItemFromCart(productId) {
-        cart = cart.filter(item => item.id != productId);
-        localStorage.setItem("cart", JSON.stringify(cart));
-        renderCart();
-        updateItemCount();
-    }
-
-    function updateQuantity(productId, quantity) {
-        for (let product of cart) {
-            if (product.id == productId) {
-                product.quantity = quantity;
-            }
-        }
-        localStorage.setItem("cart", JSON.stringify(cart));
-        renderCart();
-        updateItemCount();
-    }
-
-   const totalAmount = function getTotal() {
-        let total = cart.reduce((sum, item) => sum + parseFloat(item.price) * item.quantity, 0);
-        return total.toFixed(2);
-    }
-
-    // Function to update the item count in the circle
+    // Function to update the item count in the checkout Summary
     function updateItemCount() {
-        const itemCountCircle = document.getElementById('item-count-circle');
+        const CartitemCount = document.getElementById('cart-numberofitems');
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         let itemCount = cart.reduce((total, item) => total + item.quantity, 0);
-        itemCountCircle.textContent = itemCount;
+        CartitemCount.textContent = itemCount;
     }
+     updateItemCount();
 
-    // Call the function on page load to set the initial count
-    updateItemCount();
-
-    // Function to update the item count in the circle
-function updateItemCount() {
-    const CartitemCount = document.getElementById('cart-numberofitems');
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let itemCount = cart.reduce((total, item) => total + item.quantity, 0);
-    CartitemCount.textContent = itemCount;
-}
-// Call the function on page load to set the initial count
-document.addEventListener('DOMContentLoaded', updateItemCount);
 
     // Checkout functionality
     document.getElementById('form').addEventListener('submit', function(event) {
@@ -240,10 +176,4 @@ function getCartItems() {
 //     localStorage.removeItem('cart')
 // }
 
-
-
-// Example function to clear the cart
-// function clearCart() {
-//     localStorage.removeItem('cart');
-// }
 
