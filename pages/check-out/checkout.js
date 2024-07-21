@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
           // Process the customer details
           const customerName = document.getElementById('name').value.trim();
           const customerAddress = document.getElementById('address').value.trim();
-          const customerCountry = document.getElementById('country').value.trim();
+          const customerCountry = document.getElementById('country').value;
           const customerState = document.getElementById('state').value.trim();
           const customerCity = document.getElementById('city').value.trim();
           const customerPhone = document.getElementById('phone').value.trim();
