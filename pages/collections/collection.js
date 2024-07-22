@@ -173,7 +173,43 @@ var Products = [
     },
     {
         "id": 20,
-        "image": "../../assets/images/mac/2022 MACBOOK PRO 13 - 3.5GHz i7 - 16GB RAM - 1TB SSD - GRAY.webp",
+        "image": "../../assets/images/mac/apple-macbook-pro-16.2-32gb-1tb-10-cores-m1-max-silver.jpg",
+        "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
+        "price": "500.00",
+        "beforeprice": "330.70",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 21,
+        "image": "../../assets/images/ipad/apple-ipad-9th-gen-10.2-wi-fi-cellular-256gb-space-grey.jpg",
+        "name": "Apple IPad Pro 12 512gb (grey)",
+        "price": "2,169,100",
+        "beforeprice": "2,299,000",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 22,
+        "image": "../../assets/images/ipad/Apple-IPad-Pro-12.9-M2-2022 Model-Wi-Fi-Only-128GB-Silver.jpg",
+        "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
+        "price": "1,895,100",
+        "beforeprice": "2,100,100",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 23,
+        "image": "../../assets/images/ipad/apple-ipad-pro-12.9-m22022-modelwi-ficellular-512gb-space-gray.jpg",
+        "name": "Apple IPhone 15 Pro Max case (with magsafe)",
+        "price": "400.00",
+        "beforeprice": "330.70",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 24,
+        "image":"../../assets/images/ipad/apple-ipad-9th-gen-10.2-wi-fi-cellular-256gb-space-grey.jpg",
         "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
         "price": "500.00",
         "beforeprice": "330.70",
