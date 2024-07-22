@@ -151,62 +151,8 @@ event.preventDefault(); // Prevent default form submission
     window.location.href = '../check-out/checkout.html'; // Replace with the actual URL of your form page
     };
 }
-
-
-  // // Checkout functionality
-  // document.getElementById('checkout-button').addEventListener('click', () => {
-  //     checkout();
-  // });
-
-  // function checkout() {
-  //     if (cart.length === 0) {
-  //         alert("Your cart is empty!");
-  //         return;
-  //     }
-
-  //     const order = {
-  //         items: cart,
-  //         total: getTotal(),
-  //         date: new Date().toISOString()
-  //     };
-
-  //     // Save the order to localStorage (for demonstration purposes)
-  //     let orders = JSON.parse(localStorage.getItem('orders')) || [];
-  //     orders.push(order);
-  //     localStorage.setItem('orders', JSON.stringify(orders));
-
-  //     // Clear the cart
-  //     cart = [];
-  //     localStorage.setItem('cart', JSON.stringify(cart));
-  //     renderCart();
-
-  //     alert("Thank you for your purchase!");
-  // }
 });
 
 
 
-// Checkout functionality
 
-    // const form = document.getElementById('customer-details-form');
-    // // const sellerInfo = document.getElementById('seller-info');
-
-    // form.addEventListener('submit', function(event) {
-    //     event.preventDefault(); // Prevent the form from submitting normally
-
-    //     // Retrieve the selected payment method from localStorage
-    //     const selectedPaymentMethod = localStorage.getItem('paymentMethod');
-
-    //     // Process the customer details (this is just an example, replace with your actual logic)
-    //     const customerName = document.getElementById('name').value;
-    //     const customerEmail = localStorage.getItem('userEmail');
-
-    //     // Depending on the selected payment method, route accordingly
-    //     if (selectedPaymentMethod === 'card') {
-    //         // Redirect to Flutterwave payment platform
-    //         window.location.href = "https://www.flutterwave.com";
-    //     } else if (selectedPaymentMethod === 'transfer') {
-    //         // Show seller information div
-    //         sellerInfo.style.display = 'block';
-    //     }
-    // });

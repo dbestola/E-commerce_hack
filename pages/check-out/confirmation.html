@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Confirmation</title>
+    <link rel="stylesheet" href="/pages/cart/cart.css">
     <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
@@ -84,6 +85,26 @@
             margin-top: -1rem;
         }
 
+        .continue-shopping{
+            position: absolute;
+            bottom: 7%;
+            right: 5%;
+            background-color: red;
+            padding: 5px;
+            border-radius: 10px;
+            
+        }
+
+        .continue-shopping a{
+            text-decoration: none;
+            color: #fff;
+            }
+
+        .continue-shopping:hover a{
+            color: var(--our-green);
+            cursor: pointer;
+            }
+
    
 
         @keyframes bounce {
@@ -112,8 +133,14 @@
     <div id="confirmation-details"></div>
     <h3 class='alertMessage'> Note that: you will present this details to claim your order when it arrives, </br>
           kindly keep record of it. </h3>
+          <div class="continue-shopping">
+            <a id="continue-shoppingHover" href="/index.html"> <img src="/assets/icons/arrow-icon.png" width="15px" alt=""> Continue Shopping</a>
+        </div>
     </div>
+    
     <button class="print" id="print-button">Print Order</button>
+
+   
 
     
 
