@@ -33,7 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
             cartItemsContainer.appendChild(itemRow);
         });
 
-        cartTotalElement.innerHTML = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+       const totalAmount = cartTotalElement.innerHTML = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+       localStorage.setItem('totalAmount', totalAmount);
         
     }
 
@@ -91,7 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Retrieve customer Email from localStorage
         const customerEmail = localStorage.getItem('userEmail')
-        const totalAmount = 50000
 
         // Depending on the selected payment method, route accordingly
         if (selectedPaymentMethod === 'card') {
@@ -122,7 +122,9 @@ function generateTransactionReference() {
 
  // Replace these details with actual customer details
  const customerEmail = localStorage.getItem('userEmail');
- const customerAmount = 10000; // Amount in kobo (10000 kobo = 100 NGN)
+ const storedAmount = localStorage.getItem('totalAmount').replace(/,/g, ''); // Amount in kobo (10000 kobo = 100 NGN)
+ const customerAmount = parseInt(storedAmount, 10) * 100; // Amount in kobo
+ console.log(customerAmount);
  const customerName = localStorage.getItem('customerName');
  const customerPhone = localStorage.getItem('customerPhone');
  const customerReference = generateTransactionReference(); // Replace with a unique transaction reference
