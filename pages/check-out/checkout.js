@@ -91,11 +91,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Retrieve customer Email from localStorage
         const customerEmail = localStorage.getItem('userEmail')
+        const totalAmount = 50000
 
         // Depending on the selected payment method, route accordingly
         if (selectedPaymentMethod === 'card') {
             // Redirect to Flutterwave payment platform
-            makePayment(totalAmount );
+            makePayment();
         } else if (selectedPaymentMethod === 'delivery') {
             // Handle pay on delivery option
             handlePayOnDelivery(customerName, customerEmail, customerAddress, customerCountry, customerState, customerCity, customerPhone, customerAlternatePhone);
@@ -108,36 +109,64 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+const paystackPublicKey = 'pk_test_75c72b15bb57b4cc03f594976fab92cb685fcc6f';
 
-function makePayment(amount, customerName,phone_number, email) {
-    FlutterwaveCheckout({
-        public_key: "FLWPUBK_TEST-02b9b5fc6406bd4a41c3ff141cc45e93-X",
-        tx_ref: "txref-DI0NzMx13",
-        amount: amount,
-        currency: "NGN",
-        payment_options: "card, banktransfer, ussd",
-        meta: {
-            source: "docs-inline-test",
-            consumer_mac: "92a3-912ba-1192a",
+function generateTransactionReference() {
+    const timestamp = new Date().getTime(); // Current timestamp in milliseconds
+    const randomNumber = Math.floor(Math.random() * 1000000); // Random number between 0 and 999999
+    return `TX-${timestamp}-${randomNumber}`;
+}
+
+
+
+
+ // Replace these details with actual customer details
+ const customerEmail = localStorage.getItem('userEmail');
+ const customerAmount = 10000; // Amount in kobo (10000 kobo = 100 NGN)
+ const customerName = localStorage.getItem('customerName');
+ const customerPhone = localStorage.getItem('customerPhone');
+ const customerReference = generateTransactionReference(); // Replace with a unique transaction reference
+
+
+function makePayment() {
+    const handler = PaystackPop.setup({
+        key: paystackPublicKey,
+        email: customerEmail,
+        amount: customerAmount,
+        currency: 'NGN',
+        ref: customerReference,
+        metadata: {
+            custom_fields: [
+                {
+                    display_name: "Customer Name",
+                    variable_name: "customer_name",
+                    value: customerName
+                },
+                {
+                    display_name: "Phone Number",
+                    variable_name: "customer_phone",
+                    value: customerPhone
+                }
+            ]
         },
-        customer: {
-            email: "test@mailinator.com",
-            phone_number: "08100000000",
-            name: "Ayomide Jimi-Oni",
+        callback: function(response) {
+            // This function is called when the payment is successful
+            alert('Payment successful! Transaction reference: ' + response.reference);
+            
+            // You can redirect the user to a confirmation page or do something else here
+            console.log(response);
         },
-        customizations: {
-            title: "Flutterwave Developers",
-            description: "Test Payment",
-            logo: "https://checkout.flutterwave.com/assets/img/rave-logo.png",
-        },
-        callback: function (data) {
-            console.log("payment callback:", data);
-        },
-        onclose: function () {
-            console.log("Payment cancelled!");
+        onClose: function() {
+            // This function is called when the user closes the payment modal without completing the payment
+            alert('Payment process was not completed.');
         }
     });
-}
+    
+    // Open the Paystack payment modal
+    handler.openIframe();
+
+  }
+
 
  // Function to handle Pay on Delivery option
  function handlePayOnDelivery(name, email, address, country, state, city, phone, alternatePhone) {
