@@ -50,7 +50,7 @@ const nairaSymbol = '\u20A6'
 
 var Products = [
   {
-      "id": 1,
+      "id": 23,
       "image": "assets/images/ipad/apple-ipad-pro-12.9-m22022-modelwi-ficellular-512gb-space-gray.jpg",
       "name": "Apple IPad Pro 12 512gb (grey)",
       "price": "2,169,100",
@@ -59,7 +59,7 @@ var Products = [
       "quantity": 1
   },
   {
-      "id": 2,
+      "id": 14,
       "image": "assets/images/iphone/15/apple-iphone-15-pro-max-256gb-nano-sim-blue-titanium.jpg",
       "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
       "price": "1,895,100",
@@ -77,7 +77,7 @@ var Products = [
       "quantity": 1
   },
   {
-      "id": 4,
+      "id": 20,
       "image": "assets/images/mac/apple-macbook-pro-16.2-32gb-1tb-10-cores-m1-max-silver.jpg",
       "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
       "price": "2,232,000",

@@ -13,7 +13,7 @@ var macArray = [
     },
     {
         "id": 18,
-        "image": "../../assets/images/mac/2024 OSX SONOMA- 2018 MACBOOK AIR 13 - 1.6GHz i5 - 16GB RAM - 256GB SSD - GRAY.webp",
+        "image": "../../assets/images/mac/2022 MACBOOK PRO 13 - 3.5GHz i7 - 16GB RAM - 1TB SSD - GRAY.webp",
         "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
         "price": "1,895,100",
         "beforeprice": "2,100,100",
@@ -31,7 +31,7 @@ var macArray = [
     },
     {
         "id": 20,
-        "image": "../../assets/images/mac/2022 MACBOOK PRO 13 - 3.5GHz i7 - 16GB RAM - 1TB SSD - GRAY.webp",
+        "image": "../../assets/images/mac/apple-macbook-pro-16.2-32gb-1tb-10-cores-m1-max-silver.jpg",
         "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
         "price": "500.00",
         "beforeprice": "330.70",
