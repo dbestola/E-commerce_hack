@@ -117,17 +117,12 @@ function generateTransactionReference() {
     return `TX-${timestamp}-${randomNumber}`;
 }
 
-
-
-
- // Replace these details with actual customer details
  const customerEmail = localStorage.getItem('userEmail');
- const storedAmount = localStorage.getItem('totalAmount').replace(/,/g, ''); // Amount in kobo (10000 kobo = 100 NGN)
- const customerAmount = parseInt(storedAmount, 10) * 100; // Amount in kobo
- console.log(customerAmount);
+ const storedAmount = localStorage.getItem('totalAmount').replace(/,/g, ''); 
+ const customerAmount = parseInt(storedAmount, 10) * 100; // Amount in kobo (10000 kobo = 100 NGN)
  const customerName = localStorage.getItem('customerName');
  const customerPhone = localStorage.getItem('customerPhone');
- const customerReference = generateTransactionReference(); // Replace with a unique transaction reference
+ const customerReference = generateTransactionReference(); 
 
 
 function makePayment() {
