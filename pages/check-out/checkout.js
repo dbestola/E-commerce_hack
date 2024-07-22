@@ -50,9 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Checkout functionality
     document.getElementById('form').addEventListener('submit', function(event) {
-
-        const sellerInfo = document.getElementById('seller-info');
-
+     
         event.preventDefault(); // Prevent the form from submitting normally
 
          // Check if user is logged in
