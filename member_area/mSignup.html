@@ -24,28 +24,28 @@
             <div class="nav-links">
                 <ul>
                     <li class="dropdown">
-                        <a href="index.html">Home</a>
+                        <a href="../index.html">Home</a>
                     </li>
 
                     <li class="dropdown">
                         <a href="#">Products</a>
                         <div class="dropdown-content">
-                            <a href="pages/Products/iphone.html">iPhone</a>
-                            <a href="pages/Products/ipad.html">iPad</a>
-                            <a href="pages/Products/mac.html">Mac</a>
+                            <a href="../pages/Products/iphone.html">iPhone</a>
+                            <a href="../pages/Products/ipad.html">iPad</a>
+                            <a href="../pages/Products/mac.html">Mac</a>
                         </div>
                     </li>
 
                     <li class="dropdown">
                         <a href="#">Services</a>
                         <div class="dropdown-content">
-                            <a href="pages/Services/repairs.html">Repairs</a>
-                            <a href="pages/Services/trading.html">Trade-In</a>
-                            <a href="pages/Services/financing.html">Financing</a>
+                            <a href="../pages/Services/repairs.html">Repairs</a>
+                            <a href="../pages/Services/trading.html">Trade-In</a>
+                            <a href="../pages/Services/financing.html">Financing</a>
                         </div>
                     </li>
 
-                    <li><a href="pages/contact.html">Contact</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
                 </ul>
             </div>
             
@@ -67,7 +67,7 @@
                 </ul>
             </div>
             <div class="cart">    
-                <a href="/pages/cart/cart.html">
+                <a href="../pages/cart/cart.html">
                     <i data-feather="shopping-cart"></i>
                     <span>cart</span>
                 </a>
@@ -248,6 +248,37 @@
     </div>
 
 </footer>
+
+<script>
+    // navbar logic
+    document.addEventListener("DOMContentLoaded", function() {
+      var icon1 = document.getElementById("toggle1");
+      var icon2 = document.getElementById("toggle2");
+      const arrowDown =  document.querySelectorAll(".arrow-down i")
+
+     icon1.addEventListener("click", function() {
+     icon1.style.display = "none";
+
+    document.querySelector('.nav-links2').style.display = 'block'
+    icon2.style.display = "block";
+});
+
+    icon2.addEventListener("click", function() {
+    icon2.style.display = "none"
+    document.querySelector('.nav-links2').style.display = 'none';
+
+    icon1.style.display = "block"
+});
+
+    arrowDown.forEach(arrowDowns =>{
+    arrowDowns.addEventListener('click', function(){
+    arrowDowns.classList.toggle('fa-angle-down')
+    arrowDowns.classList.toggle('fa-angle-up')
+})})
+
+});
+</script>
+
 <script>
     feather.replace();
 </script>
