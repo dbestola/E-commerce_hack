@@ -334,16 +334,28 @@ div .sample-1, div .sample-2{
 }
 
 .img, .img2{
-    height: 75%;
+    height: 100%;
     width: 100%;
     position: relative;
+    color: white;
+    background-color: black;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.img img, .img2 img{
+.img img{
     width: 100%;
-    height: 100%;
+    height: 75%;
     position: relative;
-    object-fit: cover;
+    object-fit: fill;
+}
+
+.img2 img{
+  width: 100%;
+  height: 90%;
+  position: relative;
+  object-fit: fill;
 }
 
 div .h3-sample{
@@ -629,6 +641,11 @@ font-weight: bolder;
   .profileAccount{
     padding-left: .4rem;
   }
+
+  .img2 img{
+    width: 100%;
+    height: 78%;
+  }
 }
 
 /* screen size 4 */
@@ -696,7 +713,7 @@ font-weight: bolder;
     padding-left: 3rem;
   }
 
-  .img{
+  .img img{
     height: 50%;
   }
 

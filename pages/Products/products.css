@@ -2,18 +2,68 @@
     margin-top: 1.3rem;
 }
 .iphone{
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 1rem 1rem 1rem;
+    gap: 1vw;
 }
 .iphone-img{
     width: 100%;
     height: 100%;
+    position: relative;
+    background: black;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .iphone-img img{
     width: 100%;
-    height: 60%;
-    object-fit: contain;
+    height: 75%;
+    position: relative;
+    object-fit: fill;
 }
+.iphone-img::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--our-overlay);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    border-radius: 10px;
+  }
+  
+  .iphone-img:hover::after{
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .iphone-img::before {
+    content: "\f07a";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+  .iphone-img:hover::before{
+    opacity: 1;
+  }
+
 .iphone-banner{
     width: 100%;
 }
@@ -22,7 +72,16 @@
     object-fit: fill;
 }
 
-
+.iphone-h3{
+    color: wheat;
+    background-color: black;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: .5rem 0;
+    padding: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 0 10px 10px 0;
+}
 
 
 
@@ -30,5 +89,39 @@
 @media (max-width: 800px) {
     .iphone{
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
     }
+
+    .iphone-img img{
+        height: 50%;
+    }
+
+    #pimg1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+    
+      #pimg2{
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+    
+      #pimg3{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 5;
+      }
+    
+      #pimg4{
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 5;
+      }
+    
 }

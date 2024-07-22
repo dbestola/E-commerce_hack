@@ -49,43 +49,43 @@ document.addEventListener("DOMContentLoaded", function() {
 const nairaSymbol = '\u20A6'
 
 var Products = [
-    {
-        "id": 1,
-        "image": "assets/images/ipad/apple-ipad-pro-12.9-m22022-modelwi-ficellular-512gb-space-gray.jpg",
-        "name": "Apple IPad Pro 12 512gb (grey)",
-        "price": "2,169,100",
-        "beforeprice": "2,299,000",
-        "discountprice": "-10%",
-        "quantity": 1
-    },
-    {
-        "id": 2,
-        "image": "assets/images/iphone/15/apple-iphone-15-pro-max-256gb-nano-sim-blue-titanium.jpg",
-        "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
-        "price": "1,895,100",
-        "beforeprice": "2,100,100",
-        "discountprice": "-10%",
-        "quantity": 1
-    },
-    {
-        "id": 3,
-        "image": "assets/images/accessories/protection/apple-iphone-15-pro-max-finewoven-case-with-magsafe-taupe.webp",
-        "name": "Apple IPhone 15 Pro Max case (with magsafe)",
-        "price": "400.00",
-        "beforeprice": "330.70",
-        "discountprice": "-10%",
-        "quantity": 1
-    },
-    {
-        "id": 4,
-        "image": "assets/images/mac/apple-macbook-pro-16.2-32gb-1tb-10-cores-m1-max-silver.jpg",
-        "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
-        "price": "500.00",
-        "beforeprice": "330.70",
-        "discountprice": "10%",
-        "quantity": 1
-    }
-];
+  {
+      "id": 1,
+      "image": "assets/images/ipad/apple-ipad-pro-12.9-m22022-modelwi-ficellular-512gb-space-gray.jpg",
+      "name": "Apple IPad Pro 12 512gb (grey)",
+      "price": "2,169,100",
+      "beforeprice": "2,299,000",
+      "discountprice": "-10%",
+      "quantity": 1
+  },
+  {
+      "id": 2,
+      "image": "assets/images/iphone/15/apple-iphone-15-pro-max-256gb-nano-sim-blue-titanium.jpg",
+      "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
+      "price": "1,895,100",
+      "beforeprice": "2,100,100",
+      "discountprice": "-10%",
+      "quantity": 1
+  },
+  {
+      "id": 3,
+      "image": "assets/images/accessories/protection/apple-iphone-15-pro-max-finewoven-case-with-magsafe-taupe.webp",
+      "name": "Apple IPhone 15 Pro Max case (with magsafe)",
+      "price": "130,500",
+      "beforeprice": "145,000",
+      "discountprice": "-10%",
+      "quantity": 1
+  },
+  {
+      "id": 4,
+      "image": "assets/images/mac/apple-macbook-pro-16.2-32gb-1tb-10-cores-m1-max-silver.jpg",
+      "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
+      "price": "2,232,000",
+      "beforeprice": "2,480,000",
+      "discountprice": "-10%",
+      "quantity": 1
+  }
+]
 
 // setting Global variables so that we can acces them from inside the functions
 localStorage.setItem('products', JSON.stringify(Products) )
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         imgDiv.id = `img${product.id}`
 
         const anchor = document.createElement('a');
-        anchor.href = `/pages/collections/collections.html?id=${product.id}`;
+        anchor.href = `pages/collections/collections.html?id=${product.id}`;
 
         const imgElement = document.createElement('img');
         imgElement.src = product.image;
