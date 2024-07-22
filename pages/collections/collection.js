@@ -2,8 +2,8 @@ const nairaSymbol = '\u20A6'
 var Products = [
     {
         "id": 1,
-        "image": "/assets/images/ipad/apple-ipad-pro-12.9-m22022-modelwi-ficellular-512gb-space-gray.jpg",
-        "name": "Apple IPad Pro 12 512gb (grey)",
+        "image": "../../assets/images/iphone/11/apple-iphone-11-pro-max-6.5-4gb-ram-64gb-rom-gold.jpg",
+        "name": "Apple iphone 11 Pro Max 64gb (gold)",
         "price": "2,169,100",
         "beforeprice": "2,299,000",
         "discountprice": "-10%",
@@ -11,7 +11,7 @@ var Products = [
     },
     {
         "id": 2,
-        "image": "/assets/images/iphone/15/apple-iphone-15-pro-max-256gb-nano-sim-blue-titanium.jpg",
+        "image": "../../assets/images/iphone/11/iphone-11-6.1-4gb-ram-64gb-rom-3110mah-purple-apple.jpg",
         "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
         "price": "1,895,100",
         "beforeprice": "2,100,100",
@@ -20,7 +20,7 @@ var Products = [
     },
     {
         "id": 3,
-        "image": "/assets/images/accessories/protection/apple-iphone-15-pro-max-finewoven-case-with-magsafe-taupe.webp",
+        "image": "../../assets/images/iphone/11/iphone-11-pro-max-4gb-ram-256gb-romios-4g-lte-midnight-green.jpg",
         "name": "Apple IPhone 15 Pro Max case (with magsafe)",
         "price": "400.00",
         "beforeprice": "330.70",
@@ -29,7 +29,187 @@ var Products = [
     },
     {
         "id": 4,
-        "image": "/assets/images/mac/apple-macbook-pro-16.2-32gb-1tb-10-cores-m1-max-silver.jpg",
+        "image": "../../assets/images/iphone/11/iphone-11-pro-max-6.5-4gb-ram-256gb-rom-space-gray-apple.jpg",
+        "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
+        "price": "500.00",
+        "beforeprice": "330.70",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 5,
+        "image": "../../assets/images/iphone/13/apple-iphone-13-pro-max-6.7-256gb-rom-6gb-ram-4352ma-silver.jpg",
+        "name": "Apple iphone 11 Pro Max 64gb (gold)",
+        "price": "2,169,100",
+        "beforeprice": "2,299,000",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 6,
+        "image": "../../assets/images/iphone/13/iphone-13-pro-max-6.7-super-retina-xdr-display-with-promotion-6gb-ram-512gb-rom-ios-15-5g-facetime-gold.jpg",
+        "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
+        "price": "1,895,100",
+        "beforeprice": "2,100,100",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 7,
+        "image": "../../assets/images/iphone/13/iphone-13-pro-max-6.7-super-retina-xdr-display-with-promotion-6gb-ram-512gb-rom-ios-15-5g-facetime-sierra-blue-apple.jpg",
+        "name": "Apple IPhone 15 Pro Max case (with magsafe)",
+        "price": "400.00",
+        "beforeprice": "330.70",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 8,
+        "image": "../../assets/images/iphone/13/apple-iphone-13-pro-max-6.7-256gb-rom-6gb-ram-4352ma-silver.jpg",
+        "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
+        "price": "500.00",
+        "beforeprice": "330.70",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 9,
+        "image": "../../assets/images/iphone/14/apple-iphone-14-pro-max-6.7-128gb-rom-6gb-ram-nano-sim-black.jpg",
+        "name": "Apple iphone 11 Pro Max 64gb (gold)",
+        "price": "2,169,100",
+        "beforeprice": "2,299,000",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 10,
+        "image": "../../assets/images/iphone/14/apple-iphone-14-pro-max-6.7-128gb-rom-6gb-ram-nano-sim-silver.jpg",
+        "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
+        "price": "1,895,100",
+        "beforeprice": "2,100,100",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 11,
+        "image": "../../assets/images/iphone/14/iphone-14-pro-max-6.7-6gb-ram-128gb-rom-deep-purple.jpg",
+        "name": "Apple IPhone 15 Pro Max case (with magsafe)",
+        "price": "400.00",
+        "beforeprice": "330.70",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 12,
+        "image": "../../assets/images/iphone/14/iphone-14-pro-max-6.7-256gb-dual-nano-sim-gold-apple.jpg",
+        "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
+        "price": "500.00",
+        "beforeprice": "330.70",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 13,
+        "image": "../../assets/images/iphone/15/apple-iphone-15-pro-128gb-nano-sim-natural-titanium-.jpg",
+        "name": "Apple iphone 11 Pro Max 64gb (gold)",
+        "price": "2,169,100",
+        "beforeprice": "2,299,000",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 14,
+        "image": "../../assets/images/iphone/15/apple-iphone-15-pro-max-256gb-nano-sim-blue-titanium.jpg",
+        "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
+        "price": "1,895,100",
+        "beforeprice": "2,100,100",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 15,
+        "image": "../../assets/images/iphone/15/apple-iphone-15-pro-max-512gb-nano-sim-blue-titanium.jpg",
+        "name": "Apple IPhone 15 Pro Max case (with magsafe)",
+        "price": "400.00",
+        "beforeprice": "330.70",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 16,
+        "image": "../../assets/images/iphone/15/apple-iphone-15-pro-max-512gb-nano-sim-natural-titanium.jpg",
+        "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
+        "price": "500.00",
+        "beforeprice": "330.70",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 17,
+        "image": "../../assets/images/mac/apple-13.6-macbook-air-m2-midnight-8gb-512gb.jpg",
+        "name": "Apple iphone 11 Pro Max 64gb (gold)",
+        "price": "2,169,100",
+        "beforeprice": "2,299,000",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 18,
+        "image": "../../assets/images/mac/2024 OSX SONOMA- 2018 MACBOOK AIR 13 - 1.6GHz i5 - 16GB RAM - 256GB SSD - GRAY.webp",
+        "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
+        "price": "1,895,100",
+        "beforeprice": "2,100,100",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 19,
+        "image": "../../assets/images/mac/apple-macbook-air-13-inch-2022-m2-8gb-256gb-ssd-8-core-gpu-space-gray.jpg",
+        "name": "Apple IPhone 15 Pro Max case (with magsafe)",
+        "price": "400.00",
+        "beforeprice": "330.70",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 20,
+        "image": "../../assets/images/mac/apple-macbook-pro-16.2-32gb-1tb-10-cores-m1-max-silver.jpg",
+        "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
+        "price": "500.00",
+        "beforeprice": "330.70",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 21,
+        "image": "../../assets/images/ipad/apple-ipad-9th-gen-10.2-wi-fi-cellular-256gb-space-grey.jpg",
+        "name": "Apple IPad Pro 12 512gb (grey)",
+        "price": "2,169,100",
+        "beforeprice": "2,299,000",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 22,
+        "image": "../../assets/images/ipad/Apple-IPad-Pro-12.9-M2-2022 Model-Wi-Fi-Only-128GB-Silver.jpg",
+        "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
+        "price": "1,895,100",
+        "beforeprice": "2,100,100",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 23,
+        "image": "../../assets/images/ipad/apple-ipad-pro-12.9-m22022-modelwi-ficellular-512gb-space-gray.jpg",
+        "name": "Apple IPhone 15 Pro Max case (with magsafe)",
+        "price": "400.00",
+        "beforeprice": "330.70",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 24,
+        "image":"../../assets/images/ipad/apple-ipad-9th-gen-10.2-wi-fi-cellular-256gb-space-grey.jpg",
         "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
         "price": "500.00",
         "beforeprice": "330.70",
