@@ -433,7 +433,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <div id="social-media-share">
             <img id="twitter-share" src="../../assets/icons/kisspng-social-media-computer-icons-tulane-university-face-drawing-vector-twitter-5ab02d6b50a397.8866567515214954033303.PNG" alt="twitter" width="40px" height="40px">
-            <img id="facebook-share" src="../../assets/icons/facebook-icon.PNG" alt="facebook" width="40px" height="40px">
+            <img id="facebook-share" src="../../assets/icons/facebook-icon.png" alt="facebook" width="40px" height="40px">
             <img id="linkedin-share" src="../../assets/icons/kisspng-linkedin-logo-computer-icons-business-symbol-linkedin-icon-5ab1765660baa8.1191823015215796063962.PNG" alt="linkedin" width="40px" height="40px">
             </div>
             
