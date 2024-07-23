@@ -3,11 +3,303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer Profile</title>
+    <title>i-Hub-Nigeria-Customer-Dashboard</title>
+    <link rel="stylesheet" href="mprofile.css">
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../landing.css">
+    <link rel="shortcut icon" href="../assets/images/logos/logo.svg" type="png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 </head>
 <body>
-    <h1>
-        PROFILE
-    </h1>
+    <header class="header">
+
+    <!-- nav section -->
+      <nav class="navbar">
+          <div class="nav-toggle">
+              <i class="fas fa-bars" id="toggle1"></i>
+              <i class="fa-solid fa-xmark" id="toggle2"></i>
+          </div>
+                <div class="logo">
+                <a href="../index.html"><img src="../assets/images/logos/logo.svg" alt="logo"></a>
+                </div>
+          <div class="nav-links">
+              <ul>
+                  <li class="dropdown">
+                      <a href="../index.html">Home</a>
+                  </li>
+
+                  <li class="dropdown">
+                      <a href="#">Products</a>
+                      <div class="dropdown-content">
+                          <a href="../pages/Products/iphone.html">iphone</a>
+                          <a href="../pages/Products/ipad.html">ipad</a>
+                          <a href="../pages/Products/mac.html">Mac</a>
+                      </div>
+                  </li>
+
+                  <li class="dropdown">
+                      <a href="#">Services</a>
+                      <div class="dropdown-content">
+                          <a href="../pages/Services/repairs.html">Repairs</a>
+                          <a href="../pages/Services/trading.html">Trade-In</a>
+                          <a href="../pages/Services/financing.html">Financing</a>
+                      </div>
+                  </li>
+
+                  <li><a href="../pages/contact.html">Contact</a></li>
+              </ul>
+          </div>
+          <div class="search-bar">
+              <input type="text" placeholder="Search...">
+              <button>Search</button>
+          </div>
+          <div class="user-account">
+            <ul>
+                <li>
+                    <a href="#"><i class="fa-solid fa-user fa-lg"></i></a>
+                    <div class="user-dropdown-content">
+                        <a href="member_area/mLogin.html" id="mLogin">Customer Login</a>
+                        <a href="vendor_area/vLogin.html">Vendor Login</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="cart">    
+            <a href="../pages/cart/cart.html">
+                <i data-feather="shopping-cart"></i>
+                <span>cart</span>
+            </a>
+        </div>
+
+      </nav>
+
+    <!-- navbar 2 -->
+    <div class="nav-links2">
+          <ul>
+              <li>
+                  <div class="dropdown2">
+                      <a href="../index.html">Home</a>
+              </li>
+
+              <li>
+                  <div class="dropdown2">
+                      <a href="#">Products</a>
+                      <span class="arrow-down"><i class="fas fa-angle-down" style="color: #ffffff;"></i></span>
+                  </div>
+                  <div class="dropdown-content2">
+                      <a href="../pages/Products/iphone.html">iPhone</a>
+                      <a href="../pages/Products/ipad.html">iPad</a>
+                      <a href="../pages/Products/mac.html">Mac</a>
+                  </div>
+              </li>
+
+              <li>
+                  <div class="dropdown2">
+                      <a href="#">Services</a>
+                      <span class="arrow-down"><i class="fas fa-angle-down" style="color: #ffffff;"></i></span>
+                  </div>
+                  <div class="dropdown-content2">
+                      <a href="../pages/Services/repairs.html">Repairs</a>
+                      <a href="../pages/Services/trading.html">Trade-In</a>
+                      <a href="../pages/Services/financing.html">Financing</a>
+                  </div>
+              </li>
+
+              <div class="contact">
+                  <a href="../pages/contact.html">Contact</a>
+              </div>
+          </ul>
+    </div>
+  </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#orders">My Orders</a></li>
+                <li><a href="#inbox">Inbox</a></li>
+                <li><a href="#account">Manage Account</a></li>
+                <li><a href="#close-account">Close Account</a></li>
+                <li><a href="#logout">Logout</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <section id="orders" class="content-section">
+                <h2>My Orders</h2>
+                <div id="ongoing-orders">
+                    <h3>Ongoing Orders</h3>
+                    <!-- Ongoing orders will be dynamically loaded here -->
+                </div>
+                <div id="delivered-orders">
+                    <h3>Delivered Orders</h3>
+                    <!-- Delivered orders will be dynamically loaded here -->
+                </div>
+            </section>
+            
+            <section id="inbox">
+                <h2>Inbox</h2>
+                <p>Check your messages here.</p>
+                <!-- will be worked on later -->
+            </section>
+
+            <section id="account">
+                <h2>Manage Account</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                    
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address">
+                    
+                    <button type="submit">Update</button>
+                </form>
+            </section>
+
+            <section id="close-account">
+                <h2>Close Account</h2>
+                <button>Close My Account</button>
+            </section>
+
+            <section id="logout">
+                <h2>Logout</h2>
+                <button>Logout</button>
+            </section>
+        </main>
+    </div>
+
+    <!-- footer -->
+<footer>
+    <div class="socials-container">
+        <div class="support">
+            <a href="https://wa.me/2348102992504" target="_blank"><i class="fab fa-whatsapp fa-2x"></i>
+            <h6>need to speak with us?</h6>
+            </a>
+        </div>
+        <div class="socials">
+            <a href="https://web.facebook.com/McCprian" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
+            <a href="https://twitter.com/Mc_Cprian02" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://www.instagram.com/_obinesto_/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+        </div>
+
+    </div>
+    <hr id="footer-hr">
+    <div class="footer">
+        <div class="learn">
+            <h4>Learn</h4>
+            <a href="">
+                <p>Technical Support</p>
+            </a>
+            <a href="">
+                <p>Trade-In</p>
+            </a>
+            <a href="">
+                <p>Repairs</p>
+            </a>
+            <a href="">
+                <p>Contact Us</p>
+            </a>
+            
+        </div>
+        <div class="products">
+            <h4>Products</h4>
+            <a href="">
+                <p>Shop iPad</p>
+            </a>
+            <a href="">
+                <p>Shop iPhone</p>
+            </a>
+            <a href="">
+                <p>Shop Mac</p>
+            </a>
+            <a href="">
+                <p>Shop Accessories</p>
+            </a>
+            
+            
+        </div>
+        <div class="policies">
+            <h4>Policies</h4>
+            <a href="">
+                <p>Terms of Service</p>
+            </a>
+            <a href="">
+                <p>Refund Policy</p>
+            </a>
+            <a href="">
+                <p>Shipping Policy</p>
+            </a>
+            <a href="">
+                <p>Privacy Policy</p>
+            </a>
+        </div>
+        <div class="subscribe">
+            <h4>Subscribe</h4>
+            <p>Sign up to get the latest on sales, new releases and more …</p>
+            <form action="" id="form1">
+                <input type="text" placeholder="Email*">
+                <br>
+                <button id="Lsign-up1">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <hr id="footer-hr2">
+    <div class="subscribe2">
+        <h4>Subscribe</h4>
+        <p>Sign up to get the latest on sales, new releases and more …</p>
+        <form action="" id="form1">
+            <input type="text" placeholder="Email*">
+            <br>
+            <button id="Lsign-up2">Sign Up</button>
+        </form>
+    </div>
+
+    <div class="copyright">
+        <h6>© 2024 iHub Nigeria.</h6>
+    </div>
+
+</footer>
+
+<script>
+    // navbar logic
+    document.addEventListener("DOMContentLoaded", function() {
+      var icon1 = document.getElementById("toggle1");
+      var icon2 = document.getElementById("toggle2");
+      const arrowDown =  document.querySelectorAll(".arrow-down i")
+
+     icon1.addEventListener("click", function() {
+     icon1.style.display = "none";
+
+    document.querySelector('.nav-links2').style.display = 'block'
+    icon2.style.display = "block";
+});
+
+    icon2.addEventListener("click", function() {
+    icon2.style.display = "none"
+    document.querySelector('.nav-links2').style.display = 'none';
+
+    icon1.style.display = "block"
+});
+
+    arrowDown.forEach(arrowDowns =>{
+    arrowDowns.addEventListener('click', function(){
+    arrowDowns.classList.toggle('fa-angle-down')
+    arrowDowns.classList.toggle('fa-angle-up')
+})})
+
+});
+</script>
+
+<script>
+    feather.replace();
+</script>
+<script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+<script src="mprofile.js"></script>
+<script src="../landing.js"></script>
 </body>
 </html>

@@ -178,7 +178,7 @@ var cables = [
         "quantity": 1
     },
     {
-        "id": 37,
+        "id": 36,
         "image": "../../assets/images/accessories/cable/lightning-to-usb-c-cable-2-m.webp",
         "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
         "price": "500.00",
@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 var protections = [
     {
-        "id": 38,
+        "id": 37,
         "image": "../../assets/images/accessories/protection/apple-iphone-15-pro-max-finewoven-case-with-magsafe-taupe.webp",
         "name": "Apple iphone 11 Pro Max 64gb (gold)",
         "price": "2,169,100",
@@ -234,7 +234,7 @@ var protections = [
         "quantity": 1
     },
     {
-        "id": 39,
+        "id": 38,
         "image": "../../assets/images/accessories/protection/iphone-13-13-pro-tempered-glass-full-coverage-screen.webp",
         "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
         "price": "1,895,100",
@@ -243,7 +243,7 @@ var protections = [
         "quantity": 1
     },
     {
-        "id": 40,
+        "id": 39,
         "image": "../../assets/images/accessories/protection/iphone-14-clear-case-with-magsafe.webp",
         "name": "Apple IPhone 15 Pro Max case (with magsafe)",
         "price": "400.00",
@@ -252,7 +252,7 @@ var protections = [
         "quantity": 1
     },
     {
-        "id": 41,
+        "id": 40,
         "image": "../../assets/images/accessories/protection/iphone-15-pro-max-clear-case-with-magsafe.webp",
         "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
         "price": "500.00",

@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     macArray.forEach(mac => {
         const imgDiv = document.createElement('div');
         imgDiv.classList.add('iphone-img')
-        imgDiv.id = `mimg${mac.id}`
+        imgDiv.id = `pimg${mac.id}`
 
         const anchor = document.createElement('a');
         anchor.href = `../../pages/collections/collections.html?id=${mac.id}`;

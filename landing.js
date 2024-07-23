@@ -68,7 +68,7 @@ var Products = [
       "quantity": 1
   },
   {
-      "id": 3,
+      "id": 37,
       "image": "assets/images/accessories/protection/apple-iphone-15-pro-max-finewoven-case-with-magsafe-taupe.webp",
       "name": "Apple IPhone 15 Pro Max case (with magsafe)",
       "price": "130,500",
@@ -86,17 +86,6 @@ var Products = [
       "quantity": 1
   }
 ]
-
-// setting Global variables so that we can acces them from inside the functions
-localStorage.setItem('products', JSON.stringify(Products) )
-
-if(!localStorage.getItem("cart")) {
-    localStorage.setItem("cart", "[]")
-}
-
-
-let products = JSON.parse(localStorage.getItem("products"))
-let cart = JSON.parse(localStorage.getItem("cart"))
 
 
 document.addEventListener('DOMContentLoaded', () => {

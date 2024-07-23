@@ -89,39 +89,11 @@
 @media (max-width: 800px) {
     .iphone{
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
     }
 
     .iphone-img img{
         height: 50%;
     }
 
-    #pimg1{
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 3;
-      }
-    
-      #pimg2{
-        grid-column-start: 3;
-        grid-column-end: 5;
-        grid-row-start: 1;
-        grid-row-end: 3;
-      }
-    
-      #pimg3{
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 3;
-        grid-row-end: 5;
-      }
-    
-      #pimg4{
-        grid-column-start: 3;
-        grid-column-end: 5;
-        grid-row-start: 3;
-        grid-row-end: 5;
-      }
     
 }
