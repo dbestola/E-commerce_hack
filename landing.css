@@ -717,14 +717,14 @@ font-weight: bolder;
     height: 50%;
   }
 
-  #img1, #img2a{
+  #img23, #img2a{
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
   }
 
-  #img2, #img2b{
+  #img14, #img2b{
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 1;
@@ -738,7 +738,7 @@ font-weight: bolder;
     grid-row-end: 5;
   }
 
-  #img4, #img2d{
+  #img20, #img2d{
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 3;

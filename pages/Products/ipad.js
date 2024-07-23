@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ipads.forEach(ipad => {
         const imgDiv = document.createElement('div');
         imgDiv.classList.add('iphone-img')
-        imgDiv.id = `img${ipad.id}`
+        imgDiv.id = `pimg${ipad.id}`
 
         const anchor = document.createElement('a');
         anchor.href = `/pages/collections/collections.html?id=${ipad.id}`;

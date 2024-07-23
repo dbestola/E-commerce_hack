@@ -215,6 +215,150 @@ var Products = [
         "beforeprice": "330.70",
         "discountprice": "-10%",
         "quantity": 1
+    },
+    {
+        "id": 25,
+        "image": "../../assets/images/accessories/adapter/apple-30w-usb-c-power-adapter.webp",
+        "name": "Apple iphone 11 Pro Max 64gb (gold)",
+        "price": "2,169,100",
+        "beforeprice": "2,299,000",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 26,
+        "image": "../../assets/images/accessories/adapter/apple-magsafe-2-power-adapter-60w.webp",
+        "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
+        "price": "1,895,100",
+        "beforeprice": "2,100,100",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 27,
+        "image": "../../assets/images/accessories/adapter/apple-magsafe-power-adapter-85w.webp",
+        "name": "Apple IPhone 15 Pro Max case (with magsafe)",
+        "price": "400.00",
+        "beforeprice": "330.70",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 28,
+        "image": "../../assets/images/accessories/adapter/apple-magsafe-2-power-adapter-60w.webp",
+        "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
+        "price": "500.00",
+        "beforeprice": "330.70",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 29,
+        "image": "../../assets/images/accessories/airpod/airpods-3rd-gen.webp",
+        "name": "Apple iphone 11 Pro Max 64gb (gold)",
+        "price": "2,169,100",
+        "beforeprice": "2,299,000",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 30,
+        "image": "../../assets/images/accessories/airpod/airpods-max-grey.webp",
+        "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
+        "price": "1,895,100",
+        "beforeprice": "2,100,100",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 31,
+        "image": "../../assets/images/accessories/airpod/airpods-with-charging-case-gen-2.webp",
+        "name": "Apple IPhone 15 Pro Max case (with magsafe)",
+        "price": "400.00",
+        "beforeprice": "330.70",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 32,
+        "image": "../../assets/images/accessories/adapter/apple-30w-usb-c-power-adapter.webp",
+        "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
+        "price": "500.00",
+        "beforeprice": "330.70",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 33,
+        "image": "../../assets/images/accessories/cable/lightning-to-usb-c-cable-2-m.webp",
+        "name": "Apple iphone 11 Pro Max 64gb (gold)",
+        "price": "2,169,100",
+        "beforeprice": "2,299,000",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 34,
+        "image": "../../assets/images/accessories/cable/lightning-to-usb-cable-1m-zml.webp",
+        "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
+        "price": "1,895,100",
+        "beforeprice": "2,100,100",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 35,
+        "image": "../../assets/images/accessories/cable/lightning-to-usb-cable-2-m.webp",
+        "name": "Apple IPhone 15 Pro Max case (with magsafe)",
+        "price": "400.00",
+        "beforeprice": "330.70",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 36,
+        "image": "../../assets/images/accessories/cable/lightning-to-usb-c-cable-2-m.webp",
+        "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
+        "price": "500.00",
+        "beforeprice": "330.70",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 37,
+        "image": "../../assets/images/accessories/protection/apple-iphone-15-pro-max-finewoven-case-with-magsafe-taupe.webp",
+        "name": "Apple iphone 11 Pro Max 64gb (gold)",
+        "price": "2,169,100",
+        "beforeprice": "2,299,000",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 38,
+        "image": "../../assets/images/accessories/protection/iphone-13-13-pro-tempered-glass-full-coverage-screen.webp",
+        "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
+        "price": "1,895,100",
+        "beforeprice": "2,100,100",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 39,
+        "image": "../../assets/images/accessories/protection/iphone-14-clear-case-with-magsafe.webp",
+        "name": "Apple IPhone 15 Pro Max case (with magsafe)",
+        "price": "400.00",
+        "beforeprice": "330.70",
+        "discountprice": "-10%",
+        "quantity": 1
+    },
+    {
+        "id": 40,
+        "image": "../../assets/images/accessories/protection/iphone-15-pro-max-clear-case-with-magsafe.webp",
+        "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
+        "price": "500.00",
+        "beforeprice": "330.70",
+        "discountprice": "-10%",
+        "quantity": 1
     }
 ];
 
@@ -247,44 +391,53 @@ document.addEventListener('DOMContentLoaded', () => {
         const productDetails = document.getElementById('product-details');
 
         productDetails.innerHTML = `
-            <h2 class="product-name">${product.name}</h2>
-            <img src="${product.image}" alt="${product.name}" class="img2">
-            <div class='pricelist'>
-            <h4 style='font-weight: 600;' class="current-price">${nairaSymbol}${product.price}</h4>
-            <h6 id="before-price"><s>${nairaSymbol}${product.beforeprice}</s></h6>
-            <h6 style='background-color: rgba(255, 192, 203, 0.582);' id="discount-percent">${product.discountprice}</h6>
-            </div>
-            <div class="row">
-                <div class="col-3">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span>(verified rating)</span>
-                </div>
-            </div>
-            <button id="add-to-cart">
+        <div class="product-details-2">
+           <div class="container-img">
+              <img src="${product.image}" alt="${product.name}">
+           </div>
+           <div class="product-name">
+               <h2>${product.name}</h2>
+             <div class='pricelist'>
+               <h4 style='font-weight: 600;' class="current-price">Price:${nairaSymbol}${product.price}</h4>
+               <h4 id="before-price">Before:<s>${nairaSymbol}${product.beforeprice}</s></h6>
+               <h6 style='background-color: rgba(255, 192, 203, 0.582); width: fit-content; margin: 0;' id="discount-percent">Discount: ${product.discountprice}</h6>
+             </div>
+              <button id="add-to-cart">
                 <div class="cart-icon">
                     <a href="#">
                         <img src="../../assets/icons/shopping-cart.svg" alt="">
                     </a>
                 </div>
                 Add to Cart
-            </button>
-            <div class="horizontal-line"></div>
-            <div class="horizontal-line2"></div>
-            <div class="horizontal-line3"></div>
-            <div class="horizontal-line4"></div>
+              </button>
+
+              <div class="row">
+                <div class="col-3">
+                    <span><i class="fa-solid fa-star" style="color: #f5b400;"></i></span>
+                    <span><i class="fa-solid fa-star" style="color: #f5b400;"></i></span>
+                    <span><i class="fa-solid fa-star" style="color: #f5b400;"></i></span>
+                    <span><i class="fa-solid fa-star" style="color: #f5b400;"></i></span>
+                    <span><i class="fa-solid fa-star" style="color: #f5b400;"></i></span>
+                </div>
+                <span>(verified rating)</span>
+            </div>
+
+               <div class="horizontal-line"></div>
+               <div class="horizontal-line2"></div>
+               <div class="horizontal-line3"></div>
+               <div class="horizontal-line4"></div>
+           </div>
+        
+        </div>
             <h4 id="share-product">SHARE THIS PRODUCT</h4>
 
             <div id="social-media-share">
-            <img id="twitter-share" src="/assets/icons/kisspng-social-media-computer-icons-tulane-university-face-drawing-vector-twitter-5ab02d6b50a397.8866567515214954033303.PNG" alt="twitter" width="40px" height="40px">
-            <img id="facebook-share" src="/assets/icons/facebook-icon.PNG" alt="facebook" width="40px" height="40px">
-            <img id="linkedin-share" src="/assets/icons/kisspng-linkedin-logo-computer-icons-business-symbol-linkedin-icon-5ab1765660baa8.1191823015215796063962.PNG" alt="linkedin" width="40px" height="40px">
+            <img id="twitter-share" src="../../assets/icons/kisspng-social-media-computer-icons-tulane-university-face-drawing-vector-twitter-5ab02d6b50a397.8866567515214954033303.PNG" alt="twitter" width="40px" height="40px">
+            <img id="facebook-share" src="../../assets/icons/facebook-icon.PNG" alt="facebook" width="40px" height="40px">
+            <img id="linkedin-share" src="../../assets/icons/kisspng-linkedin-logo-computer-icons-business-symbol-linkedin-icon-5ab1765660baa8.1191823015215796063962.PNG" alt="linkedin" width="40px" height="40px">
             </div>
             
-             <p class='product-text'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat.</p>
+            <p class='product-text'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat.</p>
         `;
 
 
