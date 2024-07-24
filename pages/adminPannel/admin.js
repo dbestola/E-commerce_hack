@@ -67,3 +67,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderProductList();
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const logoutButton = document.getElementById('logoutButton');
+
+    if (logoutButton) {
+        logoutButton.addEventListener('click', function() {
+            // Clear relevant local storage items
+            localStorage.removeItem('isAdminLoggedIn');
+            localStorage.removeItem('adminEmail');
+            localStorage.removeItem('adminDetails');
+
+            // Redirect to login page
+            window.location.href = '/vendor_area/vlogin.html'; // Adjust the path to your login page
+        });
+    }
+});

@@ -162,6 +162,33 @@ function makePayment() {
 
   }
 
+  const orderDetailsForCard = {
+    customerReference : customerReference, // Unique order Refrence
+    customerName: customerName,
+    customerEmail: customerEmail,
+    paymentMethod: 'Pay with Card',
+    cart: getCartItems() // Get items from the cart
+};
+
+savePaidOrderLocally(orderDetailsForCard);
+localStorage.setItem('currentOrderRefrenceID', orderDetailsForCard.customerReference); // Save current order ID
+
+// fuction that create orders and save orders to local storage
+function savePaidOrderLocally(orderDetailsForCard) {
+    const orders = JSON.parse(localStorage.getItem('orders')) || [];
+    orders.push(orderDetailsForCard);
+    localStorage.setItem('orders', JSON.stringify(orders));
+}
+
+
+
+  // fuction that create orders and save orders to local storage
+function savPaideOrderLocally( orderDetailsForCard) {
+    const orders = JSON.parse(localStorage.getItem('orders')) || [];
+    orders.push(orderDetailsForCard);
+    localStorage.setItem('orders', JSON.stringify(orders));
+}
+
 
  // Function to handle Pay on Delivery option
  function handlePayOnDelivery(name, email, address, country, state, city, phone, alternatePhone) {
@@ -193,9 +220,9 @@ function saveOrderLocally(orderDetails) {
     localStorage.setItem('orders', JSON.stringify(orders));
 }
 
-function getCartItems() {
-    return JSON.parse(localStorage.getItem('cart')) || [];
-}
+// function getCartItems() {
+//     return JSON.parse(localStorage.getItem('cart')) || [];
+// }
 
 // function clearCart() {
 //     localStorage.removeItem('cart')

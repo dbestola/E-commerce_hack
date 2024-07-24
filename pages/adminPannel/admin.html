@@ -22,7 +22,7 @@
                   <i class="fas fa-xmark" id="toggle2"></i>
               </div>
               <div class="logo">
-                  <a href="index.html"><img src="assets/images/logos/logo.svg" alt="logo"></a>
+                  <a href="/index.html"><img src="/assets/images/logos/logo.svg" alt="logo"></a>
               </div>
               <div class="nav-links">
                   <ul>
@@ -57,20 +57,7 @@
                   <button id="search-button">Search</button>
               </div>
         
-              <div class="handleUserStates">
-                  <div class="user-account">
-                      <ul>
-                          <li>
-                              <a href="#"><i class="fa-solid fa-user fa-lg"></i></a>
-                              <div class="user-dropdown-content">
-                                  <a href="member_area/mLogin.html" id="mLogin">Customer Login</a>
-                                  <a href="vendor_area/vLogin.html">Vendor Login</a>
-                              </div>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-  
+    
               <div class="cart">    
                   <a href="/pages/cart/cart.html">
                       <i data-feather="shopping-cart"></i>
@@ -117,7 +104,10 @@
               </ul>
         </div>
       </header>
-  
+       <div class="dashboard_logOut">
+      <h1>Admin Dashboard</h1>
+      <button id="logoutButton">Logout</button>
+      </div>
 
     <div class="align">
         <h2>Add/Edit Product</h2>
@@ -151,6 +141,10 @@
         <h2>Product List</h2>
         <div id="product-list"></div>
     </div>
+
+  
+
+
   <!-- floating whatsapp icon -->
      <div class="whatsapp">
         <img src="assets/icons/whatsapp.png" alt="">
@@ -255,5 +249,6 @@
     <script src="/pages/collections/collection.js"></script>
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="admin.js"></script>
+    <script src="/vendor_area/v_login.js"></script>
 </body>
 </html>
