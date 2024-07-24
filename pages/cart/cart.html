@@ -125,21 +125,18 @@
     <h1>Shopping Cart</h1>
     <div id="cart-container">
         <table id="cart-table">
-            <tr id="tr1">
-                <th>Product</th>
-            </tr>
-            <tr id="tr2">
-                <th>Price</th>
-            </tr>
-            <tr id="tr3">
-                <th>Quantity</th>
-            </tr>
-            <tr id="tr4">
-                <th>Total</th>
-            </tr>
-            <tr id="tr5">
-                <th>Actions</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Cart items will be rendered here -->
+            </tbody>
         </table>
         
         <div id="cart-summary">
