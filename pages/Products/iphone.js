@@ -6,8 +6,8 @@ var iphone11Array = [
         "id": 1,
         "image": "../../assets/images/iphone/11/apple-iphone-11-pro-max-6.5-4gb-ram-64gb-rom-gold.jpg",
         "name": "Apple iphone 11 Pro Max 64gb (gold)",
-        "price": "2,169,100",
-        "beforeprice": "2,299,000",
+        "price": "360,000",
+        "beforeprice": "400,000",
         "discountprice": "-10%",
         "quantity": 1
     },
