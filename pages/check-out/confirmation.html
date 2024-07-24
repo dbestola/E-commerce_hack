@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Confirmation</title>
-    <link rel="stylesheet" href="/pages/cart/cart.css">
+    <title>i-Hub-Nigeria-Order-Confirmation</title>
     <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
@@ -19,6 +18,7 @@
             height: 90vh;
             overflow: hidden;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             background-color: #f5f5f5;
@@ -52,12 +52,9 @@
         }
 
         .print{
-            position: absolute;
-            bottom: 7%;
-            margin: auto;
             background-color: red;
             color: #fff;
-            width: 100px;
+            width: 150px;
             font-size: 15px;
             border-radius: .5rem;
             border-style: hidden;
@@ -86,25 +83,30 @@
         }
 
         .continue-shopping{
-            position: absolute;
-            bottom: 7%;
-            right: 5%;
             background-color: red;
             width: 150px;
             height: 25px;
             border-radius: 10px;
-            
+            padding: 0 4px;  
         }
 
         .continue-shopping a{
             text-decoration: none;
             color: #fff;
-            }
+        }
 
         .continue-shopping:hover a{
             color: greenyellow;
             cursor: pointer;
-            }
+        }
+
+        .button-container{
+            display: flex;
+            width: -moz-fit-content;
+            width: fit-content;
+            margin-top: 4rem;
+            gap: 4rem;
+        }
 
    
 
@@ -117,6 +119,13 @@
     }
     60% {
         transform: translateY(-15px);
+    }
+  }
+
+  /* media query */
+  @media (max-width:1100px){
+    .receipt{
+        width: 70vw;
     }
   }
     </style>
@@ -133,13 +142,17 @@
     <div id="confirmation-message"></div>
     <div id="confirmation-details"></div>
     <h3 class='alertMessage'> Note that: you will present this details to claim your order when it arrives, </br>
-          kindly keep record of it. </h3>
-          <div class="continue-shopping">
-            <a id="continue-shoppingHover" href="/index.html"> <img src="/assets/icons/arrow-icon.png" width="15px" alt=""> Continue Shopping</a>
-        </div>
+          kindly keep record of it. 
+    </h3>
+          
     </div>
     
-    <button class="print" id="print-button">Print Order</button>
+    <div class="button-container">
+        <button class="print" id="print-button">Print Order</button>
+        <div class="continue-shopping">
+            <a id="continue-shoppingHover" href="../../index.html"> <img src="../../assets/icons/arrow-icon.png" width="15px" alt=""> Continue Shopping</a>
+        </div>
+    </div>
 
    
 

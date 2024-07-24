@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../landing.css">
     <link rel="stylesheet" href="products.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="shortcut icon" href="/assets/images/logo.svg" type="png">
+    <link rel="shortcut icon" href="../../assets/images/logo.svg" type="png">
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
 </head>
@@ -50,20 +50,22 @@
                 <li><a href="../contact.html">Contact</a></li>
             </ul>
         </div>
-        <div class="search-bar">
+        <div class="search-bar" id="search-input">
             <input type="text" placeholder="Search...">
-            <button>Search</button>
+            <button id="search-button">Search</button>
         </div>
-        <div class="user-account">
-            <ul>
-                <li>
-                    <a href="#"><i class="fa-solid fa-user fa-lg"></i></a>
-                    <div class="user-dropdown-content">
-                        <a href="../../member_area/mLogin.html" id="mLogin">Customer Login</a>
-                        <a href="../../vendor_area/vLogin.html">Vendor Login</a>
-                    </div>
-                </li>
-            </ul>
+        <div class="handleUserStates">
+            <div class="user-account">
+                <ul>
+                    <li>
+                        <a href="#"><i class="fa-solid fa-user fa-lg"></i></a>
+                        <div class="user-dropdown-content">
+                            <a href="../../member_area/mLogin.html" id="mLogin">Customer Login</a>
+                            <a href="../../vendor_area/vLogin.html">Vendor Login</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="cart">    
             <a href="../cart/cart.html">
@@ -73,11 +75,49 @@
         </div>
     </nav>
 
+     <!-- navbar 2 -->
+     <div class="nav-links2">
+        <ul>
+            <li>
+                <div class="dropdown2">
+                    <a href="../../index.html">Home</a>
+            </li>
+
+            <li>
+                <div class="dropdown2">
+                    <a href="#">Products</a>
+                    <span class="arrow-down"><i class="fas fa-angle-down dropA" style="color: #ffffff;"></i></span>
+                </div>
+                <div class="dropdown-content2" id="dropdown-content2a">
+                    <a href="../../pages/Products/iphone.html">iPhone</a>
+                    <a href="../../pages/Products/ipad.html">iPad</a>
+                    <a href="../../pages/Products/mac.html">Mac</a>
+                </div>
+            </li>
+
+            <li>
+                <div class="dropdown2">
+                    <a href="#">Services</a>
+                    <span class="arrow-down"><i class="fas fa-angle-down dropB" style="color: #ffffff;"></i></span>
+                </div>
+                <div class="dropdown-content2" id="dropdown-content2b">
+                    <a href="../../pages/Services/repairs.html">Repairs</a>
+                    <a href="../../pages/Services/trading.html">Trade-In</a>
+                    <a href="../../pages/Services/financing.html">Financing</a>
+                </div>
+            </li>
+
+            <div class="contact">
+                <a href="../../pages/contact.html">Contact</a>
+            </div>
+        </ul>
+  </div>
+
     <div class="iphone-banner">
         <img class="product-img" src="../../assets/images/slider/ipad.webp" alt="ipad">
     </div>
 
-        <h3>Ipad</h3>
+        <h3 class="iphone-h3">Ipad</h3>
         <div class="iphone" id="ipadSeries">
             <!-- rendering from ipad.js -->
         </div>
@@ -134,16 +174,16 @@
             </div>
             <div class="policies">
                 <h4>Policies</h4>
-                <a href="">
+                <a href="../Policies/Terms-of-services.html">
                     <p>Terms of Service</p>
                 </a>
-                <a href="">
+                <a href="../Policies/Refund-policy.html">
                     <p>Refund Policy</p>
                 </a>
-                <a href="">
+                <a href="../Policies/Shipping-policy.html">
                     <p>Shipping Policy</p>
                 </a>
-                <a href="">
+                <a href="../Policies/Privacy-policy.html">
                     <p>Privacy Policy</p>
                 </a>
             </div>

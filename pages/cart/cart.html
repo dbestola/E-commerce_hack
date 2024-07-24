@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
+    <title>i-Hub-Nigeria-Cart</title>
 
     <!-- <script src="https://js.paystack.co/v1/inline.js"></script> -->
 
@@ -19,8 +19,8 @@
 <body>
     <header class="header">
 
-       <!-- nav section -->
-       <nav class="navbar">
+      <!-- nav section -->
+      <nav class="navbar">
         <div class="nav-toggle">
             <i class="fas fa-bars" id="toggle1"></i>
             <i class="fas fa-xmark" id="toggle2"></i>
@@ -37,22 +37,22 @@
                 <li class="dropdown">
                     <a href="#">Products</a>
                     <div class="dropdown-content">
-                        <a href="../Products/iphone.html">iPhone</a>
-                        <a href="../Products/ipad.html">iPad</a>
-                        <a href="../Products/mac.html">Mac</a>
+                        <a href="../../pages/Products/iphone.html">iPhone</a>
+                        <a href="../../pages/Products/ipad.html">iPad</a>
+                        <a href="../../pages/Products/mac.html">Mac</a>
                     </div>
                 </li>
 
                 <li class="dropdown">
                     <a href="#">Services</a>
                     <div class="dropdown-content">
-                        <a href="../Services/repairs.html">Repairs</a>
-                        <a href="../Services/trading.html">Trade-In</a>
-                        <a href="../Services/financing.html">Financing</a>
+                        <a href="../../pages/Services/repairs.html">Repairs</a>
+                        <a href="../../pages/Services/trading.html">Trade-In</a>
+                        <a href="../../pages/Services/financing.html">Financing</a>
                     </div>
                 </li>
 
-                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../../pages/contact.html">Contact</a></li>
             </ul>
         </div>
 
@@ -60,9 +60,21 @@
           <input type="text" id="search-input" placeholder="Search...">
           <button id="search-button">Search</button>
         </div>
-
+        <div class="handleUserStates">
+          <div class="user-account">
+              <ul>
+                  <li>
+                      <a href="#"><i class="fa-solid fa-user fa-lg"></i></a>
+                      <div class="user-dropdown-content">
+                          <a href="member_area/mLogin.html" id="mLogin">Customer Login</a>
+                          <a href="vendor_area/vLogin.html">Vendor Login</a>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
         <div class="cart" id="cart-icon-container">    
-          <a href="/pages/cart/cart.html">
+          <a href="../cart/cart.html">
               <i data-feather="shopping-cart"></i>
               <span>cart</span>
               <div id="item-count-circle">0</div>
@@ -70,67 +82,71 @@
 
             
       </nav>
-  
-        <!-- navbar 2 -->
-        <div class="nav-links2">
-              <ul>
-                  <li>
-                      <div class="dropdown2">
-                          <a href="/index.html">Home</a>
-                  </li>
-  
-                  <li>
-                      <div class="dropdown2">
-                          <a href="#">Products</a>
-                          <span class="arrow-down"><i class="fas fa-angle-down" style="color: #ffffff;"></i></span>
-                      </div>
-                      <div class="dropdown-content2">
-                          <a href="#">Category 1</a>
-                          <a href="#">Category 2</a>
-                          <a href="#">Category 3</a>
-                      </div>
-                  </li>
-  
-                  <li>
-                      <div class="dropdown2">
-                          <a href="#">Services</a>
-                          <span class="arrow-down"><i class="fas fa-angle-down" style="color: #ffffff;"></i></span>
-                      </div>
-                      <div class="dropdown-content2">
-                          <a href="#">Service 1</a>
-                          <a href="#">Service 2</a>
-                          <a href="#">Service 3</a>
-                      </div>
-                  </li>
-  
-                  <div class="contact">
-                      <a href="#">Contact</a>
-                  </div>
-              </ul>
-        </div>
-      </header>
+
+  <!-- navbar 2 -->
+  <div class="nav-links2">
+      <ul>
+          <li>
+              <div class="dropdown2">
+                  <a href="../../index.html">Home</a>
+          </li>
+
+          <li>
+              <div class="dropdown2">
+                  <a href="#">Products</a>
+                  <span class="arrow-down"><i class="fas fa-angle-down dropA" style="color: #ffffff;"></i></span>
+              </div>
+              <div class="dropdown-content2" id="dropdown-content2a">
+                  <a href="../../pages/Products/iphone.html">iPhone</a>
+                  <a href="../../pages/Products/ipad.html">iPad</a>
+                  <a href="../../pages/Products/mac.html">Mac</a>
+              </div>
+          </li>
+
+          <li>
+              <div class="dropdown2">
+                  <a href="#">Services</a>
+                  <span class="arrow-down"><i class="fas fa-angle-down dropB" style="color: #ffffff;"></i></span>
+              </div>
+              <div class="dropdown-content2" id="dropdown-content2b">
+                  <a href="../../pages/Services/repairs.html">Repairs</a>
+                  <a href="../../pages/Services/trading.html">Trade-In</a>
+                  <a href="../../pages/Services/financing.html">Financing</a>
+              </div>
+          </li>
+
+          <div class="contact">
+              <a href="../contact.html">Contact</a>
+          </div>
+      </ul>
+    </div>
+  </header>
 
     <h1>Shopping Cart</h1>
     <div id="cart-container">
         <table id="cart-table">
-            <thead>
-                <tr>
-                    <th>Product</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Total</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody id="cart-items">
-                <!-- Cart items will be rendered here -->
-            </tbody>
+            <tr id="tr1">
+                <th>Product</th>
+            </tr>
+            <tr id="tr2">
+                <th>Price</th>
+            </tr>
+            <tr id="tr3">
+                <th>Quantity</th>
+            </tr>
+            <tr id="tr4">
+                <th>Total</th>
+            </tr>
+            <tr id="tr5">
+                <th>Actions</th>
+            </tr>
         </table>
+        
         <div id="cart-summary">
             <h2>Total: ₦ <span id="cart-total">0.00</span></h2>
             <button id="clearcart-button">Clear cart</button>
             <div class="continue-shopping">
-                <a id="continue-shoppingHover" href="/index.html"> <img src="/assets/icons/arrow-icon.png" width="15px" alt=""> Continue Shopping</a>
+                <a id="continue-shoppingHover" href="../../index.html"> <img src="../../assets/icons/arrow-icon.png" width="15px" alt=""> Continue Shopping</a>
             </div>
         </div>
     
@@ -148,40 +164,6 @@
         
         <button id="checkout-button">Checkout</button>
     </div>
-
-   
-
-    
-<div class="related-products-container">
-
-    <h2> You may also like</h2>
-
-    <div  class="related-products">
-
-    <div id="img2">
-        <a href="/pages/services.html">
-            <img src="/assets/images/Nigeria_iPhone_15_Pro_Web_Banner_400x.webp" alt="">
-        </a>
-    </div>
-    <div id="img2">
-        <a href="/pages/services.html">
-            <img src="/assets/images/Nigeria_iPhone_15_Web_Banner_400x.webp" alt="">
-        </a>
-    </div>
-    <div id="img2">
-        <a href="/pages/services.html">
-            <img src="/assets/images/Nigeria_Series_9_Banner_400x.webp" alt="">
-        </a>
-    </div>
-    <div id="img2">
-        <a href="/pages/services.html">
-            <img src="/assets/images/Nigeria_iPhone_15_Pro_Web_Banner_400x.webp" alt="">
-        </a>
-    </div>
-
-    </div>
-
-</div>
 
  
 <!-- footer -->
@@ -203,32 +185,32 @@
     <div class="footer">
         <div class="learn">
             <h4>Learn</h4>
-            <a href="">
+            <a href="#">
                 <p>Technical Support</p>
             </a>
-            <a href="./pages/Services/trading.html">
+            <a href="../Services/trading.html">
                 <p>Trade-In</p>
             </a>
-            <a href="./pages/Services/repairs.html">
+            <a href="../Services/repairs.html">
                 <p>Repairs</p>
             </a>
-            <a href="./pages/contact.html">
+            <a href="../contact.html">
                 <p>Contact Us</p>
             </a>
             
         </div>
         <div class="products">
             <h4>Products</h4>
-            <a href="./pages/Products/ipad.html">
+            <a href="../Products/ipad.html">
                 <p>Shop iPad</p>
             </a>
-            <a href="./pages/Products/iphone.html">
+            <a href="../Products/iphone.html">
                 <p>Shop iPhone</p>
             </a>
-            <a href="./pages/Products/mac.html">
+            <a href="../Products/mac.html">
                 <p>Shop Mac</p>
             </a>
-            <a href="">
+            <a href="../Products/accessories.html">
                 <p>Shop Accessories</p>
             </a>
             
@@ -236,16 +218,16 @@
         </div>
         <div class="policies">
             <h4>Policies</h4>
-            <a href="./pages/Policies/Terms-of-services.html">
+            <a href="../Policies/Terms-of-services.html">
                 <p>Terms of Service</p>
             </a>
-            <a href="./pages/Policies/Refund-policy.html">
+            <a href="../Policies/Refund-policy.html">
                 <p>Refund Policy</p>
             </a>
-            <a href="./pages/Policies/Shipping-policy.html">
+            <a href="../Policies/Shipping-policy.html">
                 <p>Shipping Policy</p>
             </a>
-            <a href="./pages/Policies/Privacy-policy.html">
+            <a href="../Policies/Privacy-policy.html">
                 <p>Privacy Policy</p>
             </a>
         </div>
@@ -276,11 +258,11 @@
 
 </footer>
 
+
 <script>
     feather.replace();
 </script>
     <script src="../../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../collections/collection.js"></script>
     <script src="cart.js"></script>
     <script src="../../landing.js"></script>
   </body>

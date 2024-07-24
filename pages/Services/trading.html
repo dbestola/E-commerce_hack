@@ -49,27 +49,70 @@
             </ul>
         </div>
         <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <button>Search</button>
+            <input type="text" placeholder="Search..." id="search-input">
+            <button id="search-button">Search</button>
         </div>
-        <div class="user-account">
-            <ul>
-                <li>
-                    <a href="#"><i class="fa-solid fa-user fa-lg"></i></a>
-                    <div class="user-dropdown-content">
-                        <a href="../../member_area/mLogin.html" id="mLogin">Customer Login</a>
-                        <a href="../../vendor_area/vLogin.html">Vendor Login</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
+
+        <div class="handleUserStates">
+                <div class="user-account">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-user fa-lg"></i></a>
+                            <div class="user-dropdown-content">
+                                <a href="../../member_area/mLogin.html" id="mLogin">Customer Login</a>
+                                <a href="../../vendor_area/vLogin.html">Vendor Login</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
         <div class="cart">    
-            <a href="#">
+            <a href="../cart/cart.html">
                 <i data-feather="shopping-cart"></i>
                 <span>cart</span>
             </a>
         </div>
     </nav>
+
+    <!-- navbar 2 -->
+    <div class="nav-links2">
+        <ul>
+            <li>
+                <div class="dropdown2">
+                    <a href="../../index.html">Home</a>
+            </li>
+
+            <li>
+                <div class="dropdown2">
+                    <a href="#">Products</a>
+                    <span class="arrow-down"><i class="fas fa-angle-down dropA" style="color: #ffffff;"></i></span>
+                </div>
+                <div class="dropdown-content2" id="dropdown-content2a">
+                    <a href="../../pages/Products/iphone.html">iPhone</a>
+                    <a href="../../pages/Products/ipad.html">iPad</a>
+                    <a href="../../pages/Products/mac.html">Mac</a>
+                </div>
+            </li>
+
+            <li>
+                <div class="dropdown2">
+                    <a href="#">Services</a>
+                    <span class="arrow-down"><i class="fas fa-angle-down dropB" style="color: #ffffff;"></i></span>
+                </div>
+                <div class="dropdown-content2" id="dropdown-content2b">
+                    <a href="../../pages/Services/repairs.html">Repairs</a>
+                    <a href="../../pages/Services/trading.html">Trade-In</a>
+                    <a href="../../pages/Services/financing.html">Financing</a>
+                </div>
+            </li>
+
+            <div class="contact">
+                <a href="../contact.html">Contact</a>
+            </div>
+        </ul>
+  </div>
+
     <!-- first section -->
     <div class="trade-in">
         <div class="header-right">
@@ -200,16 +243,16 @@
             </div>
             <div class="policies">
                 <h4>Policies</h4>
-                <a href="">
+                <a href="../Policies/Terms-of-services.html">
                     <p>Terms of Service</p>
                 </a>
-                <a href="">
+                <a href="../Policies/Refund-policy.html">
                     <p>Refund Policy</p>
                 </a>
-                <a href="">
+                <a href="../Policies/Shipping-policy.html">
                     <p>Shipping Policy</p>
                 </a>
-                <a href="">
+                <a href="../Policies/Privacy-policy.html">
                     <p>Privacy Policy</p>
                 </a>
             </div>
@@ -240,11 +283,13 @@
 
     </footer>
 
+
+    </script>
+    
     <script>
         feather.replace();
     </script>
     <script src="../../landing.js"></script>
-    <script src="pages/collections/collection.js"></script>
     <script src="../../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
