@@ -88,7 +88,7 @@
 
             <li>
                 <div class="dropdown2">
-                    <a href="../pages/Products/accessories.html">Accessories</a>
+                    <a href="#">Products</a>
                     <span class="arrow-down"><i class="fas fa-angle-down dropA" style="color: #ffffff;"></i></span>
                 </div>
                 <div class="dropdown-content2" id="dropdown-content2a">
@@ -286,39 +286,8 @@
         <div class="copyright">
             <h6>© 2024 iHub Nigeria.</h6>
         </div>
-
-        <script>
-            // navbar logic
-            document.addEventListener("DOMContentLoaded", function() {
-              var icon1 = document.getElementById("toggle1");
-              var icon2 = document.getElementById("toggle2");
-              const arrowDown =  document.querySelectorAll(".arrow-down i")
-    
-             icon1.addEventListener("click", function() {
-             icon1.style.display = "none";
-    
-            document.querySelector('.nav-links2').style.display = 'block'
-            icon2.style.display = "block";
-        });
-      
-            icon2.addEventListener("click", function() {
-            icon2.style.display = "none"
-            document.querySelector('.nav-links2').style.display = 'none';
-    
-            icon1.style.display = "block"
-        });
-    
-            arrowDown.forEach(arrowDowns =>{
-            arrowDowns.addEventListener('click', function(){
-            arrowDowns.classList.toggle('fa-angle-down')
-            arrowDowns.classList.toggle('fa-angle-up')
-    })})
-    
-    });
-        </script>
-    
-
     </footer>
+
     <script>
         feather.replace();
     </script>
