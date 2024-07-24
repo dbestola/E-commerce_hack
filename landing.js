@@ -7,8 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     icon1.addEventListener("click", function() {
       icon1.style.display = "none";
-      document.querySelector('.carousel').style.display = 'none'
-      document.querySelector('.mini-catalogue').style.display = 'none';
 
       document.querySelector('.nav-links2').style.display = 'block'
       icon2.style.display = "block";
@@ -19,8 +17,6 @@ document.addEventListener("DOMContentLoaded", function() {
       document.querySelector('.nav-links2').style.display = 'none';
 
       icon1.style.display = "block"
-      document.querySelector('.carousel').style.display = 'block'
-      document.querySelector('.mini-catalogue').style.display = 'block';
     });
 
     arrowDowns.forEach(arrowDown => {
@@ -45,8 +41,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 })
 
-
-const nairaSymbol = '\u20A6'
 
 var Products = [
   {
@@ -86,40 +80,6 @@ var Products = [
       "quantity": 1
   }
 ]
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const productContainer = document.getElementById('product-container');
-
-    Products.forEach(product => {
-        const imgDiv = document.createElement('div');
-        imgDiv.classList.add('img')
-        imgDiv.id = `img${product.id}`
-
-        const anchor = document.createElement('a');
-        anchor.href = `pages/collections/collections.html?id=${product.id}`;
-
-        const imgElement = document.createElement('img');
-        imgElement.src = product.image;
-        imgElement.alt = product.name;
-
-        const PDescription = document.createElement('h5')
-        PDescription.innerText = product.name
-
-        const CPrice = document.createElement('h6')
-        CPrice.innerHTML = `Price:${nairaSymbol}${product.price}`
-
-        const BPrice = document.createElement('h6')
-        BPrice.innerHTML = `Before:<s>${nairaSymbol}${product.beforeprice}</s>`
-
-        productContainer.appendChild(imgDiv);
-        anchor.appendChild(imgElement);
-        imgDiv.appendChild(anchor);
-        imgDiv.appendChild(PDescription)
-        imgDiv.appendChild(CPrice)
-        imgDiv.appendChild(BPrice)
-    });
-});
 
 
 document.addEventListener('DOMContentLoaded', () => {

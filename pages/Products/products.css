@@ -1,5 +1,5 @@
 .product-img{
-    margin-top: 1.3rem;
+    padding-top: 1.3rem;
 }
 .iphone{
     position: relative;
@@ -66,6 +66,7 @@
 
 .iphone-banner{
     width: 100%;
+    margin-top: 2.8rem;
 }
 .iphone-banner img{
     width: 100%;
