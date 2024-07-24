@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="vLogin.css">
     <link rel="stylesheet" href="/landing.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="assets/images/logos/logo.svg" type="png">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <title>Vendor_login page</title>
 </head>
 <body>
@@ -125,20 +127,24 @@
         </div>
         <div class="mt-5 one-half medium-down--one-whole column">
 
+            <form id="Vendor_loginForm">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Email address*</label>
-                <input type="email" class="form-control input-field" id="exampleFormControlInput1" placeholder="Email address" required>
+                <input type="email" class="form-control input-field" id="VendorMail" placeholder="Email address" required>
               </div>
     
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Password*</label>
-                <input type="password" class="form-control input-field" id="exampleFormControlInput1" placeholder="Password" required>
+                <input type="password" class="form-control input-field" id="VendorPassword" placeholder="Password" required>
               </div>
     
               <div>
                 <button class="p-1 rounded btn-1">Login</button>
                 <a class="forgot-password" href="#">Forgot your password?</a>
               </div>
+
+            </form>
+
               <div class="new-vendor mt-4">
                 <p>New Vendor?</p>
                 <a class="sign-up mx-1" href="vSignup.html">Sign Up</a>
@@ -238,6 +244,6 @@
         </div>
 
     </footer>
-    <script src="/landing.js"></script>
+    <script src="v_login.js"></script>
     <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
