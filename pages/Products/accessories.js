@@ -5,38 +5,42 @@ var adapters = [
     {
         "id": 25,
         "image": "../../assets/images/accessories/adapter/apple-30w-usb-c-power-adapter.webp",
-        "name": "Apple iphone 11 Pro Max 64gb (gold)",
-        "price": "2,169,100",
-        "beforeprice": "2,299,000",
+        "name": "Apple-30w USB Adapter (white)",
+        "price": "36,000",
+        "beforeprice": "40,000",
         "discountprice": "-10%",
-        "quantity": 1
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
     },
     {
         "id": 26,
         "image": "../../assets/images/accessories/adapter/apple-magsafe-2-power-adapter-60w.webp",
-        "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
-        "price": "1,895,100",
-        "beforeprice": "2,100,100",
+        "name": "Apple magsafe adapter 60w (white)",
+        "price": "76,000",
+        "beforeprice": "80,000",
         "discountprice": "-10%",
-        "quantity": 1
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
     },
     {
         "id": 27,
         "image": "../../assets/images/accessories/adapter/apple-magsafe-power-adapter-85w.webp",
-        "name": "Apple IPhone 15 Pro Max case (with magsafe)",
-        "price": "400.00",
-        "beforeprice": "330.70",
+        "name": "Apple magsafe adapter 85w (white)",
+        "price": "81,000",
+        "beforeprice": "90,000",
         "discountprice": "-10%",
-        "quantity": 1
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
     },
     {
         "id": 28,
         "image": "../../assets/images/accessories/adapter/apple-magsafe-2-power-adapter-60w.webp",
-        "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
-        "price": "500.00",
-        "beforeprice": "330.70",
+        "name": "Apple magsafe adapter 60w (white)",
+        "price": "72,000",
+        "beforeprice": "80,000",
         "discountprice": "-10%",
-        "quantity": 1
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
     }
 ];
 
@@ -79,38 +83,42 @@ var Airpods = [
     {
         "id": 29,
         "image": "../../assets/images/accessories/airpod/airpods-3rd-gen.webp",
-        "name": "Apple iphone 11 Pro Max 64gb (gold)",
-        "price": "2,169,100",
-        "beforeprice": "2,299,000",
+        "name": "Airpod 3rd Generation (white)",
+        "price": "315,000",
+        "beforeprice": "350,000",
         "discountprice": "-10%",
-        "quantity": 1
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
     },
     {
         "id": 30,
         "image": "../../assets/images/accessories/airpod/airpods-max-grey.webp",
-        "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
-        "price": "1,895,100",
-        "beforeprice": "2,100,100",
+        "name": "Airpod max (grey)",
+        "price": "175,000",
+        "beforeprice": "195,000",
         "discountprice": "-10%",
-        "quantity": 1
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
     },
     {
         "id": 31,
         "image": "../../assets/images/accessories/airpod/airpods-with-charging-case-gen-2.webp",
-        "name": "Apple IPhone 15 Pro Max case (with magsafe)",
-        "price": "400.00",
-        "beforeprice": "330.70",
+        "name": "Airpod-with-charging-case (white)",
+        "price": "175,000",
+        "beforeprice": "195,000",
         "discountprice": "-10%",
-        "quantity": 1
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
     },
     {
         "id": 32,
         "image": "../../assets/images/accessories/adapter/apple-30w-usb-c-power-adapter.webp",
-        "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
-        "price": "500.00",
-        "beforeprice": "330.70",
+        "name": "Apple-30w USB Adapter (white)",
+        "price": "36,000",
+        "beforeprice": "40,000",
         "discountprice": "-10%",
-        "quantity": 1
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
     }
 ];
 
@@ -153,38 +161,42 @@ var cables = [
     {
         "id": 33,
         "image": "../../assets/images/accessories/cable/lightning-to-usb-c-cable-2-m.webp",
-        "name": "Apple iphone 11 Pro Max 64gb (gold)",
-        "price": "2,169,100",
-        "beforeprice": "2,299,000",
+        "name": "Apple lightning to USB (white)",
+        "price": "25,200",
+        "beforeprice": "28,000",
         "discountprice": "-10%",
-        "quantity": 1
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
     },
     {
         "id": 34,
         "image": "../../assets/images/accessories/cable/lightning-to-usb-cable-1m-zml.webp",
-        "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
-        "price": "1,895,100",
-        "beforeprice": "2,100,100",
+        "name": "USB Charge-cable 1m (white)",
+        "price": "47,250",
+        "beforeprice": "52,500",
         "discountprice": "-10%",
-        "quantity": 1
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
     },
     {
         "id": 35,
         "image": "../../assets/images/accessories/cable/lightning-to-usb-cable-2-m.webp",
-        "name": "Apple IPhone 15 Pro Max case (with magsafe)",
-        "price": "400.00",
-        "beforeprice": "330.70",
+        "name": "USB Charge-cable 2m (white)",
+        "price": "58,500",
+        "beforeprice": "65,000",
         "discountprice": "-10%",
-        "quantity": 1
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
     },
     {
         "id": 36,
         "image": "../../assets/images/accessories/cable/lightning-to-usb-c-cable-2-m.webp",
-        "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
-        "price": "500.00",
-        "beforeprice": "330.70",
+        "name": "USB Charge-cable 2m (white)",
+        "price": "58,500",
+        "beforeprice": "65,000",
         "discountprice": "-10%",
-        "quantity": 1
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
     }
 ];
 
@@ -227,38 +239,42 @@ var protections = [
     {
         "id": 37,
         "image": "../../assets/images/accessories/protection/apple-iphone-15-pro-max-finewoven-case-with-magsafe-taupe.webp",
-        "name": "Apple iphone 11 Pro Max 64gb (gold)",
-        "price": "2,169,100",
-        "beforeprice": "2,299,000",
+        "name": "Magsafe protection case (Brown)",
+        "price": "34,200",
+        "beforeprice": "38,000",
         "discountprice": "-10%",
-        "quantity": 1
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
     },
     {
         "id": 38,
         "image": "../../assets/images/accessories/protection/iphone-13-13-pro-tempered-glass-full-coverage-screen.webp",
-        "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
-        "price": "1,895,100",
-        "beforeprice": "2,100,100",
+        "name": "iphone 13 screen protection (glass full)",
+        "price": "54,000",
+        "beforeprice": "60,000",
         "discountprice": "-10%",
-        "quantity": 1
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
     },
     {
         "id": 39,
         "image": "../../assets/images/accessories/protection/iphone-14-clear-case-with-magsafe.webp",
-        "name": "Apple IPhone 15 Pro Max case (with magsafe)",
-        "price": "400.00",
-        "beforeprice": "330.70",
+        "name": "iphone 14 case (white)",
+        "price": "72,000",
+        "beforeprice": "80,000",
         "discountprice": "-10%",
-        "quantity": 1
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
     },
     {
         "id": 40,
         "image": "../../assets/images/accessories/protection/iphone-15-pro-max-clear-case-with-magsafe.webp",
-        "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
-        "price": "500.00",
-        "beforeprice": "330.70",
+        "name": "iphone 15 max case(gray)",
+        "price": "81,000",
+        "beforeprice": "90,000",
         "discountprice": "-10%",
-        "quantity": 1
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
     }
 ];
 
