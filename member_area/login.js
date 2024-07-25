@@ -1,3 +1,14 @@
+// animation control
+document.addEventListener('DOMContentLoaded', function(){
+    setTimeout(function(){
+        const handleAnimtion = document.querySelector('.login-animation')
+    if(handleAnimtion.classList.contains('animate__rotateIn')){
+        handleAnimtion.classList.remove('animate__rotateIn')
+        handleAnimtion.classList.add('animate__pulse', 'animate__infinite', 'infinite')
+    }
+    },1000)
+})
+
 // create alert
 function CustomAlert(message, callback) {
     
@@ -83,7 +94,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     localStorage.setItem('isLoggedIn', 'true');
                     localStorage.setItem('userEmail', loginEmail);
                     localStorage.setItem('createProfile', JSON.stringify(user) )
-                    window.location.href = '../index.html';
+                    const handleAnimtion = document.querySelector('.login-animation')
+                    handleAnimtion.classList.remove('animate__rotateIn','animate__pulse', 'animate__infinite', 'infinite')
+                    handleAnimtion.classList.add('animate__fadeOutRight')
+                    setTimeout(function(){
+                        window.location.href = '../index.html';
+                    },1000)
                 });
             } else {
                 // Incorrect credentials
@@ -93,4 +109,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
 
