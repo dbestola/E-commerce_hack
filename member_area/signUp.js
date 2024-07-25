@@ -1,3 +1,16 @@
+// animation control
+document.addEventListener('DOMContentLoaded', function(){
+    setTimeout(function(){
+        const handleAnimtion = document.querySelector('.login-animation')
+    if(handleAnimtion.classList.contains('animate__rotateIn')){
+        handleAnimtion.classList.remove('animate__rotateIn')
+        handleAnimtion.classList.add('animate__pulse', 'animate__infinite', 'infinite')
+    }
+    },1000)
+})
+
+
+// create alert
 function CustomAlert(message, callback) {
 
     // alert container
@@ -82,7 +95,12 @@ function handleSignup(event) {
     localStorage.setItem('users', JSON.stringify(users));
 
     CustomAlert('Sign up successful! Please log in.', function() {
-        window.location.href = 'mlogin.html';
+        const handleAnimtion = document.querySelector('.login-animation')
+        handleAnimtion.classList.remove('animate__rotateIn','animate__pulse', 'animate__infinite', 'infinite')
+        handleAnimtion.classList.add('animate__fadeOutRight')
+        setTimeout(function(){
+            window.location.href = 'mlogin.html';
+        },1000)
     });
 }
 

@@ -1,6 +1,19 @@
+
+
+// animation control
+document.addEventListener('DOMContentLoaded', function(){
+    setTimeout(function(){
+        const handleAnimtion = document.querySelector('.login-animation')
+    if(handleAnimtion.classList.contains('animate__rotateIn')){
+        handleAnimtion.classList.remove('animate__rotateIn')
+        handleAnimtion.classList.add('animate__pulse', 'animate__infinite', 'infinite')
+    }
+    },1000)
+})
+
 document.addEventListener('DOMContentLoaded', function() {
-    const adminEmail = 'admin@mail.com';
-    const adminPassword = 'password';
+    const adminEmail = 'admin@ihubnigeria.com';
+    const adminPassword = 'ihub';
     
 
     const adminDetails = [
@@ -25,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const vendorLoginEmail = document.getElementById('VendorMail').value.trim();
             const vendorLoginPassword = document.getElementById('VendorPassword').value.trim();
 
-            console.log(vendorLoginEmail, vendorLoginPassword);
+            // console.log(vendorLoginEmail, vendorLoginPassword);
 
             // Retrieve stored admin details from local storage
             const storedAdminDetails = JSON.parse(localStorage.getItem('adminDetails')) || [];
@@ -42,8 +55,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Login successful! Redirecting to dashboard.');
                 localStorage.setItem('isAdminLoggedIn', 'true');
                 localStorage.setItem('adminEmail', admin.email);
-                window.location.href = '../index.html';
-            } else {
+                const handleAnimtion = document.querySelector('.login-animation')
+                    handleAnimtion.classList.remove('animate__rotateIn','animate__pulse', 'animate__infinite', 'infinite')
+                    handleAnimtion.classList.add('animate__fadeOutRight')
+                    setTimeout(function(){
+                        window.location.href = '../index.html';
+                    },1000)  
+                } 
+           else {
                 // Incorrect credentials
                 alert('Invalid email or password. Please try again.');
             }
@@ -68,6 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   
     function handleAdminProfile() {
-      window.location.href = 'pages/adminPannel/admin.html'
+      window.location.href = 'pages/adminPanel/admin.html'
   }
   

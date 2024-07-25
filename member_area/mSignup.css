@@ -38,6 +38,36 @@
     display: flex;
 }
 
+.login-portrait{
+    display: none;
+    background-color: black; 
+    width: 92vw; 
+    margin: auto; 
+    margin-right: 5rem; 
+    margin-bottom: 2rem; 
+    height: 20vh;
+}
+
+.login-animation{
+    background-color: black; 
+    width: 38vw; 
+    margin: auto; 
+    margin-right: 5rem; 
+    margin-bottom: 2rem; 
+    height: 40vh;
+}
+
+.login-animation img, .login-portrait img{
+    width: 100%; 
+    height: 80%;
+}
+
+.login-animation h2, .login-portrait h4{
+    color: white; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    text-align: center;
+}
+
 .one-half {
     position: relative;
     width: calc(50% - 20px);
@@ -81,7 +111,7 @@
 }
 
 
-
+/* media screen */
 @media (max-width: 798px )  {
 
     .medium-down--one-whole {
@@ -89,8 +119,17 @@
         width: calc(100% - 20px);
     }
     
-    .is-order-aligned-right {
-       display: none;
+    .dev{
+        display: block;
+    }
+
+    .login-animation{
+        display: none;
+    }
+
+    .login-portrait{
+        display: block;
+        margin: 0 auto;
     }
 
     .para-field {
