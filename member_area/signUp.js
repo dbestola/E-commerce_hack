@@ -113,4 +113,4 @@ function clearError(inputId) {
 }
 
 // Event listener for form submission
-document.getElementById('signupForm').addEventListener('submit', handleSignup);
+document.getElementById('signupForm').addEventListener('submit', handleSignup );
