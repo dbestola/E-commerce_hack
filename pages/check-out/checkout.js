@@ -148,8 +148,27 @@ function makePayment() {
             // This function is called when the payment is successful
             alert('Payment successful! Transaction reference: ' + response.reference);
             
-            // You can redirect the user to a confirmation page or do something else here
-            console.log(response);
+           // Save the order after successful payment
+           const orderDetailsForCard = {
+            orderId: Date.now(), // Unique order ID
+            customerName: customerName,
+            customerEmail: customerEmail,
+            customerAddress: localStorage.getItem('customerAddress'),
+            customerCountry: localStorage.getItem('customerCountry'),
+            customerState: localStorage.getItem('customerState'),
+            customerCity: localStorage.getItem('customerCity'),
+            customerPhone: customerPhone,
+            customerAlternatePhone: localStorage.getItem('customerAlternatePhone'),
+            paymentMethod: 'Card',
+            transactionReference: response.reference, // Save the transaction reference
+            cart: getCartItems() // Get items from the cart
+        };
+        saveOrderLocally(orderDetailsForCard);
+        localStorage.setItem('currentOrderId', orderDetailsForCard.orderId); // Save current order ID
+
+        clearCart();
+        
+        window.location.href = 'confirmation.html'; // Redirect to confirmation page
         },
         onClose: function() {
             // This function is called when the user closes the payment modal without completing the payment
@@ -161,25 +180,6 @@ function makePayment() {
     handler.openIframe();
 
   }
-
-  const orderDetailsForCard = {
-    customerReference : customerReference, // Unique order Refrence
-    customerName: customerName,
-    customerEmail: customerEmail,
-    paymentMethod: 'Pay with Card',
-    cart: getCartItems() // Get items from the cart
-};
-
-savePaidOrderLocally(orderDetailsForCard);
-localStorage.setItem('currentOrderRefrenceID', orderDetailsForCard.customerReference); // Save current order ID
-
-// fuction that create orders and save orders to local storage
-function savePaidOrderLocally(orderDetailsForCard) {
-    const orders = JSON.parse(localStorage.getItem('orders')) || [];
-    orders.push(orderDetailsForCard);
-    localStorage.setItem('orders', JSON.stringify(orders));
-}
-
 
 
   // fuction that create orders and save orders to local storage
@@ -208,7 +208,7 @@ function savPaideOrderLocally( orderDetailsForCard) {
     saveOrderLocally(orderDetails);
     localStorage.setItem('currentOrderId', orderDetails.orderId); // Save current order ID
 
-    // clearCart();
+    clearCart();
 
     window.location.href = 'confirmation.html'; // Redirect to confirmation page
 }
@@ -220,12 +220,12 @@ function saveOrderLocally(orderDetails) {
     localStorage.setItem('orders', JSON.stringify(orders));
 }
 
-// function getCartItems() {
-//     return JSON.parse(localStorage.getItem('cart')) || [];
-// }
+function getCartItems() {
+    return JSON.parse(localStorage.getItem('cart')) || [];
+}
 
-// function clearCart() {
-//     localStorage.removeItem('cart')
-// }
+function clearCart() {
+    localStorage.removeItem('cart')
+}
 
 

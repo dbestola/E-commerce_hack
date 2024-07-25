@@ -141,7 +141,7 @@
         </div>
     <div id="confirmation-message"></div>
     <div id="confirmation-details"></div>
-    <h3 class='alertMessage'> Note that: you will present this details to claim your order when it arrives, </br>
+    <h3 class='alertMessage'> Note that: you will present this receipt to claim your order when it arrives, </br>
           kindly keep record of it. 
     </h3>
           
@@ -168,8 +168,16 @@
             const currentOrder = orders.find(order => order.orderId == currentOrderId);
 
             if (currentOrder) {
-                document.getElementById('confirmation-message').textContent = 'Order placed successfully! You will pay on delivery.';
-                document.getElementById('confirmation-details').innerHTML = `
+
+                let confirmationMessage = 'Order placed successfully! ';
+                if (currentOrder.paymentMethod === 'Card') {
+                    confirmationMessage += 'Payment completed successfully!';
+                } else if (currentOrder.paymentMethod === 'Pay on Delivery') {
+                    confirmationMessage += 'You will pay on delivery.';
+                }
+
+                document.getElementById('confirmation-message').textContent = confirmationMessage;
+                let confirmationDetails = `
                     <p>Name: ${currentOrder.customerName}</p>
                     <p>Order-Id: ${currentOrderId}</p>
                     <p>Email: ${currentOrder.customerEmail}</p>
@@ -179,8 +187,11 @@
                     <p>City: ${currentOrder.customerCity}</p>
                     <p>Phone No: ${currentOrder.customerPhone}</p>
                     <p>Alt Phone No: ${currentOrder.customerAlternatePhone}</p>
-                  
                 `;
+                if (currentOrder.paymentMethod === 'Card') {
+                    confirmationDetails += `<p>Transaction Reference: ${currentOrder.transactionReference}</p>`;
+                }
+                document.getElementById('confirmation-details').innerHTML = confirmationDetails;
              } 
              else {
                 document.getElementById('confirmation-message').textContent = 'No order found.';
