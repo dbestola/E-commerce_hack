@@ -345,6 +345,8 @@ div .sample-1, div .sample-2{
     text-align: center;
     border-radius: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0 6px 10px #00000063;
+    transition: box-shadow 0.3s ease;
 }
 
 .img img{
@@ -381,11 +383,13 @@ font-weight: bolder;
     opacity: 0;
     transition: opacity 0.3s;
     pointer-events: none;
+    border-radius: 10px;
   }
   
   .img:hover::after, .img2:hover::after{
     opacity: 1;
     z-index: 1;
+    box-shadow: 0 8px 16px #00000069;
   }
 
   .img::before {
@@ -436,6 +440,21 @@ font-weight: bolder;
     border: none;
     border-top: 3px solid black;
     margin: 20px 0;
+  }
+
+  /* floating whatsapp icon */
+  .whatsapp-float{
+    position: fixed;
+    right: 0;
+    top: 70%;
+    z-index: 1000000000;
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp-float a img{
+    width: 100%;
+    height: 100%;
   }
 
   /* footer */
