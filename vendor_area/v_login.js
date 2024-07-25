@@ -30,12 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
             // Retrieve stored admin details from local storage
             const storedAdminDetails = JSON.parse(localStorage.getItem('adminDetails')) || [];
 
-            console.log(storedAdminDetails);
+            // console.log(storedAdminDetails);
 
             // Check if the supplied email and password match any stored admin details
             const admin = storedAdminDetails.find(admin => admin.email === vendorLoginEmail && admin.password === vendorLoginPassword);
 
-            console.log('Found items:', admin);
+            // console.log('Found items:', admin);
 
             if (admin) {
                 // Successful login
