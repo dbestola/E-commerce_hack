@@ -133,21 +133,25 @@
                 </div>
             </div>
                 <div class="mt-5 one-half medium-down--one-whole column">
-                    <form id="loginForm">
-                    <div class="mb-3">
-                        <label for="inputEmail" class="form-label">Email address*</label>
-                        <input type="email" class="form-control input-field" id="inputEmail" placeholder="Email address" required>
-                    </div>
-    
-                    <div class="mb-3">
-                        <label for="inputPassword" class="form-label">Password*</label>
-                        <input type="password" class="form-control input-field" id="inputPassword" placeholder="Password" required>
-                    </div>
-    
-                    <div>
-                        <button type="submit" class="p-1 rounded btn-1">Login</button>
-                    </div>
-                   </form>
+
+                    <form id="Vendor_loginForm">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email address*</label>
+                            <input type="email" class="form-control input-field" id="VendorMail" placeholder="Email address" required>
+                          </div>
+                
+                          <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Password*</label>
+                            <input type="password" class="form-control input-field" id="VendorPassword" placeholder="Password" required>
+                          </div>
+                
+                          <div>
+                            <button class="p-1 rounded btn-1">Login</button>
+                            <a class="forgot-password" href="#">Forgot your password?</a>
+                          </div>
+            
+                        </form>
+
                 </div>
     
             <div class="one-half is-order-aligned-right">
@@ -255,11 +259,11 @@
 
 </footer>
 
-
+<script src="v_login.js"></script>
     <script>
     feather.replace();
     </script>
-    <script src="v_login.js"></script>
+   
     <script src="../landing.js"></script>
     <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
   </body>

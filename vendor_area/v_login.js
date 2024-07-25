@@ -1,3 +1,5 @@
+
+
 // animation control
 document.addEventListener('DOMContentLoaded', function(){
     setTimeout(function(){
@@ -11,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 document.addEventListener('DOMContentLoaded', function() {
     const adminEmail = 'admin@ihubnigeria.com';
-    const adminPassword = 'cydijuol';
+    const adminPassword = 'ihub';
     
 
     const adminDetails = [
@@ -58,8 +60,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     handleAnimtion.classList.add('animate__fadeOutRight')
                     setTimeout(function(){
                         window.location.href = '../index.html';
-                    },1000)
-            } else {
+                    },1000)  
+                } 
+           else {
                 // Incorrect credentials
                 alert('Invalid email or password. Please try again.');
             }
@@ -84,6 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   
     function handleAdminProfile() {
-      window.location.href = 'pages/adminPannel/admin.html'
+      window.location.href = 'pages/adminPanel/admin.html'
   }
   
