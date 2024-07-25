@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
   renderCart();
 
   function renderCart() {
+    const cartItemsContainer = document.getElementById("cart-items");
     const cartTotalElement = document.getElementById("cart-total");
+    cartItemsContainer.innerHTML = "";
     let total = 0;
 
     cart.forEach((item) => {
@@ -15,22 +17,22 @@ document.addEventListener("DOMContentLoaded", () => {
       const itemTotal = parseInt(itemTotalRaw, 10) * item.quantity;
       total += itemTotal;
 
-      const tr1 = document.createElement('td')
-      tr1.innerHTML =`<img src='${item.image}' width='40px'> ${item.name}`
-      const tr2 = document.createElement('td')
-      tr2.innerHTML = `₦ ${item.price}`
-      const tr3 = document.createElement('td')
-      tr3.innerHTML = `<input type="number" value="${item.quantity}" min="1" data-id="${item.id}" class="quantity-input">`
-      const tr4 = document.createElement('td')
-      tr4.innerHTML =`${nairasymbol} ${itemTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`
-      const tr5 = document.createElement('td')
-      tr5.innerHTML = `<button class="remove-btn" data-id="${item.id}">Remove</button>`;
+      const itemRow = document.createElement("tr");
+      itemRow.innerHTML = `
+                <td> <img src='${item.image}' width='40px'> ${item.name}</td>
+                <td> ₦ ${item.price}</td>
+                <td>
+                    <input type="number" value="${
+                      item.quantity
+                    }" min="1" data-id="${item.id}" class="quantity-input">
+                </td>
+                <td>${nairasymbol} ${itemTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</td>
+                <td>
+                    <button class="remove-btn" data-id="${item.id}">Remove</button>
+                </td>
+            `;
 
-      document.getElementById('tr1').appendChild(tr1)
-      document.getElementById('tr2').appendChild(tr2)
-      document.getElementById('tr3').appendChild(tr3)
-      document.getElementById('tr4').appendChild(tr4)
-      document.getElementById('tr5').appendChild(tr5)
+      cartItemsContainer.appendChild(itemRow);
     });
 
     cartTotalElement.innerHTML = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
