@@ -279,9 +279,5 @@ function clearCart() {
    
 }
 
-function clearCoupoun () {
-    localStorage.removeItem('cart')
-   
-}
 
 
