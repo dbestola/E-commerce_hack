@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.removeItem('adminDetails');
 
             // Redirect to login page
-            window.location.href = '/vendor_area/vlogin.html'; // Adjust the path to your login page
+            window.location.href = '../../vendor_area/vlogin.html'; // Adjust the path to your login page
         });
     }
 });
