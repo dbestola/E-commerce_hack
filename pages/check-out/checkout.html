@@ -14,8 +14,27 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://js.paystack.co/v1/inline.js"></script>
 </head>
-<body>
-    <header class="header">
+<body >
+    
+     <!-- Preloader -->
+     <div id="preloader">
+        <img class="loader" src="/assets/icons/icons8-preloader-67.png"/>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay"></div>
+    
+     <!-- Discount message -->
+     <div id="discount-message">
+        <p>Great news! We have a special discount available for you.</p>
+        <p>Use the code <strong>DISCOUNT10</strong> to get 10% off on your order.</p>
+        <button id="close-discount">Close</button>
+    </div>
+
+     <!-- Main content -->
+     <div id="main-content">
+
+    <header class="header" >
 
         <!-- nav section -->
         <nav class="navbar">
@@ -292,6 +311,8 @@
 
 </footer>
 
+
+</div>
 <script>
     feather.replace();
 </script>
