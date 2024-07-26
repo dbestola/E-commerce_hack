@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
        const totalAmount = cartTotalElement.innerHTML = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+       localStorage.removeItem('couponApplied')
        localStorage.setItem('totalAmount', totalAmount);
         
     }
@@ -46,6 +47,55 @@ document.addEventListener('DOMContentLoaded', () => {
         CartitemCount.textContent = itemCount;
     }
      updateItemCount();
+
+
+     
+  // Function to apply coupon code and deduct 10%
+  function applyCouponCode(couponCode) {
+    const validCouponCode = 'DISCOUNT10'; // Example valid coupon code
+    const discountPercentage = 10; // Discount percentage
+
+    // Retrieve the cart from localStorage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const storedAmount = localStorage.getItem('totalAmount').replace(/,/g, ''); 
+    const customerAmount = parseInt(storedAmount, 10);
+
+
+    // Check if the coupon has already been used for the current order
+    if (localStorage.getItem('couponApplied') === 'true') {
+        alert('Coupon code has already been used for this order.');
+        return;
+      }
+
+    if (couponCode === validCouponCode) {
+      const discountAmount = (customerAmount * discountPercentage) / 100;
+      const newTotalAmount = customerAmount - discountAmount;
+
+      alert(`Coupon applied! ${discountPercentage}% has been deducted from your total.`);
+
+      // Save the updated total amount back to localStorage
+      localStorage.setItem('totalAmount', newTotalAmount);
+      localStorage.setItem('couponApplied', 'true'); // Set flag indicating coupon has been applied
+
+      
+      // Update the total amount display
+      const totalAmountElement = document.getElementById("cart-total");
+      if (totalAmountElement) {
+        totalAmountElement.innerHTML = `${newTotalAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+      }
+    } else {
+      alert('Invalid coupon code.');
+    }
+  }
+
+  // Function to get the coupon code from the input field and apply it
+  function applyCoupon() {
+    const couponCode = document.getElementById('coupon-code').value.trim();
+    applyCouponCode(couponCode);
+  }
+
+  // Attach event listener for applying coupon
+  document.getElementById('apply-coupon-button').addEventListener('click', applyCoupon);
 
 
     // Checkout functionality
@@ -226,6 +276,12 @@ function getCartItems() {
 
 function clearCart() {
     localStorage.removeItem('cart')
+   
+}
+
+function clearCoupoun () {
+    localStorage.removeItem('cart')
+   
 }
 
 

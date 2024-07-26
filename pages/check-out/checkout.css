@@ -67,8 +67,21 @@ body {
 .handleDivStyling {
     border: 1px solid var(--our-green);
     border-radius: 5px;
-    margin: 5px;
+    margin-bottom: 5PX;
     padding: 10px;
+}
+
+
+#apply-coupon-button:hover {
+    background-color: var(--our-green);
+    color: #fff;
+    transform: scale(1);
+}
+
+.coupon-details{
+    border: red 1px solid;
+    border-radius: 5px;
+    margin-bottom: 5PX;
 }
 
 

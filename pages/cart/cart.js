@@ -1,4 +1,4 @@
-const nairasymbol = "\u20A6";
+const nairaSymbol = "\u20A6";
 
 document.addEventListener("DOMContentLoaded", () => {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -19,24 +19,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const itemRow = document.createElement("tr");
       itemRow.innerHTML = `
-                <td> <img src='${item.image}' width='40px'> ${item.name}</td>
-                <td> ₦ ${item.price}</td>
-                <td>
-                    <input type="number" value="${
-                      item.quantity
-                    }" min="1" data-id="${item.id}" class="quantity-input">
-                </td>
-                <td>${nairasymbol} ${itemTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</td>
-                <td>
-                    <button class="remove-btn" data-id="${item.id}">Remove</button>
-                </td>
-            `;
-
+        <td><img src='${item.image}' width='40px'> ${item.name}</td>
+        <td>${nairaSymbol} ${item.price}</td>
+        <td>
+          <input type="number" value="${item.quantity}" min="1" data-id="${item.id}" class="quantity-input">
+        </td>
+        <td>${nairaSymbol} ${itemTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</td>
+        <td>
+          <button class="remove-btn" data-id="${item.id}">Remove</button>
+        </td>
+      `;
       cartItemsContainer.appendChild(itemRow);
     });
 
-    cartTotalElement.innerHTML = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    const totalAmountFormatted = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    cartTotalElement.innerHTML = `Total Amount: ${nairaSymbol}${totalAmountFormatted}`;
+    localStorage.setItem('totalAmount', total);
 
+   
     // Add event listeners for quantity changes and remove buttons
     document.querySelectorAll(".quantity-input").forEach((input) => {
       input.addEventListener("change", (event) => {
@@ -52,7 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
         removeItemFromCart(productId);
       });
     });
+
   }
+
+
+
 
   function addItemToCart(productId) {
     let product = products.find((product) => product.id == productId);
@@ -107,6 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Call the function on page load to set the initial count
   updateItemCount();
 
+
   // ClearCart functionality
   document.getElementById("clearcart-button").addEventListener("click", () => {
     clearCart();
@@ -126,33 +131,39 @@ document.addEventListener("DOMContentLoaded", () => {
     alert("Your Cart is Cleared Successfully!");
   }
 
+
   // Checkout functionality
   document.getElementById('checkout-button').addEventListener('click',  function(event)  {
-event.preventDefault(); // Prevent default form submission
-    handleCartcheck()
+    event.preventDefault(); // Prevent default form submission
+        handleCartcheck()
+        
     
-
-  });
-
-  function handleCartcheck() {
-    if (cart.length === 0) {
-        alert("Your cart is empty!");
+      });
+    
+      function handleCartcheck() {
+        if (cart.length === 0) {
+            alert("Your cart is empty!");
+        }
+    
+       else {
+        
+        // Check which radio button is selected
+        const selectedPaymentMethod = document.querySelector('input[name="recommend"]:checked').value;
+    
+         // Store the selected payment method in localStorage
+         localStorage.setItem('paymentMethod', selectedPaymentMethod);
+    
+        // Redirect to the customer details form page
+        window.location.href = '../check-out/checkout.html'; // Replace with the actual URL of your form page
+        };
+    
     }
-
-   else {
     
-    // Check which radio button is selected
-    const selectedPaymentMethod = document.querySelector('input[name="recommend"]:checked').value;
+    
+    
 
-     // Store the selected payment method in localStorage
-     localStorage.setItem('paymentMethod', selectedPaymentMethod);
 
-    // Redirect to the customer details form page
-    window.location.href = '../check-out/checkout.html'; // Replace with the actual URL of your form page
-    };
-}
 });
-
 
 
 
