@@ -54,7 +54,7 @@ var Products = [
     },
     {
       "id": 14,
-      "image": "../../assets/images/iphone/15/apple-iphone-15-pro-max-256gb-nano-sim-blue-titanium.jpg",
+      "image": "assets/images/iphone/15/apple-iphone-15-pro-max-256gb-nano-sim-blue-titanium.jpg",
       "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
       "price": "1,890,090",
       "beforeprice": "2,100,100",
@@ -63,7 +63,7 @@ var Products = [
     },
     {
       "id": 37,
-      "image": "../../assets/images/accessories/protection/apple-iphone-15-pro-max-finewoven-case-with-magsafe-taupe.webp",
+      "image": "assets/images/accessories/protection/apple-iphone-15-pro-max-finewoven-case-with-magsafe-taupe.webp",
       "name": "Magsafe protection case (Brown)",
       "price": "34,200",
       "beforeprice": "38,000",
@@ -72,7 +72,7 @@ var Products = [
   },
     {
       "id": 20,
-      "image": "../../assets/images/mac/apple-macbook-pro-16.2-32gb-1tb-10-cores-m1-max-silver.jpg",
+      "image": "assets/images/mac/apple-macbook-pro-16.2-32gb-1tb-10-cores-m1-max-silver.jpg",
       "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
       "price": "1,602,000",
       "beforeprice": "1,780,000",
