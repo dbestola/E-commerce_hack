@@ -8,7 +8,7 @@ var Products = [
         "beforeprice": "400,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 2,
@@ -18,7 +18,7 @@ var Products = [
         "beforeprice": "2,500,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 3,
@@ -28,7 +28,7 @@ var Products = [
         "beforeprice": "2,100,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 4,
@@ -38,7 +38,7 @@ var Products = [
         "beforeprice": "2,550,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 5,
@@ -48,7 +48,7 @@ var Products = [
         "beforeprice": "400,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 6,
@@ -58,7 +58,7 @@ var Products = [
         "beforeprice": "2,500,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 7,
@@ -68,7 +68,7 @@ var Products = [
         "beforeprice": "2,086,100",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 8,
@@ -78,7 +78,7 @@ var Products = [
         "beforeprice": "4,874,200",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 9,
@@ -88,7 +88,7 @@ var Products = [
         "beforeprice": "400,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 10,
@@ -98,7 +98,7 @@ var Products = [
         "beforeprice": "2,086,100",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 11,
@@ -108,7 +108,7 @@ var Products = [
         "beforeprice": "2,000,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 12,
@@ -118,7 +118,7 @@ var Products = [
         "beforeprice": "1,780,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 13,
@@ -128,7 +128,7 @@ var Products = [
         "beforeprice": "2,000,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 14,
@@ -138,7 +138,7 @@ var Products = [
         "beforeprice": "2,100,100",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 15,
@@ -148,7 +148,7 @@ var Products = [
         "beforeprice": "2,086,100",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 16,
@@ -158,7 +158,7 @@ var Products = [
         "beforeprice": "1,780,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 17,
@@ -168,7 +168,7 @@ var Products = [
         "beforeprice": "500,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 18,
@@ -178,7 +178,7 @@ var Products = [
         "beforeprice": "2,100,100",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 19,
@@ -188,7 +188,7 @@ var Products = [
         "beforeprice": "1,780,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 20,
@@ -198,7 +198,7 @@ var Products = [
         "beforeprice": "1,780,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 21,
@@ -208,7 +208,7 @@ var Products = [
         "beforeprice": "1,650,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 22,
@@ -218,7 +218,7 @@ var Products = [
         "beforeprice": "2,100,100",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 23,
@@ -228,17 +228,17 @@ var Products = [
         "beforeprice": "1,780,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 24,
-        "image":"../../assets/images/ipad/apple-ipad-9th-gen-10.2-wi-fi-cellular-256gb-space-grey.jpg",
+        "image": "../../assets/images/ipad/apple-ipad-9th-gen-10.2-wi-fi-cellular-256gb-space-grey.jpg",
         "name": "Apple ipad 256gb (gray)",
         "price": "4,386,780",
         "beforeprice": "4,874,200",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 25,
@@ -248,7 +248,7 @@ var Products = [
         "beforeprice": "40,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 26,
@@ -258,7 +258,7 @@ var Products = [
         "beforeprice": "80,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 27,
@@ -268,7 +268,7 @@ var Products = [
         "beforeprice": "90,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 28,
@@ -278,7 +278,7 @@ var Products = [
         "beforeprice": "80,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 29,
@@ -288,7 +288,7 @@ var Products = [
         "beforeprice": "350,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 30,
@@ -298,7 +298,7 @@ var Products = [
         "beforeprice": "195,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 31,
@@ -308,7 +308,7 @@ var Products = [
         "beforeprice": "195,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 32,
@@ -318,7 +318,7 @@ var Products = [
         "beforeprice": "40,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 33,
@@ -328,7 +328,7 @@ var Products = [
         "beforeprice": "28,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 34,
@@ -338,7 +338,7 @@ var Products = [
         "beforeprice": "52,500",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 35,
@@ -348,7 +348,7 @@ var Products = [
         "beforeprice": "65,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 36,
@@ -358,7 +358,7 @@ var Products = [
         "beforeprice": "65,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 37,
@@ -368,7 +368,7 @@ var Products = [
         "beforeprice": "38,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 38,
@@ -378,7 +378,7 @@ var Products = [
         "beforeprice": "60,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 39,
@@ -388,7 +388,7 @@ var Products = [
         "beforeprice": "80,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     },
     {
         "id": 40,
@@ -398,7 +398,7 @@ var Products = [
         "beforeprice": "90,000",
         "discountprice": "-10%",
         "quantity": 1,
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat."
     }
 ];
 
@@ -489,9 +489,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('add-to-cart').addEventListener('click', () => {
             // Implement add to cart functionality here
             addItemToCart(productId);
-           
-            alert(`${product.name} added to cart!`);
-           
+
+            Toastify({
+
+                text: `${product.name} added to cart!`,
+                duration: 3000,
+                gravity: "top", // `top` or `bottom`
+                positionLeft: true, // `true` or `false` 
+                backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+            }).showToast();
         });
     } else {
         const notFoundHTML = '<p>Product not found.</p>';
@@ -536,23 +542,23 @@ document.addEventListener('DOMContentLoaded', updateItemCount);
 
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('search-input');
-  const searchButton = document.getElementById('search-button');
+    const searchButton = document.getElementById('search-button');
     const searchResults = document.createElement('div')
     searchResults.className = 'handleSearchResults'
-  
-  
-    searchInput.addEventListener('input', function() {
+
+
+    searchInput.addEventListener('input', function () {
         const query = searchInput.value.toLowerCase();
         searchProducts(query);
     });
-  
+
     function searchProducts(query) {
         // Clear previous results
         searchResults.innerHTML = '';
-  
+
         // Filter products based on the query
         const filteredProducts = Products.filter(product => product.name.toLowerCase().includes(query));
-  
+
         // Display the filtered products
         if (filteredProducts.length > 0) {
             filteredProducts.forEach(product => {
@@ -571,16 +577,16 @@ document.addEventListener('DOMContentLoaded', () => {
             searchResults.innerHTML = '<p>No products found.</p>';
         }
     }
-  
+
     // Event listener for the search button
-    searchButton.addEventListener('click', function() {
-      const query = searchInput.value;
-      searchProducts(query);
-  });
-  });
+    searchButton.addEventListener('click', function () {
+        const query = searchInput.value;
+        searchProducts(query);
+    });
+});
 
 
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Your existing code here...
 
     // Function to share on social media
@@ -604,13 +610,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Add event listeners to social media icons
-    document.getElementById('facebook-share').addEventListener('click', function() {
+    document.getElementById('facebook-share').addEventListener('click', function () {
         shareOnSocialMedia('facebook');
     });
-    document.getElementById('twitter-share').addEventListener('click', function() {
+    document.getElementById('twitter-share').addEventListener('click', function () {
         shareOnSocialMedia('twitter');
     });
-    document.getElementById('linkedin-share').addEventListener('click', function() {
+    document.getElementById('linkedin-share').addEventListener('click', function () {
         shareOnSocialMedia('linkedin');
     });
 });

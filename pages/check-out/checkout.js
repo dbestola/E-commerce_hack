@@ -99,15 +99,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Check if the coupon has already been used for the current order
         if (localStorage.getItem('couponApplied') === 'true') {
-            alert('Coupon code has already been used for this order.');
+            Toastify({
+
+                text: 'Coupon code has already been used for this order.',
+                duration: 3000,
+                gravity: "top", // `top` or `bottom`
+                positionLeft: true, // `true` or `false` 
+                backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                }).showToast();
+            
+           
             return;
         }
 
         if (couponCode === validCouponCode) {
             const discountAmount = (customerAmount * discountPercentage) / 100;
             const newTotalAmount = customerAmount - discountAmount;
+            Toastify({
 
-            alert(`Coupon applied! ${discountPercentage}% has been deducted from your total.`);
+                text: `Coupon applied! ${discountPercentage}% has been deducted from your total.`,
+                duration: 3000,
+                gravity: "top", // `top` or `bottom`
+                positionLeft: true, // `true` or `false` 
+                backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                }).showToast();
+           
 
             // Save the updated total amount back to localStorage
             localStorage.setItem('totalAmount', newTotalAmount);
@@ -120,7 +136,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 totalAmountElement.innerHTML = `${newTotalAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
             }
         } else {
-            alert('Invalid coupon code.');
+            Toastify({
+
+                text: 'Invalid coupon code.',
+                duration: 3000,
+                gravity: "top", // `top` or `bottom`
+                positionLeft: true, // `true` or `false` 
+                backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                }).showToast();
+           
         }
     }
 
@@ -142,7 +166,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // Check if user is logged in
         const userEmail = localStorage.getItem('userEmail');
         if (!userEmail) {
-            alert('Please log in to proceed with the checkout.');
+            Toastify({
+
+                text: 'Please log in to proceed with the checkout.',
+                duration: 3000,
+                gravity: "top", // `top` or `bottom`
+                positionLeft: true, // `true` or `false` 
+                backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                }).showToast();
+           
             window.location.href = '/member_area/mLogin.html'; // Redirect to login page
             return;
         }
@@ -158,7 +190,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Check if all required form fields are filled
         if (!customerName || !customerAddress || !customerCountry || !customerState || !customerCity || !customerPhone || !customerAlternatePhone) {
-            alert('Please fill out all required fields.');
+            Toastify({
+
+                text: 'Please fill out all required fields.',
+                duration: 3000,
+                gravity: "top", // `top` or `bottom`
+                positionLeft: true, // `true` or `false` 
+                backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                }).showToast();
+           
             return;
         }
 
@@ -231,9 +271,9 @@ function makePayment() {
             ]
         },
         callback: function (response) {
-            // This function is called when the payment is successful
-            alert('Payment successful! Transaction reference: ' + response.reference);
-
+           // This function is called when the payment is successful
+           alert('Payment successful! Transaction reference: ' + response.reference);
+           
             // Save the order after successful payment
             const orderDetailsForCard = {
                 orderId: Date.now(), // Unique order ID
@@ -258,7 +298,15 @@ function makePayment() {
         },
         onClose: function () {
             // This function is called when the user closes the payment modal without completing the payment
-            alert('Payment process was not completed.');
+            Toastify({
+
+                text: 'Payment process was not completed.',
+                duration: 3000,
+                gravity: "top", // `top` or `bottom`
+                positionLeft: true, // `true` or `false` 
+                backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                }).showToast();
+         
         }
     });
 

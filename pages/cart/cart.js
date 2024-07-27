@@ -119,7 +119,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function clearCart() {
     if (cart.length === 0) {
-      alert("Your cart is empty!");
+      Toastify({
+
+        text: "Your cart is empty!",
+        duration: 3000,
+        gravity: "top", // `top` or `bottom`
+        positionLeft: true, // `true` or `false` 
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        }).showToast();
+
       return;
     }
 
@@ -128,7 +136,14 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("cart", JSON.stringify(cart));
     renderCart();
 
-    alert("Your Cart is Cleared Successfully!");
+    Toastify({
+
+      text: "Your Cart is Cleared Successfully!",
+      duration: 3000,
+      gravity: "top", // `top` or `bottom`
+      positionLeft: true, // `true` or `false` 
+      backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+      }).showToast();
   }
 
 
@@ -142,7 +157,14 @@ document.addEventListener("DOMContentLoaded", () => {
     
       function handleCartcheck() {
         if (cart.length === 0) {
-            alert("Your cart is empty!");
+          Toastify({
+
+            text: "Your cart is empty!",
+            duration: 3000,
+            gravity: "top", // `top` or `bottom`
+            positionLeft: true, // `true` or `false` 
+            backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+            }).showToast();
         }
     
        else {
