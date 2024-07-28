@@ -161,6 +161,7 @@ body {
     right: 15px;
     top: 15px;
     width: 30px;
+    border-radius: 14px;
 }
 
 #close-icon:hover {
@@ -172,16 +173,25 @@ body {
 
 
 .promo-image{
-
  margin: 24px;
  width: 400px;
  animation: zoom-in-zoom-out 1s ease infinite;
 }
 
-.logo{
+.promo-logo{
     position: absolute;
     left: 0;
     top: 0;
+    width: fit-content;
+    color: #fff;
+    background-color: black;
+    margin-top: 5px;
+    margin-left: 5px;
+    border-radius: 10px;
+}
+
+.promo-logo span {
+    padding-right: 10px;
 }
 
 
