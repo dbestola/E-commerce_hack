@@ -124,6 +124,7 @@ body {
  /* Discount message styles */
  #discount-message {
     position: fixed;
+    border-radius: 20px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -133,6 +134,7 @@ body {
     z-index: 10000; /* Ensure it covers the main content */
     display: none; /* Initially hidden */
     text-align: center;
+   
 }
 
 #discount-message p {
@@ -142,10 +144,25 @@ body {
 #close-discount {
     background-color: #3498db;
     color: white;
+    border-radius: 10px;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
 }
+
+#close-discount:hover {
+    background-color: var(--our-green);
+    color: black;
+    transform: scale(1);
+}
+
+.close-icon{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width: 30px;
+}
+ 
 
  /* Overlay to make the background faint */
  #overlay {

@@ -30,6 +30,18 @@ document.addEventListener('DOMContentLoaded', function () {
             mainContent.style.opacity = '1'; // Ensure main content is fully visible
         });
 
+           // Close discount message and continue to main content
+           document.getElementById('close-icon').addEventListener('click', function() {
+            const discountMessage = document.getElementById('discount-message');
+            const overlay = document.getElementById('overlay');
+            discountMessage.style.display = 'none';
+            overlay.style.display = 'none';
+
+            const mainContent = document.getElementById('main-content');
+            mainContent.style.opacity = '1'; // Ensure main content is fully visible
+        });
+
+
     });
 });
 
