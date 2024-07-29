@@ -51,6 +51,34 @@
   background-color: aliceblue;
   padding: 1.5rem 1rem 1rem 1rem;
 }
+.finance-grid{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+.finance{
+  width: 30%;
+  height: 47vh;
+  margin: 5px;
+  border-radius: 10px;
+  border: solid 1px #d5d5d5;
+  background-color: #f9f9f9;
+}
+.finance a{
+  text-decoration: none;
+}
+.learn-more{
+  padding:0.4rem;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.learn-more:hover{
+  background-color: #cbf802;
+}
+  
+
 
 @media (max-width: 1000px) {
   .trade-in {
@@ -58,5 +86,8 @@
   }
   .grid {
     grid-template-columns: 1fr;
+  }
+  .finance-grid {
+    display: block;
   }
 }
