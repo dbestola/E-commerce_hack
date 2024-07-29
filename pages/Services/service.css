@@ -52,15 +52,25 @@
   padding: 1.5rem 1rem 1rem 1rem;
 }
 .finance-grid{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 15% 1fr 1fr 15%;
   margin-top: 2rem;
   width: 100%;
+  gap: 4vw;
+}
+.grid-1{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  width: 100%;
+  height: 100%;
+}
+.grid-2{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  width: 100%;
+  height: 100%;
 }
 .finance{
-  width: 30%;
-  height: 47vh;
   margin: 5px;
   border-radius: 10px;
   border: solid 1px #d5d5d5;
@@ -87,7 +97,23 @@
   .grid {
     grid-template-columns: 1fr;
   }
+  .header-right{
+    margin-top: -1rem;
+  }
   .finance-grid {
-    display: block;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .grid-1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .grid-2{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
   }
 }

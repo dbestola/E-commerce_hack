@@ -54,16 +54,18 @@
               <input type="text" placeholder="Search...">
               <button>Search</button>
           </div>
-          <div class="user-account">
-            <ul>
-                <li>
-                    <a href="#"><i class="fa-solid fa-user fa-lg"></i></a>
-                    <div class="user-dropdown-content">
-                        <a href="member_area/mLogin.html" id="mLogin">Customer Login</a>
-                        <a href="vendor_area/vLogin.html">Vendor Login</a>
-                    </div>
-                </li>
-            </ul>
+          <div class="handleUserStates">
+            <div class="user-account">
+                <ul>
+                    <li>
+                        <a href="#"><i class="fa-solid fa-user fa-lg"></i></a>
+                        <div class="user-dropdown-content">
+                            <a href="member_area/mLogin.html" id="mLogin">Customer Login</a>
+                            <a href="vendor_area/vLogin.html">Admin Login</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="cart">    
             <a href="../pages/cart/cart.html">
@@ -115,36 +117,39 @@
 
     <div class="dashboard-container">
         <aside class="sidebar">
+        <h3 class="myName"></h3>
             <ul>
                 <li><a href="#orders">My Orders</a></li>
-                <li><a href="#inbox">Inbox</a></li>
+                <li><a href="#inbox">Inbox <span class="inbox-count">0</span></a></li>
                 <li><a href="#account">Manage Account</a></li>
                 <li><a href="#close-account">Close Account</a></li>
-                <li><a href="#logout">Logout</a></li>
+                <li id="logout-a"><a href="#logout">Logout</a></li>
             </ul>
         </aside>
         <main class="main-content">
-            <section id="orders" class="content-section">
-                <h2>My Orders</h2>
-                <div id="ongoing-orders">
-                    <h3>Ongoing Orders</h3>
-                    <!-- Ongoing orders will be dynamically loaded here -->
-                </div>
-                <div id="delivered-orders">
-                    <h3>Delivered Orders</h3>
-                    <!-- Delivered orders will be dynamically loaded here -->
+            <section id="orders">
+                <h3>Orders</h3>
+                <div class="orders-container">
+                    <div id="ongoing-orders">
+                        <h5>Ongoing Orders</h5>
+                        <!-- Ongoing orders will be dynamically loaded here -->
+                    </div>
+                    <div id="delivered-orders">
+                        <h5>Delivered Orders</h5>
+                        <!-- Delivered orders will be dynamically loaded here -->
+                    </div>
                 </div>
             </section>
             
             <section id="inbox">
                 <h2>Inbox</h2>
                 <p>Check your messages here.</p>
-                <!-- will be worked on later -->
+                <!-- messages will be dynamically loaded -->
             </section>
 
             <section id="account">
                 <h2>Manage Account</h2>
-                <form>
+                <form id="account-form">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name">
                     
@@ -162,13 +167,13 @@
             </section>
 
             <section id="close-account">
-                <h2>Close Account</h2>
-                <button>Close My Account</button>
+                <h2>Are you sure you want to close your account?</h2>
+                <button id="close-account-btn">Close My Account</button>
             </section>
 
             <section id="logout">
                 <h2>Logout</h2>
-                <button>Logout</button>
+                <button id="logout-btn">Logout</button>
             </section>
         </main>
     </div>
@@ -265,35 +270,6 @@
 
 </footer>
 
-<script>
-    // navbar logic
-    document.addEventListener("DOMContentLoaded", function() {
-      var icon1 = document.getElementById("toggle1");
-      var icon2 = document.getElementById("toggle2");
-      const arrowDown =  document.querySelectorAll(".arrow-down i")
-
-     icon1.addEventListener("click", function() {
-     icon1.style.display = "none";
-
-    document.querySelector('.nav-links2').style.display = 'block'
-    icon2.style.display = "block";
-});
-
-    icon2.addEventListener("click", function() {
-    icon2.style.display = "none"
-    document.querySelector('.nav-links2').style.display = 'none';
-
-    icon1.style.display = "block"
-});
-
-    arrowDown.forEach(arrowDowns =>{
-    arrowDowns.addEventListener('click', function(){
-    arrowDowns.classList.toggle('fa-angle-down')
-    arrowDowns.classList.toggle('fa-angle-up')
-})})
-
-});
-</script>
 
 <script>
     feather.replace();
