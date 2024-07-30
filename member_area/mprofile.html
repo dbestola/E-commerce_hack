@@ -51,8 +51,8 @@
               </ul>
           </div>
           <div class="search-bar">
-              <input type="text" placeholder="Search...">
-              <button>Search</button>
+              <input type="text" placeholder="Search..." id="search-input">
+              <button id="search-button">Search</button>
           </div>
           <div class="handleUserStates">
             <div class="user-account">
@@ -119,10 +119,10 @@
         <aside class="sidebar">
         <h3 class="myName"></h3>
             <ul>
-                <li><a href="#orders">My Orders</a></li>
-                <li><a href="#inbox">Inbox <span class="inbox-count">0</span></a></li>
-                <li><a href="#account">Manage Account</a></li>
-                <li><a href="#close-account">Close Account</a></li>
+                <li><a href="" id="my-orders">My Orders</a></li>
+                <li><a href="" id="my-inbox">Inbox <span class="inbox-count">0</span></a></li>
+                <li><a href="" id="my-manage-account">Manage Account</a></li>
+                <li><a href="" id="my-close-account">Close Account</a></li>
                 <li id="logout-a"><a href="#logout">Logout</a></li>
             </ul>
         </aside>
@@ -143,15 +143,17 @@
             
             <section id="inbox">
                 <h2>Inbox</h2>
-                <p>Check your messages here.</p>
                 <!-- messages will be dynamically loaded -->
             </section>
 
             <section id="account">
                 <h2>Manage Account</h2>
                 <form id="account-form">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name">
+
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name">
                     
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email">
@@ -167,7 +169,7 @@
             </section>
 
             <section id="close-account">
-                <h2>Are you sure you want to close your account?</h2>
+                <h4>Are you sure you want to close your account?</h4>
                 <button id="close-account-btn">Close My Account</button>
             </section>
 

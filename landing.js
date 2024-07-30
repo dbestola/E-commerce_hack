@@ -84,7 +84,7 @@ var Products = [
 
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('search-input');
-const searchButton = document.getElementById('search-button');
+  const searchButton = document.getElementById('search-button');
   const searchResults = document.createElement('div')
   searchResults.className = 'handleSearchResults'
 
