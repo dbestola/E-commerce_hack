@@ -1,5 +1,5 @@
 // Custom Alert function
-function CustomAlert(message) {
+function CustomAlert(message, callback) {
     const alertContainer = document.createElement('div');
     alertContainer.className = 'custom-alert';
 
@@ -17,6 +17,7 @@ function CustomAlert(message) {
 
     closeButton.addEventListener('click', function() {
         document.body.removeChild(alertContainer);
+        if(callback) callback()
     });
 }
 
@@ -61,27 +62,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Function to close user account
     closeAccountBtn.addEventListener('click', () => {
-        if (CustomAlert('Are you sure you want to close your account? This action cannot be undone.')) {
-            localStorage.removeItem('users');
-            CustomAlert('Your account has been closed.');
-            setTimeout(()=>{
-                window.location.href = 'mSignup.html';
-            },1000)
-        }
-    });
+        (CustomAlert('Are you sure you want to close your account? This action cannot be undone.', function(){
+            localStorage.clear()
+            CustomAlert('Your account has been closed.', ()=>{
+                setTimeout(()=>{
+                    window.location.href = 'mSignup.html';
+                },1000)
+    
+            });
+           
+        }))
+            
+        });
 
 // Function to log user out
     logoutBtn.addEventListener('click', () => {
-        if(CustomAlert('Are you sure you want to logout?')){
+        (CustomAlert('Are you sure you want to logout?', ()=>{
             localStorage.removeItem('isLoggedIn')
             localStorage.removeItem('userEmail')
             localStorage.removeItem('createProfile')
-            CustomAlert('You have been logged out.');
-            setTimeout(()=>{
-                window.location.href = 'mLogin.html';
-            },1000)
-        }
-    });
+            CustomAlert('You have been logged out.', function(){
+                setTimeout(()=>{
+                    window.location.href = 'mLogin.html';
+                },1000)
+            });
+
+        }))
+            
+        });
 
 
 // Function to render oders in user dashboard
