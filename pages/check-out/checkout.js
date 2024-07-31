@@ -1,5 +1,53 @@
 const nairasymbol = '\u20A6'
 
+document.addEventListener('DOMContentLoaded', function () {
+    window.addEventListener('load', function () {
+        // Introduce a delay before hiding the preloader and showing the main content
+        setTimeout(function () {
+            // Hide the preloader
+            const preloader = document.getElementById('preloader');
+            preloader.style.display = 'none';
+
+            // Show the main content with full opacity
+            const mainContent = document.getElementById('main-content');
+            mainContent.classList.add('visible');
+
+                // Show the discount message and the overlay
+            const discountMessage = document.getElementById('discount-message');
+            const overlay = document.getElementById('overlay');
+            discountMessage.style.display = 'block';
+            overlay.style.display = 'block';
+        }, 1000); // Delay in milliseconds (1000ms = 1 seconds)
+
+         // Close discount message and continue to main content
+         document.getElementById('close-discount').addEventListener('click', function() {
+            const discountMessage = document.getElementById('discount-message');
+            const overlay = document.getElementById('overlay');
+            discountMessage.style.display = 'none';
+            overlay.style.display = 'none';
+
+            const mainContent = document.getElementById('main-content');
+            mainContent.style.opacity = '1'; // Ensure main content is fully visible
+        });
+
+           // Close discount message and continue to main content
+           document.getElementById('close-icon').addEventListener('click', function() {
+            const discountMessage = document.getElementById('discount-message');
+            const overlay = document.getElementById('overlay');
+            discountMessage.style.display = 'none';
+            overlay.style.display = 'none';
+
+            const mainContent = document.getElementById('main-content');
+            mainContent.style.opacity = '1'; // Ensure main content is fully visible
+        });
+
+
+    });
+});
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -33,9 +81,10 @@ document.addEventListener('DOMContentLoaded', () => {
             cartItemsContainer.appendChild(itemRow);
         });
 
-       const totalAmount = cartTotalElement.innerHTML = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-       localStorage.setItem('totalAmount', totalAmount);
-        
+        const totalAmount = cartTotalElement.innerHTML = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        localStorage.removeItem('couponApplied')
+        localStorage.setItem('totalAmount', totalAmount);
+
     }
 
     // Function to update the item count in the checkout Summary
@@ -45,37 +94,126 @@ document.addEventListener('DOMContentLoaded', () => {
         let itemCount = cart.reduce((total, item) => total + item.quantity, 0);
         CartitemCount.textContent = itemCount;
     }
-     updateItemCount();
+    updateItemCount();
+
+
+
+    // Function to apply coupon code and deduct 10%
+    function applyCouponCode(couponCode) {
+        const validCouponCode = 'DISCOUNT10'; // Example valid coupon code
+        const discountPercentage = 10; // Discount percentage
+
+        // Retrieve the cart from localStorage
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const storedAmount = localStorage.getItem('totalAmount').replace(/,/g, '');
+        const customerAmount = parseInt(storedAmount, 10);
+
+
+        // Check if the coupon has already been used for the current order
+        if (localStorage.getItem('couponApplied') === 'true') {
+            Toastify({
+
+                text: 'Coupon code has already been used for this order.',
+                duration: 3000,
+                gravity: "top", // `top` or `bottom`
+                positionLeft: true, // `true` or `false` 
+                backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                }).showToast();
+            
+           
+            return;
+        }
+
+        if (couponCode === validCouponCode) {
+            const discountAmount = (customerAmount * discountPercentage) / 100;
+            const newTotalAmount = customerAmount - discountAmount;
+            Toastify({
+
+                text: `Coupon applied! ${discountPercentage}% has been deducted from your total.`,
+                duration: 3000,
+                gravity: "top", // `top` or `bottom`
+                positionLeft: true, // `true` or `false` 
+                backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                }).showToast();
+           
+
+            // Save the updated total amount back to localStorage
+            localStorage.setItem('totalAmount', newTotalAmount);
+            localStorage.setItem('couponApplied', 'true'); // Set flag indicating coupon has been applied
+
+
+            // Update the total amount display
+            const totalAmountElement = document.getElementById("cart-total");
+            if (totalAmountElement) {
+                totalAmountElement.innerHTML = `${newTotalAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+            }
+        } else {
+            Toastify({
+
+                text: 'Invalid coupon code.',
+                duration: 3000,
+                gravity: "top", // `top` or `bottom`
+                positionLeft: true, // `true` or `false` 
+                backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                }).showToast();
+           
+        }
+    }
+
+    // Function to get the coupon code from the input field and apply it
+    function applyCoupon() {
+        const couponCode = document.getElementById('coupon-code').value.trim();
+        applyCouponCode(couponCode);
+    }
+
+    // Attach event listener for applying coupon
+    document.getElementById('apply-coupon-button').addEventListener('click', applyCoupon);
 
 
     // Checkout functionality
-    document.getElementById('form').addEventListener('submit', function(event) {
-     
+    document.getElementById('form').addEventListener('submit', function (event) {
+
         event.preventDefault(); // Prevent the form from submitting normally
 
-         // Check if user is logged in
-         const userEmail = localStorage.getItem('userEmail');
-         if (!userEmail) {
-             alert('Please log in to proceed with the checkout.');
-             window.location.href = '/member_area/mLogin.html'; // Redirect to login page
-             return;
-         }
+        // Check if user is logged in
+        const userEmail = localStorage.getItem('userEmail');
+        if (!userEmail) {
+            Toastify({
 
-          // Process the customer details
-          const customerName = document.getElementById('name').value.trim();
-          const customerAddress = document.getElementById('address').value.trim();
-          const customerCountry = document.getElementById('country').value;
-          const customerState = document.getElementById('state').value.trim();
-          const customerCity = document.getElementById('city').value.trim();
-          const customerPhone = document.getElementById('phone').value.trim();
-          const customerAlternatePhone = document.getElementById('altPhone').value.trim();
+                text: 'Please log in to proceed with the checkout.',
+                duration: 3000,
+                gravity: "top", // `top` or `bottom`
+                positionLeft: true, // `true` or `false` 
+                backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                }).showToast();
+           
+            window.location.href = '/member_area/mLogin.html'; // Redirect to login page
+            return;
+        }
 
-          // Check if all required form fields are filled
-          if (!customerName || !customerAddress || !customerCountry || !customerState || !customerCity || !customerPhone || !customerAlternatePhone) {
-              alert('Please fill out all required fields.');
-              return;
-          }
-        
+        // Process the customer details
+        const customerName = document.getElementById('name').value.trim();
+        const customerAddress = document.getElementById('address').value.trim();
+        const customerCountry = document.getElementById('country').value;
+        const customerState = document.getElementById('state').value.trim();
+        const customerCity = document.getElementById('city').value.trim();
+        const customerPhone = document.getElementById('phone').value.trim();
+        const customerAlternatePhone = document.getElementById('altPhone').value.trim();
+
+        // Check if all required form fields are filled
+        if (!customerName || !customerAddress || !customerCountry || !customerState || !customerCity || !customerPhone || !customerAlternatePhone) {
+            Toastify({
+
+                text: 'Please fill out all required fields.',
+                duration: 3000,
+                gravity: "top", // `top` or `bottom`
+                positionLeft: true, // `true` or `false` 
+                backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                }).showToast();
+           
+            return;
+        }
+
         // Retrieve the selected payment method from localStorage
         const selectedPaymentMethod = localStorage.getItem('paymentMethod');
 
@@ -100,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
             handlePayOnDelivery(customerName, customerEmail, customerAddress, customerCountry, customerState, customerCity, customerPhone, customerAlternatePhone);
         }
 
-        
+
     });
 
 
@@ -115,12 +253,12 @@ function generateTransactionReference() {
     return `TX-${timestamp}-${randomNumber}`;
 }
 
- const customerEmail = localStorage.getItem('userEmail');
- const storedAmount = localStorage.getItem('totalAmount').replace(/,/g, ''); 
- const customerAmount = parseInt(storedAmount, 10) * 100; // Amount in kobo (10000 kobo = 100 NGN)
- const customerName = localStorage.getItem('customerName');
- const customerPhone = localStorage.getItem('customerPhone');
- const customerReference = generateTransactionReference(); 
+const customerEmail = localStorage.getItem('userEmail');
+const storedAmount = localStorage.getItem('totalAmount').replace(/,/g, '');
+const customerAmount = parseInt(storedAmount, 10) * 100; // Amount in kobo (10000 kobo = 100 NGN)
+const customerName = localStorage.getItem('customerName');
+const customerPhone = localStorage.getItem('customerPhone');
+const customerReference = generateTransactionReference();
 
 
 function makePayment() {
@@ -144,54 +282,62 @@ function makePayment() {
                 }
             ]
         },
-        callback: function(response) {
-            // This function is called when the payment is successful
-            alert('Payment successful! Transaction reference: ' + response.reference);
-            
-            // You can redirect the user to a confirmation page or do something else here
-            console.log(response);
+        callback: function (response) {
+           // This function is called when the payment is successful
+           alert('Payment successful! Transaction reference: ' + response.reference);
+           
+            // Save the order after successful payment
+            const orderDetailsForCard = {
+                orderId: Date.now(), // Unique order ID
+                customerName: customerName,
+                customerEmail: customerEmail,
+                customerAddress: localStorage.getItem('customerAddress'),
+                customerCountry: localStorage.getItem('customerCountry'),
+                customerState: localStorage.getItem('customerState'),
+                customerCity: localStorage.getItem('customerCity'),
+                customerPhone: customerPhone,
+                customerAlternatePhone: localStorage.getItem('customerAlternatePhone'),
+                paymentMethod: 'Card',
+                transactionReference: response.reference, // Save the transaction reference
+                cart: getCartItems() // Get items from the cart
+            };
+            saveOrderLocally(orderDetailsForCard);
+            localStorage.setItem('currentOrderId', orderDetailsForCard.orderId); // Save current order ID
+
+            clearCart();
+
+            window.location.href = 'confirmation.html'; // Redirect to confirmation page
         },
-        onClose: function() {
+        onClose: function () {
             // This function is called when the user closes the payment modal without completing the payment
-            alert('Payment process was not completed.');
+            Toastify({
+
+                text: 'Payment process was not completed.',
+                duration: 3000,
+                gravity: "top", // `top` or `bottom`
+                positionLeft: true, // `true` or `false` 
+                backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                }).showToast();
+         
         }
     });
-    
+
     // Open the Paystack payment modal
     handler.openIframe();
 
-  }
+}
 
-  const orderDetailsForCard = {
-    customerReference : customerReference, // Unique order Refrence
-    customerName: customerName,
-    customerEmail: customerEmail,
-    paymentMethod: 'Pay with Card',
-    cart: getCartItems() // Get items from the cart
-};
-
-savePaidOrderLocally(orderDetailsForCard);
-localStorage.setItem('currentOrderRefrenceID', orderDetailsForCard.customerReference); // Save current order ID
 
 // fuction that create orders and save orders to local storage
-function savePaidOrderLocally(orderDetailsForCard) {
+function savPaideOrderLocally(orderDetailsForCard) {
     const orders = JSON.parse(localStorage.getItem('orders')) || [];
     orders.push(orderDetailsForCard);
     localStorage.setItem('orders', JSON.stringify(orders));
 }
 
 
-
-  // fuction that create orders and save orders to local storage
-function savPaideOrderLocally( orderDetailsForCard) {
-    const orders = JSON.parse(localStorage.getItem('orders')) || [];
-    orders.push(orderDetailsForCard);
-    localStorage.setItem('orders', JSON.stringify(orders));
-}
-
-
- // Function to handle Pay on Delivery option
- function handlePayOnDelivery(name, email, address, country, state, city, phone, alternatePhone) {
+// Function to handle Pay on Delivery option
+function handlePayOnDelivery(name, email, address, country, state, city, phone, alternatePhone) {
     const orderDetails = {
         orderId: Date.now(), // Unique order ID
         customerName: name,
@@ -208,7 +354,7 @@ function savPaideOrderLocally( orderDetailsForCard) {
     saveOrderLocally(orderDetails);
     localStorage.setItem('currentOrderId', orderDetails.orderId); // Save current order ID
 
-    // clearCart();
+    clearCart();
 
     window.location.href = 'confirmation.html'; // Redirect to confirmation page
 }
@@ -220,12 +366,14 @@ function saveOrderLocally(orderDetails) {
     localStorage.setItem('orders', JSON.stringify(orders));
 }
 
-// function getCartItems() {
-//     return JSON.parse(localStorage.getItem('cart')) || [];
-// }
+function getCartItems() {
+    return JSON.parse(localStorage.getItem('cart')) || [];
+}
 
-// function clearCart() {
-//     localStorage.removeItem('cart')
-// }
+function clearCart() {
+    localStorage.removeItem('cart')
+
+}
+
 
 

@@ -60,6 +60,34 @@
     font-weight: bold;
 }
 
+.custom-alert {
+    position: absolute;
+    top: 12%;
+    left: 70%;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: .5rem;
+    z-index: 1000;
+    text-align: center;
+    width: 17vw;
+}
+
+.custom-alert p {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #ffff;
+}
+
+.custom-alert-button {
+    padding: 10px 20px;
+    background-color: #cbf802;
+    color: #000000;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 16px;
+}
+
 /* MEDIA QUERY */
 @media (max-width: 1000px) {
     .contact-container{

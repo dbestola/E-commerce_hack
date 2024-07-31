@@ -189,7 +189,7 @@ var Products = [
         "discountprice": "-10%",
         "quantity": 1,
         "description": "Apple M2 ChipNow packed with 20 billion transistors, the Apple M2 integrates the CPU, GPU, Neural Engine, I/O, and more into a single system on a chip (SoC). The additional transistors, 25 percent more than the M1, improve the features of the chip, including the memory controller that can deliver up to 100 GB/s of unified memory bandwidth. The M2 has faster performance cores with a larger cache and the efficiency cores have been enhanced for more performance gains. Together, the M2 delivers up to 18 percent greater multithreaded performance than the M1.13.6"
-    }
+    },
     {
         "id": 20,
         "image": "../../assets/images/mac/apple-macbook-pro-16.2-32gb-1tb-10-cores-m1-max-silver.jpg",
@@ -232,7 +232,7 @@ var Products = [
     },
     {
         "id": 24,
-        "image":"../../assets/images/ipad/apple-ipad-9th-gen-10.2-wi-fi-cellular-256gb-space-grey.jpg",
+        "image": "../../assets/images/ipad/apple-ipad-9th-gen-10.2-wi-fi-cellular-256gb-space-grey.jpg",
         "name": "Apple ipad 256gb (gray)",
         "price": "4,386,780",
         "beforeprice": "4,874,200",
@@ -489,9 +489,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('add-to-cart').addEventListener('click', () => {
             // Implement add to cart functionality here
             addItemToCart(productId);
-           
-            alert(`${product.name} added to cart!`);
-           
+
+            Toastify({
+
+                text: `${product.name} added to cart!`,
+                duration: 3000,
+                gravity: "top", // `top` or `bottom`
+                positionLeft: true, // `true` or `false` 
+                backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+            }).showToast();
         });
     } else {
         const notFoundHTML = '<p>Product not found.</p>';
@@ -536,23 +542,23 @@ document.addEventListener('DOMContentLoaded', updateItemCount);
 
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('search-input');
-  const searchButton = document.getElementById('search-button');
+    const searchButton = document.getElementById('search-button');
     const searchResults = document.createElement('div')
     searchResults.className = 'handleSearchResults'
-  
-  
-    searchInput.addEventListener('input', function() {
+
+
+    searchInput.addEventListener('input', function () {
         const query = searchInput.value.toLowerCase();
         searchProducts(query);
     });
-  
+
     function searchProducts(query) {
         // Clear previous results
         searchResults.innerHTML = '';
-  
+
         // Filter products based on the query
         const filteredProducts = Products.filter(product => product.name.toLowerCase().includes(query));
-  
+
         // Display the filtered products
         if (filteredProducts.length > 0) {
             filteredProducts.forEach(product => {
@@ -571,16 +577,16 @@ document.addEventListener('DOMContentLoaded', () => {
             searchResults.innerHTML = '<p>No products found.</p>';
         }
     }
-  
+
     // Event listener for the search button
-    searchButton.addEventListener('click', function() {
-      const query = searchInput.value;
-      searchProducts(query);
-  });
-  });
+    searchButton.addEventListener('click', function () {
+        const query = searchInput.value;
+        searchProducts(query);
+    });
+});
 
 
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Your existing code here...
 
     // Function to share on social media
@@ -604,13 +610,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Add event listeners to social media icons
-    document.getElementById('facebook-share').addEventListener('click', function() {
+    document.getElementById('facebook-share').addEventListener('click', function () {
         shareOnSocialMedia('facebook');
     });
-    document.getElementById('twitter-share').addEventListener('click', function() {
+    document.getElementById('twitter-share').addEventListener('click', function () {
         shareOnSocialMedia('twitter');
     });
-    document.getElementById('linkedin-share').addEventListener('click', function() {
+    document.getElementById('linkedin-share').addEventListener('click', function () {
         shareOnSocialMedia('linkedin');
     });
 });

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>i-Hub-Nigeria-Checkout</title>
     <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="flutterwave.css">
     <link rel="stylesheet" href="../../bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../collections/collection.css">
@@ -14,8 +15,33 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://js.paystack.co/v1/inline.js"></script>
 </head>
-<body>
-    <header class="header">
+<body >
+    
+     <!-- Preloader -->
+     <div id="preloader">
+        <img class="loader" src="/assets/icons/icons8-preloader-67.png"/>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay"></div>
+    
+     <!-- Discount message -->
+     <div id="discount-message">
+        <div class="promo-logo">
+            <img src="../../assets/images/logos/logo.svg" alt="" width="60px">
+            <span>i-Hub Nigeria</span>
+        </div>
+        <img class="close-icon" id="close-icon" src="/assets/icons/closeIcon.png" alt="close-icon">
+        <img class="promo-image" src="/assets/icons/discountShoutout.png" alt="promo-shoutout">
+        <p>Great news! We have a special discount available for you.</p>
+        <p>Use the code <strong>DISCOUNT10</strong> to get 10% off on your order.</p>
+        <button id="close-discount">OK</button>
+    </div>
+
+     <!-- Main content -->
+     <div id="main-content">
+
+    <header class="header" >
 
         <!-- nav section -->
         <nav class="navbar">
@@ -182,6 +208,15 @@
         <p style="display: inline-block; font-weight: bold;"> Cart Item(s): <span id="cart-numberofitems">0</span> </p>
 
         <div id="shoppingcart-items"></div>
+        
+        <div class="coupon-container">
+            <div class="coupon-details">
+                <p>Enjoy 10% Discount on Every Order</p>
+                <p>Use <span style="color: gold; font-weight: 600;">Ihubnigeria</span>  Coupon: <span style="color: red; font-weight: 400;">DISCOUNT10</span></p>
+            </div>
+            <input type="text" id="coupon-code" placeholder="Enter Coupon code if any..">
+            <button id="apply-coupon-button" >Apply Coupon</button>
+        </div>
         <div id="cart-summary">
             <h2>Total: ₦<span id="cart-total">0.00</span></h2>
         </div>
@@ -283,11 +318,15 @@
 
 </footer>
 
+
+</div>
 <script>
     feather.replace();
 </script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script src="../../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
 <script src="checkout.js"></script>
 <script src="../../landing.js"></script>
+<script src="../collections/collection.js"></script>
 </body>
 </html>

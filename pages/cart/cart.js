@@ -1,4 +1,4 @@
-const nairasymbol = "\u20A6";
+const nairaSymbol = "\u20A6";
 
 document.addEventListener("DOMContentLoaded", () => {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
   renderCart();
 
   function renderCart() {
+    const cartItemsContainer = document.getElementById("cart-items");
     const cartTotalElement = document.getElementById("cart-total");
+    cartItemsContainer.innerHTML = "";
     let total = 0;
 
     cart.forEach((item) => {
@@ -15,26 +17,26 @@ document.addEventListener("DOMContentLoaded", () => {
       const itemTotal = parseInt(itemTotalRaw, 10) * item.quantity;
       total += itemTotal;
 
-      const tr1 = document.createElement('td')
-      tr1.innerHTML =`<img src='${item.image}' width='40px'> ${item.name}`
-      const tr2 = document.createElement('td')
-      tr2.innerHTML = `₦ ${item.price}`
-      const tr3 = document.createElement('td')
-      tr3.innerHTML = `<input type="number" value="${item.quantity}" min="1" data-id="${item.id}" class="quantity-input">`
-      const tr4 = document.createElement('td')
-      tr4.innerHTML =`${nairasymbol} ${itemTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`
-      const tr5 = document.createElement('td')
-      tr5.innerHTML = `<button class="remove-btn" data-id="${item.id}">Remove</button>`;
-
-      document.getElementById('tr1').appendChild(tr1)
-      document.getElementById('tr2').appendChild(tr2)
-      document.getElementById('tr3').appendChild(tr3)
-      document.getElementById('tr4').appendChild(tr4)
-      document.getElementById('tr5').appendChild(tr5)
+      const itemRow = document.createElement("tr");
+      itemRow.innerHTML = `
+        <td><img src='${item.image}' width='40px'> ${item.name}</td>
+        <td>${nairaSymbol} ${item.price}</td>
+        <td>
+          <input type="number" value="${item.quantity}" min="1" data-id="${item.id}" class="quantity-input">
+        </td>
+        <td>${nairaSymbol} ${itemTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</td>
+        <td>
+          <button class="remove-btn" data-id="${item.id}">Remove</button>
+        </td>
+      `;
+      cartItemsContainer.appendChild(itemRow);
     });
 
-    cartTotalElement.innerHTML = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    const totalAmountFormatted = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    cartTotalElement.innerHTML = `Total Amount: ${nairaSymbol}${totalAmountFormatted}`;
+    localStorage.setItem('totalAmount', total);
 
+   
     // Add event listeners for quantity changes and remove buttons
     document.querySelectorAll(".quantity-input").forEach((input) => {
       input.addEventListener("change", (event) => {
@@ -50,7 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
         removeItemFromCart(productId);
       });
     });
+
   }
+
+
+
 
   function addItemToCart(productId) {
     let product = products.find((product) => product.id == productId);
@@ -105,6 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Call the function on page load to set the initial count
   updateItemCount();
 
+
   // ClearCart functionality
   document.getElementById("clearcart-button").addEventListener("click", () => {
     clearCart();
@@ -112,7 +119,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function clearCart() {
     if (cart.length === 0) {
-      alert("Your cart is empty!");
+      Toastify({
+
+        text: "Your cart is empty!",
+        duration: 3000,
+        gravity: "top", // `top` or `bottom`
+        positionLeft: true, // `true` or `false` 
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        }).showToast();
+
       return;
     }
 
@@ -121,36 +136,56 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("cart", JSON.stringify(cart));
     renderCart();
 
-    alert("Your Cart is Cleared Successfully!");
+    Toastify({
+
+      text: "Your Cart is Cleared Successfully!",
+      duration: 3000,
+      gravity: "top", // `top` or `bottom`
+      positionLeft: true, // `true` or `false` 
+      backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+      }).showToast();
   }
+
 
   // Checkout functionality
   document.getElementById('checkout-button').addEventListener('click',  function(event)  {
-event.preventDefault(); // Prevent default form submission
-    handleCartcheck()
+    event.preventDefault(); // Prevent default form submission
+        handleCartcheck()
+        
     
+      });
+    
+      function handleCartcheck() {
+        if (cart.length === 0) {
+          Toastify({
 
-  });
-
-  function handleCartcheck() {
-    if (cart.length === 0) {
-        alert("Your cart is empty!");
+            text: "Your cart is empty!",
+            duration: 3000,
+            gravity: "top", // `top` or `bottom`
+            positionLeft: true, // `true` or `false` 
+            backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+            }).showToast();
+        }
+    
+       else {
+        
+        // Check which radio button is selected
+        const selectedPaymentMethod = document.querySelector('input[name="recommend"]:checked').value;
+    
+         // Store the selected payment method in localStorage
+         localStorage.setItem('paymentMethod', selectedPaymentMethod);
+    
+        // Redirect to the customer details form page
+        window.location.href = '../check-out/checkout.html'; // Replace with the actual URL of your form page
+        };
+    
     }
-
-   else {
     
-    // Check which radio button is selected
-    const selectedPaymentMethod = document.querySelector('input[name="recommend"]:checked').value;
+    
+    
 
-     // Store the selected payment method in localStorage
-     localStorage.setItem('paymentMethod', selectedPaymentMethod);
 
-    // Redirect to the customer details form page
-    window.location.href = '../check-out/checkout.html'; // Replace with the actual URL of your form page
-    };
-}
 });
-
 
 
 
