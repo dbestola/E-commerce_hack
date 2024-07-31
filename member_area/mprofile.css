@@ -230,3 +230,15 @@ button:hover {
     cursor: pointer;
     font-size: 16px;
 }
+
+/* media screen */
+@media (max-width:830px){
+    .myName{
+        font-size: medium;
+    }
+
+    #orders .orders-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}

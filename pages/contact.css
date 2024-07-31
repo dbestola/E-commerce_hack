@@ -62,8 +62,9 @@
 
 .custom-alert {
     position: absolute;
-    top: 12%;
-    left: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #000000;
     padding: 10px;
     border-radius: .5rem;

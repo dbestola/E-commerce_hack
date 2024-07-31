@@ -36,14 +36,19 @@ document.addEventListener('DOMContentLoaded', () => {
     
 // Function to update user details
     function loadUserData() {
-        const user = JSON.parse(localStorage.getItem('users'));
-        if (user) {
-            document.getElementById('first-name').value = user.firstName;
-            document.getElementById('last-name').value = user.lastName;
-            document.getElementById('email').value = user.email;
-            document.getElementById('password').value = user.password;
-            document.getElementById('address').value = user.address;
-        }
+        const users = JSON.parse(localStorage.getItem('users'));
+
+        users.forEach((user=>{
+            if (user) {
+                document.getElementById('first-name').value = user.firstName ;
+                document.getElementById('last-name').value = user.lastName;
+                document.getElementById('email').value = user.email;
+                document.getElementById('password').value = user.password;
+            }
+
+        }))
+
+        
     }
 
     accountForm.addEventListener('submit', (event) => {
@@ -56,8 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
             password: formData.get('password'),
             address: formData.get('address')
         };
-        localStorage.setItem('users', JSON.stringify(updatedAccountData));
-        CustomAlert('Account updated successfully!');
+        CustomAlert('Account updated successfully!', setTimeout(()=>{
+            
+            localStorage.setItem('users', JSON.stringify(updatedAccountData));
+            localStorage.setItem('createProfile', JSON.stringify(updatedAccountData));
+            window.location.reload()
+        },2000));
     });
 
 // Function to close user account
