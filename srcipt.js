@@ -300,4 +300,79 @@ document.addEventListener('DOMContentLoaded', () => {
         imgDiv.appendChild(BPrice)
     });
 });
+
+var adapters = [
+    {
+        "id": 25,
+        "image": "./assets/images/accessories/adapter/apple-30w-usb-c-power-adapter.webp",
+        "name": "Apple-30w USB Adapter (white)",
+        "price": "36,000",
+        "beforeprice": "40,000",
+        "discountprice": "-10%",
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+    },
+    {
+        "id": 30,
+        "image": "./assets/images/accessories/airpod/airpods-max-grey.webp",
+        "name": "Airpod max (grey)",
+        "price": "175,000",
+        "beforeprice": "195,000",
+        "discountprice": "-10%",
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+    },
+    {
+        "id": 35,
+        "image": "./assets/images/accessories/cable/lightning-to-usb-cable-2-m.webp",
+        "name": "USB Charge-cable 2m (white)",
+        "price": "58,500",
+        "beforeprice": "65,000",
+        "discountprice": "-10%",
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+    },
+    {
+        "id": 37,
+        "image": "./assets/images/accessories/protection/apple-iphone-15-pro-max-finewoven-case-with-magsafe-taupe.webp",
+        "name": "Magsafe protection case (Brown)",
+        "price": "34,200",
+        "beforeprice": "38,000",
+        "discountprice": "-10%",
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores qui sequi veritatis ex, omnis repellendus, iste quod magnam aliquam nobis esse nemo saepe id? Alias doloribus placeat harum dolorem quaerat." 
+    }
+];
+document.addEventListener('DOMContentLoaded', () => {
+    const productContainer = document.getElementById('product-container4');
+
+    adapters.forEach(product => {
+        const imgDiv = document.createElement('div');
+        imgDiv.classList.add('img')
+        imgDiv.id = `img${product.id}`
+
+        const anchor = document.createElement('a');
+        anchor.href = `pages/collections/collections.html?id=${product.id}`;
+
+        const imgElement = document.createElement('img');
+        imgElement.src = product.image;
+        imgElement.alt = product.name;
+
+        const PDescription = document.createElement('h5')
+        PDescription.innerText = product.name
+
+        const CPrice = document.createElement('h6')
+        CPrice.innerHTML = `Price:${nairaSymbol}${product.price}`
+
+        const BPrice = document.createElement('h6')
+        BPrice.innerHTML = `Before:<s>${nairaSymbol}${product.beforeprice}</s>`
+
+        productContainer.appendChild(imgDiv);
+        anchor.appendChild(imgElement);
+        imgDiv.appendChild(anchor);
+        imgDiv.appendChild(PDescription)
+        imgDiv.appendChild(CPrice)
+        imgDiv.appendChild(BPrice)
+    });
+});
   
