@@ -441,6 +441,20 @@ font-weight: bolder;
     border-top: 3px solid black;
     margin: 20px 0;
   }
+  .view-btn{
+    float: right;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    background-color: black;
+  }
+  .view-btn a{
+    text-decoration: none;
+    color: #fff;
+  }
+  .view-btn:hover{
+    background-color: #cbf802;
+  }
 
   /* floating whatsapp icon */
   .whatsapp-float{
