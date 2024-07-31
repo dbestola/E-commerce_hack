@@ -43,16 +43,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 var Products = [
-      {
-        "id": 23,
-        "image": "assets/images/ipad/apple-ipad-pro-12.9-m22022-modelwi-ficellular-512gb-space-gray.jpg",
-        "name": "Apple Ipad 512gb (gray)",
-        "price": "1,602,000",
-        "beforeprice": "1,780,000",
-        "discountprice": "-10%",
-        "quantity": 1
-    },
-    {
+  {
+      "id": 23,
+      "image": "assets/images/ipad/apple-ipad-pro-12.9-m22022-modelwi-ficellular-512gb-space-gray.jpg",
+      "name": "Apple Ipad 512gb (gray)",
+      "price": "1,602,000",
+      "beforeprice": "1,780,000",
+      "discountprice": "-10%",
+      "quantity": 1
+  },
+  {
       "id": 14,
       "image": "assets/images/iphone/15/apple-iphone-15-pro-max-256gb-nano-sim-blue-titanium.jpg",
       "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
@@ -70,7 +70,7 @@ var Products = [
       "discountprice": "-10%",
       "quantity": 1
   },
-    {
+  {
       "id": 20,
       "image": "assets/images/mac/apple-macbook-pro-16.2-32gb-1tb-10-cores-m1-max-silver.jpg",
       "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
@@ -79,7 +79,7 @@ var Products = [
       "discountprice": "-10%",
       "quantity": 1
   }
-]
+];
 
 
 document.addEventListener('DOMContentLoaded', () => {
