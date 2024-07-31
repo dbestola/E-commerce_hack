@@ -304,6 +304,23 @@ function makePayment() {
             saveOrderLocally(orderDetailsForCard);
             localStorage.setItem('currentOrderId', orderDetailsForCard.orderId); // Save current order ID
 
+            localStorage.getItem('messages')
+            const newUpdatedMessage = [
+                { id: 1, 
+                sender: 'Admin', 
+                subject: 'Congratulations on your onboarding!',
+                body: "Congratulations on taking the first step to ensuring that you always have access to premium apple products and support services. Our goal is to ensure you get maximum satisfaction purchasing and also using our catalogue of apple products. We look forward to your patronage. Once again welcome to iHub Nigeria!"
+            },
+            { id: 2, 
+                sender: 'Admin', 
+                subject: 'Congratulations your order has been shipped!',
+                body: "Thank you for purchasing our product, your order has been shipped successfully, you will get a message from our admin when the product arrive our pickup station close to your address!"
+            }
+        ]
+
+       
+        localStorage.setItem('messages', JSON.stringify(newUpdatedMessage));
+
             clearCart();
 
             window.location.href = 'confirmation.html'; // Redirect to confirmation page
