@@ -10,19 +10,16 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 
 
-// create alert
+// create custom alert
 function CustomAlert(message, callback) {
 
-    // alert container
     const alertContainer = document.createElement('div');
     alertContainer.className = 'custom-alert';
 
-    // alert message
     const alertMessage = document.createElement('p');
     alertMessage.textContent = message;
     alertContainer.appendChild(alertMessage);
 
-    // close button
     const closeButton = document.createElement('button');
     closeButton.textContent = 'OK';
     closeButton.className = 'custom-alert-button';
@@ -32,16 +29,16 @@ function CustomAlert(message, callback) {
     });
     alertContainer.appendChild(closeButton);
 
-    // Append alert to body
+    // Append custom alert to body
     document.body.appendChild(alertContainer);
 
-    // Automatically remove the alert after 3 seconds 
-    setTimeout(() => {
+    // Automatically remove the alert after 2 seconds 
+    setInterval(() => {
         if (document.body.contains(alertContainer)) {
             document.body.removeChild(alertContainer);
             if (callback) callback();
         }
-    }, 3000);
+    }, 2000);
 }
 
 // Function to handle signup form submission
@@ -84,6 +81,14 @@ function handleSignup(event) {
         password: password
     };
 
+    const newMessage = [
+        { id: 1, 
+        sender: 'Admin', 
+        subject: 'Congratulations on your onboarding!',
+        body: "Congratulations on taking the first step to ensuring that you always have access to premium apple products and support services. Our goal is to ensure you get maximum satisfaction purchasing and also using our catalogue of apple products. We look forward to your patronage. Once again welcome to iHub Nigeria!"
+    }
+]
+
     let users = JSON.parse(localStorage.getItem('users')) || [];
 
     if (users.some(user => user.email === email)) {
@@ -93,6 +98,8 @@ function handleSignup(event) {
 
     users.push(newUser);
     localStorage.setItem('users', JSON.stringify(users));
+    localStorage.setItem('messages', JSON.stringify(newMessage));
+
 
     CustomAlert('Sign up successful! Please log in.', function() {
         const handleAnimtion = document.querySelector('.login-animation')

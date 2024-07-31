@@ -67,7 +67,7 @@ body {
     height: 50vh;
 }
 
-#orders h3{
+#orders h3, #inbox h3, #account h3{
     margin: auto;
     text-transform: uppercase;
     width: -moz-fit-content;
@@ -117,11 +117,28 @@ body {
     height: auto;
 }
 
+.msg-container{
+    margin-top: 1rem;
+}
+
+.msg-container #msg-counter{
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+#account-form{
+    margin-top: 3rem;
+    margin-left: 10rem;
+}
+
+
 form {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 10px;
-    max-width: 400px;
+    max-width: 40vw;
 }
 
 form label {
@@ -137,18 +154,44 @@ form input {
 form button {
     grid-column: 2 / 3;
     padding: 10px;
-    background-color: #007BFF;
+    background-color: black;
     color: white;
     border: none;
     cursor: pointer;
 }
 
 form button:hover {
-    background-color: #0056b3;
+    color: #cbf802;
+    background-color: #000000;
+}
+
+#close-account h4, #logout h4{
+    width: -moz-fit-content;
+    width: fit-content;
+    margin:10rem auto;
+}
+
+#close-account-btn, #logout-btn{
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: -4rem auto;
+    width: 20vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#close-account-btn:hover, #logout-btn:hover{
+    color: white;
+    background: #FF0000;
 }
 
 button {
     padding: 10px 20px;
+    border-radius: 10px;
     background-color: #FF0000;
     color: white;
     border: none;
@@ -157,4 +200,33 @@ button {
 
 button:hover {
     background-color: #cc0000;
+}
+
+.custom-alert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+    padding: 10px;
+    border-radius: .5rem;
+    z-index: 1000;
+    text-align: center;
+    width: 17vw;
+}
+
+.custom-alert p {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #ffff;
+}
+
+.custom-alert-button {
+    padding: 10px 20px;
+    background-color: #cbf802;
+    color: #000000;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 16px;
 }

@@ -9,19 +9,16 @@ document.addEventListener('DOMContentLoaded', function(){
     },1000)
 })
 
-// create alert
+// create custom alert
 function CustomAlert(message, callback) {
     
-    // alert container
     const alertContainer = document.createElement('div');
     alertContainer.className = 'custom-alert';
 
-    // alert message
     const alertMessage = document.createElement('p');
     alertMessage.textContent = message;
     alertContainer.appendChild(alertMessage);
 
-    // close button
     const closeButton = document.createElement('button');
     closeButton.textContent = 'OK';
     closeButton.className = 'custom-alert-button';
@@ -34,13 +31,13 @@ function CustomAlert(message, callback) {
     // Append alert to body
     document.body.appendChild(alertContainer);
 
-    // Automatically remove the alert after 3 seconds 
-    setTimeout(() => {
+    // Automatically remove the alert after 2 seconds 
+    setInterval(() => {
         if (document.body.contains(alertContainer)) {
             document.body.removeChild(alertContainer);
             if (callback) callback();
         }
-    }, 3000);
+    }, 2000);
 }
 
 // Function to display error messages
