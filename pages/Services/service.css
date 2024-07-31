@@ -2,7 +2,19 @@
   width: 100%;
   overflow: hidden;
 }
-.service-img img {
+
+.service-img2{
+  width: 80%;
+  overflow: hidden;
+  margin: auto;
+}
+.service-img img{
+  width: 100%;
+  height: 40vh;
+  margin-top: 7rem;
+  object-fit: fill;
+}
+.service-img2 img{
   width: 100%;
   height: 40vh;
   margin-top: 7rem;
@@ -89,7 +101,14 @@
 .learn-more:hover{
   background-color: #cbf802;
 }
-  
+.repairs21,.repairs22,.repairs23{
+  text-align: center;
+  margin-top: 5rem;
+}
+.repair-container,.repair-container2{
+  display: flex;
+  margin-top: 3rem;
+}
 
 
 @media (max-width: 1000px) {
