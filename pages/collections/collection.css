@@ -12,7 +12,7 @@
     display: grid;
     grid-template-columns: 30% 70%;
     gap: 2vw;
-    height: 70%;
+    height: fit-content;
     overflow: hidden;
 }
 
@@ -32,7 +32,7 @@
 
 .container-img img{
     width: 100%;
-    height: 90%;
+    height: 80%;
     border-radius: 1rem;
     object-fit: fill;
 }
@@ -208,6 +208,9 @@ margin: 10px;
     .product-name{
         margin-top: -2rem;
         margin-bottom: 27rem;
+    }
+    #share-product{
+        margin-top: -25rem;
     }
 }
 
