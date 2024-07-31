@@ -3,7 +3,7 @@ const nairaSymbol = '\u20A6'
 var Products = [
     {
         "id": 23,
-        "image": "assets/images/ipad/apple-ipad-pro-12.9-m22022-modelwi-ficellular-512gb-space-gray.jpg",
+        "image": "./assets/images/ipad/apple-ipad-pro-12.9-m22022-modelwi-ficellular-512gb-space-gray.jpg",
         "name": "Apple Ipad 512gb (gray)",
         "price": "1,602,000",
         "beforeprice": "1,780,000",
@@ -12,7 +12,7 @@ var Products = [
     },
     {
         "id": 14,
-        "image": "assets/images/iphone/15/apple-iphone-15-pro-max-256gb-nano-sim-blue-titanium.jpg",
+        "image": "./assets/images/iphone/15/apple-iphone-15-pro-max-256gb-nano-sim-blue-titanium.jpg",
         "name": "Apple IPhone 15 Pro Max 256gb (nano-sim blue titanium)",
         "price": "1,890,090",
         "beforeprice": "2,100,100",
@@ -21,7 +21,7 @@ var Products = [
       },
       {
         "id": 37,
-        "image": "assets/images/accessories/protection/apple-iphone-15-pro-max-finewoven-case-with-magsafe-taupe.webp",
+        "image": "./assets/images/accessories/protection/apple-iphone-15-pro-max-finewoven-case-with-magsafe-taupe.webp",
         "name": "Magsafe protection case (Brown)",
         "price": "34,200",
         "beforeprice": "38,000",
@@ -30,7 +30,7 @@ var Products = [
     },
     {
         "id": 20,
-        "image": "assets/images/mac/apple-macbook-pro-16.2-32gb-1tb-10-cores-m1-max-silver.jpg",
+        "image": "./assets/images/mac/apple-macbook-pro-16.2-32gb-1tb-10-cores-m1-max-silver.jpg",
         "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
         "price": "1,602,000",
         "beforeprice": "1,780,000",
@@ -77,7 +77,7 @@ var Products = [
 var iphone = [
     {
         "id": 1,
-        "image": "../../assets/images/iphone/11/apple-iphone-11-pro-max-6.5-4gb-ram-64gb-rom-gold.jpg",
+        "image": "./assets/images/iphone/11/apple-iphone-11-pro-max-6.5-4gb-ram-64gb-rom-gold.jpg",
         "name": "Apple iphone 11 Pro Max 64gb (gold)",
         "price": "360,000",
         "beforeprice": "400,000",
@@ -86,7 +86,7 @@ var iphone = [
     },
     {
         "id": 6,
-        "image": "../../assets/images/iphone/13/iphone-13-pro-max-6.7-super-retina-xdr-display-with-promotion-6gb-ram-512gb-rom-ios-15-5g-facetime-gold.jpg",
+        "image": "./assets/images/iphone/13/iphone-13-pro-max-6.7-super-retina-xdr-display-with-promotion-6gb-ram-512gb-rom-ios-15-5g-facetime-gold.jpg",
         "name": "IPhone 13 Pro Max 512gb (gold)",
         "price": "2,250,000",
         "beforeprice": "2,500,000",
@@ -96,7 +96,7 @@ var iphone = [
     },
     {
         "id": 11,
-        "image": "../../assets/images/iphone/14/iphone-14-pro-max-6.7-6gb-ram-128gb-rom-deep-purple.jpg",
+        "image": "./assets/images/iphone/14/iphone-14-pro-max-6.7-6gb-ram-128gb-rom-deep-purple.jpg",
         "name": "IPhone 14 Pro max 128gb (purple)",
         "price": "1,800,000",
         "beforeprice": "2,000,000",
@@ -106,7 +106,7 @@ var iphone = [
     },
     {
         "id": 13,
-        "image": "../../assets/images/iphone/15/apple-iphone-15-pro-128gb-nano-sim-natural-titanium-.jpg",
+        "image": "./assets/images/iphone/15/apple-iphone-15-pro-128gb-nano-sim-natural-titanium-.jpg",
         "name": "Apple iphone 15 Pro 128gb (natural-titanium)",
         "price": "1,800,000",
         "beforeprice": "2,000,000",
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
 var ipads = [
     {
         "id": 21,
-        "image": "../../assets/images/ipad/apple-ipad-9th-gen-10.2-wi-fi-cellular-256gb-space-grey.jpg",
+        "image": "./assets/images/ipad/apple-ipad-9th-gen-10.2-wi-fi-cellular-256gb-space-grey.jpg",
         "name": "Apple IPad 256gb (grey)",
         "price": "1,485,000",
         "beforeprice": "1,650,000",
@@ -162,7 +162,7 @@ var ipads = [
     },
     {
         "id": 22,
-        "image": "../../assets/images/ipad/Apple-IPad-Pro-12.9-M2-2022 Model-Wi-Fi-Only-128GB-Silver.jpg",
+        "image": "./assets/images/ipad/Apple-IPad-Pro-12.9-M2-2022 Model-Wi-Fi-Only-128GB-Silver.jpg",
         "name": "Apple IPad 128gb (silver)",
         "price": "1,895,100",
         "beforeprice": "2,100,100",
@@ -172,7 +172,7 @@ var ipads = [
     },
     {
         "id": 23,
-        "image": "../../assets/images/ipad/apple-ipad-pro-12.9-m22022-modelwi-ficellular-512gb-space-gray.jpg",
+        "image": "./assets/images/ipad/apple-ipad-pro-12.9-m22022-modelwi-ficellular-512gb-space-gray.jpg",
         "name": "Apple Ipad 512gb (gray)",
         "price": "1,602,000",
         "beforeprice": "1,780,000",
@@ -182,7 +182,7 @@ var ipads = [
     },
     {
         "id": 24,
-        "image":"../../assets/images/ipad/apple-ipad-9th-gen-10.2-wi-fi-cellular-256gb-space-grey.jpg",
+        "image":"./assets/images/ipad/apple-ipad-9th-gen-10.2-wi-fi-cellular-256gb-space-grey.jpg",
         "name": "Apple ipad 256gb (gray)",
         "price": "4,386,780",
         "beforeprice": "4,874,200",
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
 var macArray = [
     {
         "id": 17,
-        "image": "../../assets/images/mac/apple-13.6-macbook-air-m2-midnight-8gb-512gb.jpg",
+        "image": "./assets/images/mac/apple-13.6-macbook-air-m2-midnight-8gb-512gb.jpg",
         "name": "Macbook Air 512gb",
         "price": "450,000",
         "beforeprice": "500,000",
@@ -238,7 +238,7 @@ var macArray = [
     },
     {
         "id": 18,
-        "image": "../../assets/images/mac/2024 OSX SONOMA- 2018 MACBOOK AIR 13 - 1.6GHz i5 - 16GB RAM - 256GB SSD - GRAY.webp",
+        "image": "./assets/images/mac/2024 OSX SONOMA- 2018 MACBOOK AIR 13 - 1.6GHz i5 - 16GB RAM - 256GB SSD - GRAY.webp",
         "name": "Macbook AIR 13 256gb (grey)",
         "price": "1,890,090",
         "beforeprice": "2,100,100",
@@ -248,7 +248,7 @@ var macArray = [
     },,
     {
         "id": 19,
-        "image": "../../assets/images/mac/apple-macbook-air-13-inch-2022-m2-8gb-256gb-ssd-8-core-gpu-space-gray.jpg",
+        "image": "./assets/images/mac/apple-macbook-air-13-inch-2022-m2-8gb-256gb-ssd-8-core-gpu-space-gray.jpg",
         "name": " Apple Macbook Air 13 256gb (gray)",
         "price": "1,602,000",
         "beforeprice": "1,780,000",
@@ -258,7 +258,7 @@ var macArray = [
     },
     {
         "id": 20,
-        "image": "../../assets/images/mac/apple-macbook-pro-16.2-32gb-1tb-10-cores-m1-max-silver.jpg",
+        "image": "./assets/images/mac/apple-macbook-pro-16.2-32gb-1tb-10-cores-m1-max-silver.jpg",
         "name": "Apple MacBook Pro 32gbRAM 1tbROM (10-cores, silver)",
         "price": "1,602,000",
         "beforeprice": "1,780,000",
