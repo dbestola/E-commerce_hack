@@ -140,7 +140,8 @@ function loadOrders() {
 
         messages.forEach(message => {
             const messageElement = document.createElement('div');
-            messageElement.innerHTML = `Message #${message.id} <br> <h5> From ${message.sender}: ${message.subject}</h5> <p>${message.body}</p>`;
+            messageElement.className = 'msg-container'
+            messageElement.innerHTML = `<span id="msg-counter">Message #${message.id}</span> <br><br> <h5> From ${message.sender}: ${message.subject}</h5> <p>${message.body}</p>`;
             inboxList.appendChild(messageElement);
         });
     }
