@@ -637,11 +637,6 @@ font-weight: bolder;
 @media (max-width: 1200px) {
 
 
-  .sample-1, .sample-2 {
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 100%;
-  }
-
   #Lsign-up1, #form1 input {
       width: 30vw;
   }
@@ -662,8 +657,7 @@ font-weight: bolder;
 }
 
   .sample-1, .sample-2 {
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   #Lsign-up1, #form1 input {
@@ -689,7 +683,6 @@ font-weight: bolder;
   }
 
   .img2 img{
-    width: 100%;
     height: 78%;
   }
 }
@@ -760,31 +753,31 @@ font-weight: bolder;
   }
 
   .img img{
-    height: 50%;
+    height: 75%;
   }
 
-  #img23, #img2a{
+  #img23, #img1, #img17, #img25, #img2a{
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
   }
 
-  #img14, #img2b{
+  #img14, #img6, #img21, #img30, #img18, #img2b{
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 3;
   }
 
-  #img37, #img2c{
+  #img37, #img11, #img22, #img19, #img2c{
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 5;
   }
 
-  #img20, #img2d{
+  #img20, #img13, #img24, #img35, #img2d{
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 3;
@@ -881,6 +874,10 @@ font-weight: bolder;
   .carousel-item {
     min-height: 30vh;
     max-height: 30vh;
+  }
+
+  .img img{
+    height: 65%;
   }
 
   #Lsign-up2, #form1 input {
