@@ -336,24 +336,66 @@ div .sample-1, div .sample-2{
     gap: 1vw;
 }
 
-.img, .img2{
+#product-container div {
+  border: 1px solid rgb(223, 220, 220);
+  height: fit-content;
+  padding-top: 5px;
+}
+
+#product-container1 div {
+  border: 1px solid rgb(223, 220, 220);
+  height: fit-content;
+  padding-top: 5px;
+}
+
+#product-container2 div {
+  border: 1px solid rgb(223, 220, 220);
+  height: fit-content;
+  padding-top: 5px;
+}
+
+#product-container3 div {
+  border: 1px solid rgb(223, 220, 220);
+  height: fit-content;
+  padding-top: 5px;
+}
+
+#product-container4 div {
+  border: 1px solid rgb(223, 220, 220);
+  height: fit-content;
+  padding-top: 5px;
+}
+
+.img , .img2{
     height: 100%;
     width: 100%;
     position: relative;
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: #fff;
     text-align: center;
+    box-shadow: 0 8px 16px #00000054;
+    transition: box-shadow 0.3s ease;
     border-radius: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    box-shadow: 0 6px 10px #00000063;
-    transition: box-shadow 0.3s ease;
+    
 }
 
 .img img{
-    width: 100%;
-    height: 75%;
+    width: 50%;
     position: relative;
-    object-fit: fill;
+    object-fit: contain;
+}
+
+.img h4 {
+  font-size: 15px;
+}
+
+.img h5 {
+  font-size: 15px;
+}
+
+.img h6 {
+  font-size: 10px;
 }
 
 .img2 img{
@@ -389,7 +431,8 @@ font-weight: bolder;
   .img:hover::after, .img2:hover::after{
     opacity: 1;
     z-index: 1;
-    box-shadow: 0 8px 16px #00000069;
+    box-shadow: 0 8px 16px #00000054;
+
   }
 
   .img::before {
@@ -447,6 +490,7 @@ font-weight: bolder;
     border: none;
     border-radius: 6px;
     background-color: black;
+    margin-right: 20px;
   }
   .view-btn a{
     text-decoration: none;

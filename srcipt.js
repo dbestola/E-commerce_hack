@@ -54,15 +54,29 @@ var Products = [
           const imgElement = document.createElement('img');
           imgElement.src = product.image;
           imgElement.alt = product.name;
+
+          function truncateText(text, maxLength) {
+            if (text.length > maxLength) {
+                return text.substring(0, maxLength - 3) + '...';
+            } else {
+                return text;
+            }
+        }
+
+        const originalText = product.name ;
+        const maxLength = 25; // Set the desired maximum length
+
+        const truncatedText = truncateText(originalText, maxLength);
+
   
-          const PDescription = document.createElement('h5')
-          PDescription.innerText = product.name
-  
-          const CPrice = document.createElement('h6')
-          CPrice.innerHTML = `Price:${nairaSymbol}${product.price}`
+          const PDescription = document.createElement('h4')
+          PDescription.innerText = truncatedText 
+
+          const CPrice = document.createElement('h5')
+          CPrice.innerHTML = `${nairaSymbol}${product.price}`
   
           const BPrice = document.createElement('h6')
-          BPrice.innerHTML = `Before:<s>${nairaSymbol}${product.beforeprice}</s>`
+          BPrice.innerHTML = `<s>${nairaSymbol}${product.beforeprice}</s>`
   
           productContainer.appendChild(imgDiv);
           anchor.appendChild(imgElement);
@@ -131,10 +145,23 @@ document.addEventListener('DOMContentLoaded', () => {
         imgElement.src = product.image;
         imgElement.alt = product.name;
 
-        const PDescription = document.createElement('h5')
-        PDescription.innerText = product.name
+        function truncateText(text, maxLength) {
+            if (text.length > maxLength) {
+                return text.substring(0, maxLength - 3) + '...';
+            } else {
+                return text;
+            }
+        }
 
-        const CPrice = document.createElement('h6')
+        const originalText = product.name ;
+        const maxLength = 25; // Set the desired maximum length
+
+        const truncatedText = truncateText(originalText, maxLength);
+
+        const PDescription = document.createElement('h4')
+        PDescription.innerText = truncatedText
+
+        const CPrice = document.createElement('h5')
         CPrice.innerHTML = `Price:${nairaSymbol}${product.price}`
 
         const BPrice = document.createElement('h6')
@@ -207,10 +234,23 @@ document.addEventListener('DOMContentLoaded', () => {
         imgElement.src = product.image;
         imgElement.alt = product.name;
 
-        const PDescription = document.createElement('h5')
-        PDescription.innerText = product.name
+        function truncateText(text, maxLength) {
+            if (text.length > maxLength) {
+                return text.substring(0, maxLength - 3) + '...';
+            } else {
+                return text;
+            }
+        }
 
-        const CPrice = document.createElement('h6')
+        const originalText = product.name ;
+        const maxLength = 25; // Set the desired maximum length
+
+        const truncatedText = truncateText(originalText, maxLength);
+
+        const PDescription = document.createElement('h4')
+        PDescription.innerText = truncatedText
+
+        const CPrice = document.createElement('h5')
         CPrice.innerHTML = `Price:${nairaSymbol}${product.price}`
 
         const BPrice = document.createElement('h6')
@@ -283,10 +323,23 @@ document.addEventListener('DOMContentLoaded', () => {
         imgElement.src = product.image;
         imgElement.alt = product.name;
 
-        const PDescription = document.createElement('h5')
-        PDescription.innerText = product.name
+        function truncateText(text, maxLength) {
+            if (text.length > maxLength) {
+                return text.substring(0, maxLength - 3) + '...';
+            } else {
+                return text;
+            }
+        }
 
-        const CPrice = document.createElement('h6')
+        const originalText = product.name ;
+        const maxLength = 25; // Set the desired maximum length
+
+        const truncatedText = truncateText(originalText, maxLength);
+
+        const PDescription = document.createElement('h4')
+        PDescription.innerText = truncatedText
+
+        const CPrice = document.createElement('h5')
         CPrice.innerHTML = `Price:${nairaSymbol}${product.price}`
 
         const BPrice = document.createElement('h6')
@@ -358,10 +411,23 @@ document.addEventListener('DOMContentLoaded', () => {
         imgElement.src = product.image;
         imgElement.alt = product.name;
 
-        const PDescription = document.createElement('h5')
-        PDescription.innerText = product.name
+        function truncateText(text, maxLength) {
+            if (text.length > maxLength) {
+                return text.substring(0, maxLength - 3) + '...';
+            } else {
+                return text;
+            }
+        }
 
-        const CPrice = document.createElement('h6')
+        const originalText = product.name ;
+        const maxLength = 25; // Set the desired maximum length
+
+        const truncatedText = truncateText(originalText, maxLength);
+
+        const PDescription = document.createElement('h4')
+        PDescription.innerText = truncatedText
+
+        const CPrice = document.createElement('h5')
         CPrice.innerHTML = `Price:${nairaSymbol}${product.price}`
 
         const BPrice = document.createElement('h6')
