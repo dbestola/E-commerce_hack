@@ -12,15 +12,15 @@ document.addEventListener('DOMContentLoaded', function () {
             const mainContent = document.getElementById('main-content');
             mainContent.classList.add('visible');
 
-                // Show the discount message and the overlay
+            // Show the discount message and the overlay
             const discountMessage = document.getElementById('discount-message');
             const overlay = document.getElementById('overlay');
             discountMessage.style.display = 'block';
             overlay.style.display = 'block';
         }, 1000); // Delay in milliseconds (1000ms = 1 seconds)
 
-         // Close discount message and continue to main content
-         document.getElementById('close-discount').addEventListener('click', function() {
+        // Close discount message and continue to main content
+        document.getElementById('close-discount').addEventListener('click', function () {
             const discountMessage = document.getElementById('discount-message');
             const overlay = document.getElementById('overlay');
             discountMessage.style.display = 'none';
@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
             mainContent.style.opacity = '1'; // Ensure main content is fully visible
         });
 
-           // Close discount message and continue to main content
-           document.getElementById('close-icon').addEventListener('click', function() {
+        // Close discount message and continue to main content
+        document.getElementById('close-icon').addEventListener('click', function () {
             const discountMessage = document.getElementById('discount-message');
             const overlay = document.getElementById('overlay');
             discountMessage.style.display = 'none';
@@ -118,9 +118,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 gravity: "top", // `top` or `bottom`
                 positionLeft: true, // `true` or `false` 
                 backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-                }).showToast();
-            
-           
+            }).showToast();
+
+
             return;
         }
 
@@ -134,8 +134,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 gravity: "top", // `top` or `bottom`
                 positionLeft: true, // `true` or `false` 
                 backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-                }).showToast();
-           
+            }).showToast();
+
 
             // Save the updated total amount back to localStorage
             localStorage.setItem('totalAmount', newTotalAmount);
@@ -155,8 +155,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 gravity: "top", // `top` or `bottom`
                 positionLeft: true, // `true` or `false` 
                 backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-                }).showToast();
-           
+            }).showToast();
+
         }
     }
 
@@ -185,8 +185,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 gravity: "top", // `top` or `bottom`
                 positionLeft: true, // `true` or `false` 
                 backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-                }).showToast();
-           
+            }).showToast();
+
             window.location.href = '/member_area/mLogin.html'; // Redirect to login page
             return;
         }
@@ -209,8 +209,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 gravity: "top", // `top` or `bottom`
                 positionLeft: true, // `true` or `false` 
                 backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-                }).showToast();
-           
+            }).showToast();
+
             return;
         }
 
@@ -283,9 +283,9 @@ function makePayment() {
             ]
         },
         callback: function (response) {
-           // This function is called when the payment is successful
-           alert('Payment successful! Transaction reference: ' + response.reference);
-           
+            // This function is called when the payment is successful
+            alert('Payment successful! Transaction reference: ' + response.reference);
+
             // Save the order after successful payment
             const orderDetailsForCard = {
                 orderId: Date.now(), // Unique order ID
@@ -304,22 +304,20 @@ function makePayment() {
             saveOrderLocally(orderDetailsForCard);
             localStorage.setItem('currentOrderId', orderDetailsForCard.orderId); // Save current order ID
 
-            localStorage.getItem('messages')
-            const newUpdatedMessage = [
-                { id: 1, 
-                sender: 'Admin', 
-                subject: 'Congratulations on your onboarding!',
-                body: "Congratulations on taking the first step to ensuring that you always have access to premium apple products and support services. Our goal is to ensure you get maximum satisfaction purchasing and also using our catalogue of apple products. We look forward to your patronage. Once again welcome to iHub Nigeria!"
-            },
-            { id: 2, 
-                sender: 'Admin', 
-                subject: 'Congratulations your order has been shipped!',
-                body: "Thank you for purchasing our product, your order has been shipped successfully, you will get a message from our admin when the product arrive our pickup station close to your address!"
-            }
-        ]
+            const newUpdatedMessage =
+                {
+                    id: 'Paid',
+                    sender: 'Admin',
+                    subject: 'Congratulations your order has been shipped!',
+                    body: "Thank you for purchasing our product, your order has been shipped successfully, you will get a message from our admin when the product arrive our pickup station close to your address!"
+                };
 
-       
-        localStorage.setItem('messages', JSON.stringify(newUpdatedMessage));
+            let msgUpdate = JSON.parse(localStorage.getItem('messages')) || [];
+
+            msgUpdate.push(newUpdatedMessage);
+
+
+            localStorage.setItem('messages', JSON.stringify(msgUpdate));
 
             clearCart();
 
@@ -334,8 +332,8 @@ function makePayment() {
                 gravity: "top", // `top` or `bottom`
                 positionLeft: true, // `true` or `false` 
                 backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-                }).showToast();
-         
+            }).showToast();
+
         }
     });
 
@@ -370,6 +368,21 @@ function handlePayOnDelivery(name, email, address, country, state, city, phone, 
     };
     saveOrderLocally(orderDetails);
     localStorage.setItem('currentOrderId', orderDetails.orderId); // Save current order ID
+
+    const newUpdatedMsg =
+        {
+            id: "notPaid",
+            sender: 'Admin',
+            subject: 'Congratulations your order has been shipped!',
+            body: "Hello, we reecived your order... you have chosen to pay on delivery, kindly get your money ready... your order has been shipped successfully, you will get a message from our admin when the product arrive our pickup station close to your address!"
+        };
+
+    let messages = JSON.parse(localStorage.getItem('messages')) || [];
+
+    messages.push(newUpdatedMsg);
+
+    localStorage.setItem('messages', JSON.stringify(messages));
+
 
     clearCart();
 
