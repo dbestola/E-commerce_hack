@@ -106,7 +106,7 @@ function handleSignup(event) {
         handleAnimtion.classList.remove('animate__rotateIn','animate__pulse', 'animate__infinite', 'infinite')
         handleAnimtion.classList.add('animate__fadeOutRight')
         setTimeout(function(){
-            window.location.href = './mlogin.html';
+            window.location.href = '/member_area/mLogin.html';
         },1000)
     });
 }
