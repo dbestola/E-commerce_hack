@@ -9,6 +9,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 3fr;
     padding-top: 4rem;
+    overflow-x: scroll;
 }
 
 .sidebar {
@@ -24,8 +25,9 @@ body {
     color: #cbf802;
     background-color: black;
     width: -moz-fit-content;
-    padding: 6px 10px;
     width: fit-content;
+    padding: 6px 10px;
+    text-align: center;
     border-radius: 10px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -54,7 +56,7 @@ body {
     font-weight: bold;
 }
 
-#logout-a{
+#logout-li{
     margin-top: 12rem;
 }
 
@@ -128,30 +130,31 @@ body {
     border-radius: 3px;
 }
 
+#account h4{
+    width: fit-content; 
+    margin: 3rem auto;
+}
+
 #account-form{
     margin-top: 3rem;
     margin-left: 10rem;
-}
-
-
-form {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 10px;
-    max-width: 40vw;
+    gap: 1vw;
+    width: 40vw;
 }
 
-form label {
+#account-form label {
     text-align: right;
     padding-right: 10px;
 }
 
-form input {
+#account-form input {
     padding: 5px;
     font-size: 1em;
 }
 
-form button {
+#account-form button {
     grid-column: 2 / 3;
     padding: 10px;
     background-color: black;
@@ -160,7 +163,7 @@ form button {
     cursor: pointer;
 }
 
-form button:hover {
+#account-form button:hover {
     color: #cbf802;
     background-color: #000000;
 }
@@ -187,19 +190,6 @@ form button:hover {
 #close-account-btn:hover, #logout-btn:hover{
     color: white;
     background: #FF0000;
-}
-
-button {
-    padding: 10px 20px;
-    border-radius: 10px;
-    background-color: #FF0000;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #cc0000;
 }
 
 .custom-alert {
@@ -231,14 +221,56 @@ button:hover {
     font-size: 16px;
 }
 
+.custom-alert-cancel {
+    background-color: #cbf802;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
 /* media screen */
 @media (max-width:830px){
+    .dashboard-container{
+        padding-top: 5rem;
+    }
+
     .myName{
         font-size: medium;
+    }
+
+    #orders h3, #inbox h3, #account h3{
+        font-size: large;
     }
 
     #orders .orders-container{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
+        height: 150%;
+    }
+
+    .sidebar li{
+        width: 20vw;
+    }
+
+    .sidebar a{
+        font-size: small;
+    }
+
+    #account-form{
+        margin-left: 0;
+        grid-template-columns: 30% 70%;
+        width: 90%;
+    }
+
+    #close-account-btn{
+        width: 40vw;
+    }
+
+    .custom-alert{
+        width: 45vw;
+        top: 70%;
+        left: 63%;
     }
 }

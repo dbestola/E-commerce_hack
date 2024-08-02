@@ -142,4 +142,10 @@
         width: 100%;
     }
 
+    .custom-alert{
+        width: 45vw;
+        top: 70%;
+        left: 63%;
+    }
+
 }
