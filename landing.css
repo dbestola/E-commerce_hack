@@ -330,7 +330,6 @@ div .sample-1, div .sample-2{
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 100%;
     overflow: hidden;
     padding: 0 1rem 1rem 1rem;
     gap: 1vw;
@@ -339,6 +338,7 @@ div .sample-1, div .sample-2{
 #product-container div {
   border: 1px solid rgb(223, 220, 220);
   height: fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding-top: 5px;
 }
@@ -346,6 +346,7 @@ div .sample-1, div .sample-2{
 #product-container1 div {
   border: 1px solid rgb(223, 220, 220);
   height: fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding-top: 5px;
 }
@@ -359,6 +360,7 @@ div .sample-1, div .sample-2{
 #product-container3 div {
   border: 1px solid rgb(223, 220, 220);
   height: fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding-top: 5px;
 }
@@ -366,6 +368,7 @@ div .sample-1, div .sample-2{
 #product-container4 div {
   border: 1px solid rgb(223, 220, 220);
   height: fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding-top: 5px;
 }
@@ -488,6 +491,11 @@ font-weight: bolder;
     border-top: 3px solid black;
     margin: 20px 0;
   }
+
+  .view-more{
+    margin-bottom: 2rem;
+  }
+
   .view-btn{
     float: right;
     padding: 0.8rem;
@@ -496,10 +504,12 @@ font-weight: bolder;
     background-color: black;
     margin-right: 20px;
   }
+
   .view-btn a{
     text-decoration: none;
     color: #fff;
   }
+
   .view-btn:hover{
     background-color: #cbf802;
   }
@@ -513,7 +523,7 @@ font-weight: bolder;
     width: 55px;
     height: 55px;
   }
-    /* floating whatsapp icon */
+    /* floating call icon */
     .call-float{
       position: fixed;
       right: 20px;
