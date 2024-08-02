@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function handleProfile() {
-  window.location.href = '/member_area/mprofile.html';
+  window.location.href = './member_area/mprofile.html';
 }
 
 
