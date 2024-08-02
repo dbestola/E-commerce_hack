@@ -925,8 +925,9 @@ font-weight: bolder;
   }
 
   .img img{
-    height: 65%;
+    width: 65%;
   }
+  
 
   #Lsign-up2, #form1 input {
       width: calc(100% - 10px);

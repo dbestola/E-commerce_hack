@@ -64,7 +64,7 @@ var Products = [
         }
 
         const originalText = product.name ;
-        const maxLength = 25; // Set the desired maximum length
+        const maxLength = 23; // Set the desired maximum length
 
         const truncatedText = truncateText(originalText, maxLength);
 
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const originalText = product.name ;
-        const maxLength = 25; // Set the desired maximum length
+        const maxLength = 23; // Set the desired maximum length
 
         const truncatedText = truncateText(originalText, maxLength);
 
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const originalText = product.name ;
-        const maxLength = 25; // Set the desired maximum length
+        const maxLength = 23; // Set the desired maximum length
 
         const truncatedText = truncateText(originalText, maxLength);
 
@@ -332,7 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const originalText = product.name ;
-        const maxLength = 25; // Set the desired maximum length
+        const maxLength = 22; // Set the desired maximum length
 
         const truncatedText = truncateText(originalText, maxLength);
 
@@ -420,7 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const originalText = product.name ;
-        const maxLength = 25; // Set the desired maximum length
+        const maxLength = 23; // Set the desired maximum length
 
         const truncatedText = truncateText(originalText, maxLength);
 
