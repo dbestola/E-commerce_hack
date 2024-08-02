@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.handleUserStates').appendChild(profileAccount);
     
     profileAccount.addEventListener('click', () => {
-      if (window.location.pathname === '/member_area/mprofile.html') {
+      if (window.location.pathname === 'member_area/mprofile.html') {
         window.location.reload();
       } else {
         handleProfile();
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function handleProfile() {
-  window.location.href = 'member_area/mprofile.html';
+  window.location.href = '/member_area/mprofile.html';
 }
 
 
