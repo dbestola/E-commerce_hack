@@ -1,23 +1,32 @@
 // Custom Alert function
 function CustomAlert(message, callback) {
-    const alertContainer = document.createElement('div');
+    const alertContainer = document.createElement('div')
     alertContainer.className = 'custom-alert';
 
-    const alertMessage = document.createElement('p');
+    const alertMessage = document.createElement('p')
     alertMessage.textContent = message;
     
-    const closeButton = document.createElement('button');
-    closeButton.textContent = 'OK';
-    closeButton.className = 'custom-alert-button';
+    const closeButton = document.createElement('button')
+    closeButton.textContent = 'OK'
+    closeButton.className = 'custom-alert-button'
 
-    alertContainer.appendChild(alertMessage);
-    alertContainer.appendChild(closeButton);
+    const cancelButton = document.createElement('span')
+    cancelButton.className = 'custom-alert-cancel'
+    cancelButton.innerHTML = '<i class="fa-solid fa-xmark" style="color: #000;"></i>'
 
-    document.body.appendChild(alertContainer);
+    alertContainer.appendChild(cancelButton)
+    alertContainer.appendChild(alertMessage)
+    alertContainer.appendChild(closeButton)
+
+    document.body.appendChild(alertContainer)
 
     closeButton.addEventListener('click', function() {
+        document.body.removeChild(alertContainer)
+        if (callback) callback();
+    });
+
+    cancelButton.addEventListener('click', function() {
         document.body.removeChild(alertContainer);
-        if(callback) callback()
     });
 }
 

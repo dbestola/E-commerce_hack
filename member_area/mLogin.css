@@ -170,7 +170,13 @@
         font-size: 0.9rem;
         cursor: pointer;
         color: #007ACE;
-    } 
+    }
+
+    .custom-alert{
+        width: 45vw;
+        top: 70%;
+        left: 63%;
+    }
 
 }
 
