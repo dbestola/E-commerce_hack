@@ -306,7 +306,7 @@ function makePayment() {
 
             const newUpdatedMessage =
                 {
-                    id: 'Paid',
+                    id: orderDetailsForCard.orderId + ' ' + 'Paid',
                     sender: 'Admin',
                     subject: 'Congratulations your order has been shipped!',
                     body: "Thank you for purchasing our product, your order has been shipped successfully, you will get a message from our admin when the product arrive our pickup station close to your address!"
@@ -371,7 +371,7 @@ function handlePayOnDelivery(name, email, address, country, state, city, phone, 
 
     const newUpdatedMsg =
         {
-            id: "notPaid",
+            id: orderDetails.orderId + ' ' + "notPaid",
             sender: 'Admin',
             subject: 'Congratulations your order has been shipped!',
             body: "Hello, we reecived your order... you have chosen to pay on delivery, kindly get your money ready... your order has been shipped successfully, you will get a message from our admin when the product arrive our pickup station close to your address!"
