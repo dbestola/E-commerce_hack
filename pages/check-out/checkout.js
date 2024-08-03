@@ -371,7 +371,7 @@ function handlePayOnDelivery(name, email, address, country, state, city, phone, 
 
     const newUpdatedMsg =
         {
-            id: orderDetails.orderId + ' ' + "notPaid",
+            id: orderDetails.orderId + ' ' + "Pending-Payment",
             sender: 'Admin',
             subject: 'Congratulations your order has been shipped!',
             body: "Hello, we reecived your order... you have chosen to pay on delivery, kindly get your money ready... your order has been shipped successfully, you will get a message from our admin when the product arrive our pickup station close to your address!"
