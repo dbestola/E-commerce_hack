@@ -3,7 +3,7 @@
     --our-white: #f3f3f3;
     --our-shadow: #00000033;
     --our-grey: #555;
-    --our-overlay: #252424b3;
+    --our-overlay: #2524244b;
     --our-green: #cbf802;
     --our-grey-2: #dcdcdcbd;
 }
@@ -393,6 +393,10 @@ div .sample-1, div .sample-2{
     object-fit: contain;
 }
 
+.img:hover {
+  transform: translateY(-2px);
+}
+
 .img h4 {
   font-size: 15px;
 }
@@ -410,6 +414,10 @@ div .sample-1, div .sample-2{
   height: 90%;
   position: relative;
   object-fit: fill;
+}
+
+.img2:hover{
+  transform: translateY(-2px);
 }
 
 div .h3-sample{
