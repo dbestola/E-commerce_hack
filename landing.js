@@ -138,8 +138,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const profileAccount = document.createElement('div');
     profileAccount.className = 'profileAccount';
     profileAccount.innerHTML = `<span>Hi <span class="profileAccountName">${getProfile.firstName}</span></span>`;
+    const messages = JSON.parse(localStorage.getItem('messages'))
+    const messageCount = document.createElement('div')
+    messageCount.className = 'user-msg-count'
+    messageCount.textContent = messages.length
     
     document.querySelector('.handleUserStates').appendChild(profileAccount);
+    profileAccount.appendChild(messageCount)
     
     profileAccount.addEventListener('click', () => {
       if (window.location.pathname === 'member_area/mprofile.html') {

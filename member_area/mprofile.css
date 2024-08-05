@@ -111,12 +111,14 @@ body {
 
 .inbox-count{
     background-color: red;
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 3px;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
     color: white;
     border-radius: 50%;
-    height: auto;
+    height: 18px;
 }
 
 .msg-container{
@@ -131,6 +133,7 @@ body {
 }
 
 #account h4{
+    width: -moz-fit-content;
     width: fit-content; 
     margin: 3rem auto;
 }
