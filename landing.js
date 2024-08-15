@@ -160,6 +160,17 @@ function handleProfile() {
   window.location.href = '/member_area/mprofile.html';
 }
 
+// Function to update the item count in the circle
+function updateItemCount() {
+  const itemCountCircle = document.getElementById('item-count-circle');
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  let itemCount = cart.reduce((total, item) => total + item.quantity, 0);
+  itemCountCircle.textContent = itemCount;
+}
+
+// Call the function on page load to set the initial count
+document.addEventListener('DOMContentLoaded', updateItemCount);
+
 
 
 
